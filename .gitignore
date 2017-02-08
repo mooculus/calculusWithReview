@@ -1,5 +1,7 @@
 .DS*
-._DS*
+._.DS*
+._*
+
 .smbdelete*
 
 ## Core latex/pdflatex auxiliary files:
