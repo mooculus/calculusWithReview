@@ -1,0 +1,258 @@
+\indexentry{function}{13}
+\indexentry{function}{13}
+\indexentry{domain}{13}
+\indexentry{domain}{13}
+\indexentry{range}{13}
+\indexentry{range}{13}
+\indexentry{greatest integer function}{14}
+\indexentry{vertical line test}{14}
+\indexentry{inverses}{19}
+\indexentry{one-to-one}{21}
+\indexentry{vertical line test}{21}
+\indexentry{horizontal line test}{21}
+\indexentry{horizontal line test}{21}
+\indexentry{limit}{26}
+\indexentry{limit from the right}{28}
+\indexentry{limit from the left}{28}
+\indexentry{limit}{29}
+\indexentry{one-sided limit}{29}
+\indexentry{polynomial function}{33}
+\indexentry{coefficients}{33}
+\indexentry{degree}{33}
+\indexentry{Fundamental Theorem of Algebra}{33}
+\indexentry{root}{33}
+\indexentry{rational function}{37}
+\indexentry{continuous at a point}{41}
+\indexentry{continuous on an open interval}{42}
+\indexentry{continuity of famous functions}{42}
+\indexentry{constant function}{42}
+\indexentry{indenity function}{42}
+\indexentry{power function}{42}
+\indexentry{exponential function}{42}
+\indexentry{logarithmic function}{42}
+\indexentry{sine}{42}
+\indexentry{cosine}{42}
+\indexentry{left continuous}{42}
+\indexentry{right continuous}{42}
+\indexentry{continuous on a closed interval}{42}
+\indexentry{continuous on a half-closed interval}{42}
+\indexentry{continuous on a half-closed interval}{42}
+\indexentry{limit laws}{44}
+\indexentry{continuity of polynomial functions}{44}
+\indexentry{continuity of rational functions}{44}
+\indexentry{composition limit law}{45}
+\indexentry{Squeeze Theorem}{48}
+\indexentry{multiplying by the conjugate}{55}
+\indexentry{indeterminate form}{55}
+\indexentry{determinate form}{55}
+\indexentry{approaches infinity}{57}
+\indexentry{limit!infinite}{64}
+\indexentry{infinite limit}{64}
+\indexentry{approaches infinity}{64}
+\indexentry{approaches negative infinity}{64}
+\indexentry{asymptote!vertical}{65}
+\indexentry{vertical asymptote}{65}
+\indexentry{vertical asymptote}{65}
+\indexentry{limit!at infinity}{66}
+\indexentry{limit at infinity}{66}
+\indexentry{limit at negative infinity}{66}
+\indexentry{asymptote!horizontal}{67}
+\indexentry{horizontal asymptote}{67}
+\indexentry{horizontal asymptote}{67}
+\indexentry{slant asymptote}{69}
+\indexentry{asymptote!slant}{69}
+\indexentry{slant asymptote}{69}
+\indexentry{Intermediate Value Theorem}{76}
+\indexentry{instantaneous velocity}{86}
+\indexentry{displacement}{90}
+\indexentry{velocity}{90}
+\indexentry{velocity}{90}
+\indexentry{acceleration}{90}
+\indexentry{marginal revenue}{90}
+\indexentry{marginal cost}{90}
+\indexentry{marginal profit}{90}
+\indexentry{tangent line}{90}
+\indexentry{tangent line}{90}
+\indexentry{secant}{91}
+\indexentry{derivative}{91}
+\indexentry{differentiable}{91}
+\indexentry{non-differentiable}{91}
+\indexentry{derivative!notation}{92}
+\indexentry{differentiability implies continuity}{98}
+\indexentry{derivative rules!constant}{103}
+\indexentry{constant rule}{103}
+\indexentry{Binomial Theorem}{103}
+\indexentry{derivative rules!power}{104}
+\indexentry{power rule}{104}
+\indexentry{derivative rules!sum}{105}
+\indexentry{sum rule}{105}
+\indexentry{derivative rules!product}{109}
+\indexentry{product rule}{109}
+\indexentry{derivative rules!quotient}{110}
+\indexentry{quotient rule}{110}
+\indexentry{chain rule}{113}
+\indexentry{derivative rules!chain}{113}
+\indexentry{exponential function}{119}
+\indexentry{logarithmic function}{119}
+\indexentry{base}{119}
+\indexentry{exponential function}{124}
+\indexentry{logarithmic function}{124}
+\indexentry{base}{124}
+\indexentry{second derivative}{129}
+\indexentry{third derivative}{129}
+\indexentry{concave up}{131}
+\indexentry{concave up}{131}
+\indexentry{concave down}{131}
+\indexentry{concave down}{131}
+\indexentry{concavity test}{131}
+\indexentry{trigonometric function}{136}
+\indexentry{sine}{137}
+\indexentry{cosine}{137}
+\indexentry{tangent}{137}
+\indexentry{secant}{137}
+\indexentry{cosecant}{137}
+\indexentry{cotangent}{137}
+\indexentry{trigonometric function}{137}
+\indexentry{arccosine}{138}
+\indexentry{arcsine}{138}
+\indexentry{arccosine}{140}
+\indexentry{arcsine}{140}
+\indexentry{arctangent}{140}
+\indexentry{arcsecant}{140}
+\indexentry{arccosecant}{140}
+\indexentry{arccotangent}{140}
+\indexentry{inverse!trigonometric functions}{140}
+\indexentry{Pythagorean Theorem}{141}
+\indexentry{Pythagorean identities}{141}
+\indexentry{trigonometric function}{145}
+\indexentry{sine}{146}
+\indexentry{cosine}{146}
+\indexentry{tangent}{146}
+\indexentry{secant}{146}
+\indexentry{cosecant}{146}
+\indexentry{cotangent}{146}
+\indexentry{trigonometric function}{146}
+\indexentry{arccosine}{147}
+\indexentry{arcsine}{147}
+\indexentry{arccosine}{149}
+\indexentry{arcsine}{149}
+\indexentry{arctangent}{149}
+\indexentry{arcsecant}{149}
+\indexentry{arccosecant}{149}
+\indexentry{arccotangent}{149}
+\indexentry{inverse!trigonometric functions}{149}
+\indexentry{Pythagorean Theorem}{150}
+\indexentry{Pythagorean identities}{150}
+\indexentry{maximum/minimum!local}{154}
+\indexentry{local maximum}{154}
+\indexentry{local minimum}{154}
+\indexentry{local extremum}{154}
+\indexentry{extremum!local}{154}
+\indexentry{Fermat's Theorem}{154}
+\indexentry{critical point}{155}
+\indexentry{critical point}{155}
+\indexentry{first derivative test}{156}
+\indexentry{concavity test}{157}
+\indexentry{inflection point}{158}
+\indexentry{inflection point}{158}
+\indexentry{second derivative test}{159}
+\indexentry{maximum/minimum!absolute}{165}
+\indexentry{global maximum}{165}
+\indexentry{global minimum}{165}
+\indexentry{global extremum}{165}
+\indexentry{extremum!global}{165}
+\indexentry{Extreme Value Theorem}{165}
+\indexentry{Rolle's Theorem}{166}
+\indexentry{Mean Value Theorem}{166}
+\indexentry{optimization problem}{171}
+\indexentry{rational function}{187}
+\indexentry{rational function}{191}
+\indexentry{linear approximation}{195}
+\indexentry{differentials}{196}
+\indexentry{average rate of change}{199}
+\indexentry{instantaneous rate of change}{199}
+\indexentry{product rule}{200}
+\indexentry{chain rule}{201}
+\indexentry{chain rule}{211}
+\indexentry{derivative rules!chain}{211}
+\indexentry{explicit function}{211}
+\indexentry{implicit differentiation}{211}
+\indexentry{power rule}{218}
+\indexentry{trigonometric function}{225}
+\indexentry{sine}{226}
+\indexentry{cosine}{226}
+\indexentry{tangent}{226}
+\indexentry{secant}{226}
+\indexentry{cosecant}{226}
+\indexentry{cotangent}{226}
+\indexentry{trigonometric function}{226}
+\indexentry{arccosine}{227}
+\indexentry{arcsine}{227}
+\indexentry{arccosine}{229}
+\indexentry{arcsine}{229}
+\indexentry{arctangent}{229}
+\indexentry{arcsecant}{229}
+\indexentry{arccosecant}{229}
+\indexentry{arccotangent}{229}
+\indexentry{inverse!trigonometric functions}{229}
+\indexentry{Pythagorean Theorem}{230}
+\indexentry{Pythagorean identities}{230}
+\indexentry{trigonometric function}{234}
+\indexentry{sine}{235}
+\indexentry{cosine}{235}
+\indexentry{tangent}{235}
+\indexentry{secant}{235}
+\indexentry{cosecant}{235}
+\indexentry{cotangent}{235}
+\indexentry{trigonometric function}{235}
+\indexentry{arccosine}{236}
+\indexentry{arcsine}{236}
+\indexentry{arccosine}{238}
+\indexentry{arcsine}{238}
+\indexentry{arctangent}{238}
+\indexentry{arcsecant}{238}
+\indexentry{arccosecant}{238}
+\indexentry{arccotangent}{238}
+\indexentry{inverse!trigonometric functions}{238}
+\indexentry{Pythagorean Theorem}{239}
+\indexentry{Pythagorean identities}{239}
+\indexentry{L'H\^opital's Rule}{257}
+\indexentry{indeterminate form}{257}
+\indexentry{antiderivative}{263}
+\indexentry{antiderivative!notation}{263}
+\indexentry{indefinite integral}{263}
+\indexentry{indefinite integral}{263}
+\indexentry{differential equation}{267}
+\indexentry{differential equation}{271}
+\indexentry{exponential growth}{271}
+\indexentry{grid points}{280}
+\indexentry{sample point}{280}
+\indexentry{Riemann sum}{281}
+\indexentry{integral}{287}
+\indexentry{definite integral}{287}
+\indexentry{definite integral}{287}
+\indexentry{odd}{288}
+\indexentry{even}{288}
+\indexentry{accumulation function}{299}
+\indexentry{First Fundamental Theorem of Calculus}{300}
+\indexentry{Second Fundamental Theorem of Calculus}{304}
+\indexentry{displacement}{306}
+\indexentry{antiderivative}{307}
+\indexentry{accumulation function}{307}
+\indexentry{area function}{307}
+\indexentry{definite integral}{308}
+\indexentry{velocity}{311}
+\indexentry{position}{311}
+\indexentry{displacement}{311}
+\indexentry{speed}{311}
+\indexentry{distance}{311}
+\indexentry{average value}{312}
+\indexentry{Mean Value Theorem for integrals}{313}
+\indexentry{integral substitution formula}{319}
+\indexentry{force}{329}
+\indexentry{newton}{329}
+\indexentry{kinetic energy}{329}
+\indexentry{joule}{329}
+\indexentry{work}{330}
+\indexentry{joule}{330}
+\indexentry{Work-Energy Theorem}{331}
