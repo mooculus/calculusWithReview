@@ -14,7 +14,6 @@
 \end{abstract}
 \maketitle
 
-
 \begin{definition}\index{equation}
 An \dfn{equation} is a statement expressing the equality between two quantities.
 \end{definition}
@@ -23,131 +22,100 @@ This means that an equation will always have a single equals sign.
 
 \begin{example}
   From Devyn's question above, $\displaystyle \frac{74 + 84 + x}{3}$ is the average of his three exam 
-  scores, with the variable $x$ representing the third unknown exam score.  What does
-  \[ \frac{74 + 84 + x}{3} = 82 \] mean in this setting?
+  scores, with the variable $x$ representing the third unknown exam score.  What does the equation
+  $\displaystyle \dfrac{74 + 84 + x}{3} = 82$ mean in this setting?
   
   \begin{explanation}
     This is an equation, stating that the average of Devyn's three exam scores is 82.
   \end{explanation}
 \end{example}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Composition of functions can be thought of as putting one function
-inside another.  We use the notation
-\[
-(f\circ g)(x) = f(g(x)).
-\]
-\begin{warning}
-  The composition $f\circ g$ only makes sense if
-  \[
-  \{\text{the range of $g$}\}
-  \text{ is contained in or equal to }
-  \{\text{the domain of $f$}\}
-  \]
-\end{warning}
+Usually, when dealing with an equation, we will be looking for values that make the equation true.
+\begin{definition}
+A \dfn{solution} to an equation is a value that, when substituted in for the variables,
+yield a true number statement.
+\end{definition}
 
 \begin{example}
- Suppose we have
-\begin{align*}
-  f(x)&={{x}^{2}}+5x+4 &&\text{for $-\infty< x< \infty$,}\\
-  g(x)&= x+7 &&\text{for $-\infty< x< \infty$.}\\
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  The range of $g$ is $-\infty< x< \infty$, which is equal to the
-  domain of $f$. This means the domain of $f\circ g$ is $-\infty< x<
-  \infty$. Next, we substitute $x+7$ for each instance of $\answer[given]{x}$ found
-  in
-  \[
-  f(x)={{x}^{2}}+5x+4
-  \]
-  and so
-  \begin{align*}
-  f(g(x)) &=f(x+7)\\
-  &=\answer[given]{{{(x+7)}^{2}}+5(x+7)+4}.
-  \end{align*}
-\end{explanation}
+	$\displaystyle \dfrac{74 + 84 + 88}{3} = 82$, so $x = 88$ is a solution of the equation
+	$\displaystyle \dfrac{74 + 84 + x}{3} = 82$.
 \end{example}
 
-Now let's try an example with a more restricted domain.
+When we are asked to \emph{solve an equation}, we are being asked to find all solutions.
+Exactly how to do that depends on the particular equation involved.
 
+
+\begin{definition}\index{linear equation}
+	A \dfn{linear equation in $x$} is an equation which is equivalent to one with the form
+	$a x + b = 0$, where $a$ and $b$ are constants, with $a \neq 0$.
+\end{definition}
+
+To solve a linear equation, we isolate the $x$-term and divide by the coefficient.
 \begin{example}
- Suppose we have:
-\begin{align*}
-  f(x)&=x^2 &&\text{for $-\infty< x< \infty$,}\\
-  g(x)&= \sqrt{x} &&\text{for $0\le x< \infty$.}\\
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  The domain of $g$ is $0\le x< \infty$. From this we can see that the
-  range of $g$ is $\answer[given]{0}\le x< \infty$. This is contained
-  in the domain of $f$.
+	Solve the linear equation $\displaystyle \dfrac{x}{3} - 9 = 4\left( 2x + \dfrac{5}{2} \right)$.
 
-  This means that the domain of $f\circ g$ is $0\le x< \infty$.  Next,
-  we substitute $\answer[given]{\sqrt{x}}$ for each instance of $x$
-  found in
-  \[
-  f(x)={{x}^{2}}
-  \]
-  and so
-  \begin{align*}
-  f(g(x))&=f(\sqrt{x})\\
-  &=\left(\sqrt{x}\right)^2.
-  \end{align*}
-  We can summarize our results as a piecewise function, which
-  looks somewhat interesting:
-  \[
-  (f\circ g)(x) = 
-  \begin{cases}
-    x & \text{if $0\le x < \infty$}\\
-   \text{undefined} &\text{otherwise}. 
-  \end{cases}
-  \]
-\end{explanation}
+	\begin{explanation}
+		This doesn't really look like $ax + b = 0$ when written like this.  Let's start by distributing the $4$ into 
+		the parentheses, then combining like terms.
+		\begin{align*}
+			\frac{x}{3} - 9 &= 4\left( 2x + \dfrac{5}{2} \right) \\
+			\frac{x}{3} - 9 &= 8x + 10
+		\end{align*}
+		That looks better.  From here, we'll move all the $x$-terms to the right side of the equation, and all of
+		the constant terms to the left.
+		\begin{align*}
+			- 9 - 10 &= 8x - \frac{x}{3}\\
+			-19 &= \frac{23}{3} x \\
+			x &= -19 \cdot \frac{3}{23} = -\frac{57}{23}
+		\end{align*}
+	\end{explanation}	
 \end{example}
 
 
-\begin{example}
- Suppose we have:
-\begin{align*}
-  f(x)&=\sqrt{x} &&\text{for $0\le x< \infty$,}\\
-  g(x)&= x^2 &&\text{for $-\infty< x< \infty$.}
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  While the domain of $g$ is $-\infty< x< \infty$, its range is only
-  $0 \le x<\infty$. This is exactly the domain of $f$. This means that
-  the domain of $f\circ g$ is $-\infty< x< \infty$. %%BADBAD Explain more
-  Now we may substitute $\answer[given]{x^2}$ for each instance of
-  $\answer[given]{x}$ found in
-  \[
-  f(x)=\sqrt{x}
-  \]
-  and so
-  \begin{align*}
-  f(g(x))&=f(x^2)\\
-  &=\sqrt{x^2},\\
-  &=|x|.
-  \end{align*}
-\end{explanation}
-\end{example}
+\begin{question}
+ 	Solve the linear equation $\displaystyle \dfrac{4}{5}\left(x+2\right) - 3 = \dfrac{x-1}{2}$. 
+ 	\begin{hint}
+    		It may be easier to clear fractions first.
+	\end{hint}
+  	\begin{prompt}
+    		x = $\answer{3}$.
+  	\end{prompt}
+\end{question}
 
-Compare and contrast the previous two examples.  We used the same
-functions for each example, but composed them in different ways.  The resulting
-compositions are not only different, they have different domains!
+\begin{definition}
+	A \dfn{quadratic equation in $x$} is an equation which is equivalent to one with the form
+	$ax^2 + bx + c = 0$, where $a$, $b$, and $c$ are constants, with $a \neq 0$.
+\end{definition}
+There are three major techniques you are probably familiar with for solving quadratic equations:
+\begin{itemize}
+	\item Factoring.
+	\item Completing the Square.
+	\item Quadratic Formula.
+\end{itemize}
+
+Each of these methods are important.  Factoring is vital, because it is a valid approach to solve nearly any type of equation.  Completing
+the Square is a technique that becomes useful when we need to rewrite certain types of expressions.  The Quadratic Formula will always
+work, but has some limitations.
+
+\begin{example}
+	Solve the quadratic equation
+	\[ 2x^2 +5x = 27 x - 60. \]
+	\begin{explanation}
+		We'll start by writing this in it's standard form: $2x^2 - 22x + 60 = 0$.  Notice how there is a common factor of 2? Let's divide by 2.
+		
+		$x^2 - 11x + 30 = 0$.  Any of the above methods will work here, so let's try factoring.  What numbers add to $-11$ and multiply to $30$?
+		$-5$ and $-6$ do. That gives us:
+		\begin{align*}
+			x^2 - 11x + 30 &= 0\\
+			(x-5)(x-6) &= 0
+		\end{align*}
+		Either $x-5 = 0$ (giving us $x=5$) or $x-6 = 0$ (giving us $x=6$).  The two solutions are $x = 5, 6$.
+	\end{explanation}
+\end{example}	
+
+
+
+
 
 
 
