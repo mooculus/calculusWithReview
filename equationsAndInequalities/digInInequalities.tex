@@ -2,144 +2,72 @@
 
 \input{../preamble.tex}
 
-\outcome{Find the domain and range of a function.}
-\outcome{Distinguish between functions by considering their domains.}
-\outcome{Perform basic operations and compositions on functions.}
-\outcome{Work with piecewise defined functions.}
-\outcome{Recognize different representations of the same function.}
+\outcome{Solve linear inequalities.}
+\outcome{Solve nonlinear inequalities using a sign chart.}
 
-\title[Dig-In:]{Compositions of functions}
+\title[Dig-In:]{Inequalities}
 \begin{document}
 \begin{abstract}
-  We discuss compositions of functions.
+  We discuss inequalities.
 \end{abstract}
 \maketitle
 
+Devyn asked what score he needed on his third exam to have an average of 82.  This gave us the equation $\displaystyle \dfrac{74 + 84 + x}{3} = 82$.  
+The solutions only tell us what will give an average \emph{exactly} 82.  It may have been more advantageous to ask what score was needed to have an
+average of at least 82, yielding not an equation, but an \emph{inequality}, $\displaystyle \dfrac{74+84+x}{3} \geq 82$.
 
-Given two functions, we can compose them. Let's give an example in a
-``real context.''
+As with equations, there are various types of inequalities.  
+
+A \emph{linear inequality in $x$} is an inequality which is equivalent to  $ax + b >0$, $ax + b \geq 0$, $ax+b < 0$, or $ax + b \leq 0$.
+We solve the inequality in much the same manner as with a linear equation.  The main differences come from changing the direction of the inequality when multiplying/dividing
+by a negative quantity and expressing our answers in interval notation.
 
 \begin{example}
-  Let
-  \[
-  g(m) = \text{the amount of gas one can buy with $m$ dollars,}
-  \]
-  and let
-  \[
-  f(g) = \text{how far one can drive with $g$ gallons of gas.}
-  \]
-  What does $f(g(m))$ represent in this setting?
-  \begin{explanation}
-    With $f(g(m))$ we first relate how far one can drive with
-    $\answer[given]{g}$ gallons of gas, and this in turn is determined
-    by how much money $\answer[given]{m}$ one has. Hence $f(g(m))$ represents how far
-    one can drive with $\answer[given]{m}$ dollars.
-  \end{explanation}
+ 	Solve the inequality $\displaystyle \dfrac{2x}{3}-4 < 3\left( 2-x \right)$.
+	\begin{explanation}
+    		As with equations, we'll start by simplifying and combining like terms.
+		\begin{align*}
+			\dfrac{2x}{3} -4 &< 3\left( 2-x \right)\\
+			\dfrac{2x}{3} - 4 &< 6 - 3x\\
+			\dfrac{2x}{3}+3x &< 6 + 4\\
+			\dfrac{11}{3} x &< 10\\
+			x &< \dfrac{30}{11}
+		\end{align*}
+		All $x$ less than $\frac{30}{11}$ satisfy the inequality.
+		
+		The solution is $\left( -\infty , \dfrac{30}{11} \right)$.
+	\end{explanation}
 \end{example}
 
-Composition of functions can be thought of as putting one function
-inside another.  We use the notation
-\[
-(f\circ g)(x) = f(g(x)).
-\]
-\begin{warning}
-  The composition $f\circ g$ only makes sense if
-  \[
-  \{\text{the range of $g$}\}
-  \text{ is contained in or equal to }
-  \{\text{the domain of $f$}\}
-  \]
-\end{warning}
-
+Nonlinear inequalities are more complicated.  To solve them, we will use a tool called a \emph{sign chart}.
+The process requires us to move all the nonzero terms of the inequality to one side, and factor.
 \begin{example}
- Suppose we have
-\begin{align*}
-  f(x)&={{x}^{2}}+5x+4 &&\text{for $-\infty< x< \infty$,}\\
-  g(x)&= x+7 &&\text{for $-\infty< x< \infty$.}\\
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  The range of $g$ is $-\infty< x< \infty$, which is equal to the
-  domain of $f$. This means the domain of $f\circ g$ is $-\infty< x<
-  \infty$. Next, we substitute $x+7$ for each instance of $\answer[given]{x}$ found
-  in
-  \[
-  f(x)={{x}^{2}}+5x+4
-  \]
-  and so
-  \begin{align*}
-  f(g(x)) &=f(x+7)\\
-  &=\answer[given]{{{(x+7)}^{2}}+5(x+7)+4}.
-  \end{align*}
-\end{explanation}
-\end{example}
+	Solve the inequality $\displaystyle \dfrac{x^3 \left(2x-5\right)^2}{x+1} \geq 0.$.
 
-Now let's try an example with a more restricted domain.
+	\begin{explanation}
+		Since the right-hand side is zero, we are really asking where the left-hand side will be positive.  The only way
+		a nice formula like the left-hand side can switch from positive to negative, or vice-versa, is if it is either zero
+		or undefined at the point where it changes.
 
-\begin{example}
- Suppose we have:
-\begin{align*}
-  f(x)&=x^2 &&\text{for $-\infty< x< \infty$,}\\
-  g(x)&= \sqrt{x} &&\text{for $0\le x< \infty$.}\\
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  The domain of $g$ is $0\le x< \infty$. From this we can see that the
-  range of $g$ is $\answer[given]{0}\le x< \infty$. This is contained
-  in the domain of $f$.
-
-  This means that the domain of $f\circ g$ is $0\le x< \infty$.  Next,
-  we substitute $\answer[given]{\sqrt{x}}$ for each instance of $x$
-  found in
-  \[
-  f(x)={{x}^{2}}
-  \]
-  and so
-  \begin{align*}
-  f(g(x))&=f(\sqrt{x})\\
-  &=\left(\sqrt{x}\right)^2.
-  \end{align*}
-  We can summarize our results as a piecewise function, which
-  looks somewhat interesting:
-  \[
-  (f\circ g)(x) = 
-  \begin{cases}
-    x & \text{if $0\le x < \infty$}\\
-   \text{undefined} &\text{otherwise}. 
-  \end{cases}
-  \]
-\end{explanation}
+		Notice where the left-hand side would be either zero or undefined.  Those occur at $x = -1, 0, \frac{5}{2}$.  
+		We'll use those points to split the number line into four regions.
+	\end{explanation}
+	
+	%%%% \todo{finish this example and draw in the sign chart.  Then come up with a question.}
 \end{example}
 
 
-\begin{example}
- Suppose we have:
-\begin{align*}
-  f(x)&=\sqrt{x} &&\text{for $0\le x< \infty$,}\\
-  g(x)&= x^2 &&\text{for $-\infty< x< \infty$.}
-\end{align*}
-Find $f(g(x))$ and state its domain.
-\begin{explanation}
-  While the domain of $g$ is $-\infty< x< \infty$, its range is only
-  $0 \le x<\infty$. This is exactly the domain of $f$. This means that
-  the domain of $f\circ g$ is $-\infty< x< \infty$. %%BADBAD Explain more
-  Now we may substitute $\answer[given]{x^2}$ for each instance of
-  $\answer[given]{x}$ found in
-  \[
-  f(x)=\sqrt{x}
-  \]
-  and so
-  \begin{align*}
-  f(g(x))&=f(x^2)\\
-  &=\sqrt{x^2},\\
-  &=|x|.
-  \end{align*}
-\end{explanation}
-\end{example}
 
-Compare and contrast the previous two examples.  We used the same
-functions for each example, but composed them in different ways.  The resulting
-compositions are not only different, they have different domains!
+
+
+
+
+
+
+
+
+
+
 
 
 

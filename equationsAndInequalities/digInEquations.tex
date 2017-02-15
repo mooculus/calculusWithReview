@@ -14,10 +14,7 @@
 \end{abstract}
 \maketitle
 
-\begin{definition}\index{equation}
-An \dfn{equation} is a statement expressing the equality between two quantities.
-\end{definition}
-This means that an equation will always have a single equals sign.
+An equation is a statement expressing the equality between two quantities.  This means that an equation will always have a single equals sign.
 
 
 \begin{example}
@@ -31,10 +28,7 @@ This means that an equation will always have a single equals sign.
 \end{example}
 
 Usually, when dealing with an equation, we will be looking for values that make the equation true.
-\begin{definition}
-A \dfn{solution} to an equation is a value that, when substituted in for the variables,
-yield a true number statement.
-\end{definition}
+A solution to an equation is a value that, when substituted in for the variables, yield a true number statement.
 
 \begin{example}
 	$\displaystyle \dfrac{74 + 84 + 88}{3} = 82$, so $x = 88$ is a solution of the equation
@@ -44,11 +38,9 @@ yield a true number statement.
 When we are asked to \emph{solve an equation}, we are being asked to find all solutions.
 Exactly how to do that depends on the particular equation involved.
 
+A \emph{linear equation in $x$} is an equation which is equivalent to one with the form
+$a x + b = 0$, where $a$ and $b$ are constants, with $a \neq 0$.
 
-\begin{definition}\index{linear equation}
-	A \dfn{linear equation in $x$} is an equation which is equivalent to one with the form
-	$a x + b = 0$, where $a$ and $b$ are constants, with $a \neq 0$.
-\end{definition}
 
 To solve a linear equation, we isolate the $x$-term and divide by the coefficient.
 \begin{example}
@@ -82,10 +74,10 @@ To solve a linear equation, we isolate the $x$-term and divide by the coefficien
   	\end{prompt}
 \end{question}
 
-\begin{definition}
-	A \dfn{quadratic equation in $x$} is an equation which is equivalent to one with the form
+
+A \emph{quadratic equation in $x$} is an equation which is equivalent to one with the form
 	$ax^2 + bx + c = 0$, where $a$, $b$, and $c$ are constants, with $a \neq 0$.
-\end{definition}
+
 There are three major techniques you are probably familiar with for solving quadratic equations:
 \begin{itemize}
 	\item Factoring.
@@ -113,10 +105,47 @@ work, but has some limitations.
 	\end{explanation}
 \end{example}	
 
+\begin{example}
+	Solve the quadratic equation
+	\[  x^2 = 6x -4.\]
+	\begin{explanation}
+		Again, we'll write it in standard form: $x^2 - 6x + 4 = 0$.  The quadratic $x^2 -6x+4$ does not factor, so we'll complete the square instead.
+		
+		Start by moving the constant term to the other side
+		\[ x^2 - 6x = -4. \]
+		This has $b = -6$.  That means $\displaystyle \dfrac{b}{2} = -3$ and $\displaystyle \left( \dfrac{b}{2}\right)^2 = 9$.  Add $9$ to both sides.
+		\[ x^2 - 6x + 9 = -4 + 9 = 5. \]
+		The left-hand side is now a perfect square, $\left(x-3\right)^2 = x^2 - 6x + 9$.  We can then solve using square roots.
+		\begin{align*}
+			x^2 - 6x + 9 &=  5\\
+			\left( x-3 \right)^2 &= 5\\
+			x-3 = \pm \sqrt{5} \\
+			x = 3 \pm \sqrt{5}.
+		\end{align*}
+	\end{explanation}
+\end{example}
+If you had used the quadratic formula, $\displaystyle x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$, instead of factoring or completing the square above, you would have found the same solutions.
 
+\begin{question}
+	Solve the quadratic equation $\displaystyle x^2 + 4 = 4\left(x+2\right)$.
+		\begin{multipleChoice}
+			\choice{$x = \pm 2$}
+			\choice[correct]{$x=2\pm 2\sqrt{2}$}
+			\choice{$x = -2, -4$}
+			\choice{none of the above}
+  \end{multipleChoice}
+\end{question}
 
-
-
-
+Factoring is a process that helps us solve more than just quadratic equations, as long as we first get one side of the equation equal to zero.
+\begin{example}
+	Solve the equation
+	\[ 2x^2 \left( x-4 \right) \left( 2x-5\right)^3 = 0. \]
+	\begin{explanation}
+		The only way for a product of real numbers to be zero, is for one of the factors to have been zero.
+		Here, that means either $2x^2 = 0$, or $x-4 = 0$ or $(2x-5)^3 = 0$.
+		This gives us three equations, each substantially less complicated than the original one, to solve.  By solving them, we find
+		$x = 0, 4, \frac{5}{2}$.
+	\end{explanation}
+\end{example}
 
 \end{document}
