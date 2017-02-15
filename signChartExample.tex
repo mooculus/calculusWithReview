@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tkz-tab}
+\usetikzlibrary{decorations.pathreplacing} 
+\usepackage{amsmath,fullpage}
+\parindent=0pt
+
+\begin{document}
+
+
+
+\begin{tikzpicture} 
+\tkzTabInit[lgt=2,espcl=1] 
+	{$x$         /1, 
+	$x^3$   /1, 
+	$\left(2x-5\right)^2$  /1,
+	$x+1$       /1}% 
+	{  , $-1$ , $0$ ,$\dfrac{5}{2}$,  }% 
+\tkzTabLine{ , - , t , - , t , + , t , + ,}
+\tkzTabLine{ , + , d , h , d , + , t , - ,}
+\tkzTabLine{ , - , d , h , d , + , t , +, }
+\end{tikzpicture} 
+
+
+
+\end{document}

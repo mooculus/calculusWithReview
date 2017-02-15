@@ -50,11 +50,32 @@ The process requires us to move all the nonzero terms of the inequality to one s
 		or undefined at the point where it changes.
 
 		Notice where the left-hand side would be either zero or undefined.  Those occur at $x = -1, 0, \frac{5}{2}$.  
-		We'll use those points to split the number line into four regions.
+		We'll use those points to split the number line into four regions. Inside each of those regions, our factors are either
+		always positive or always negative.
+		
+		\begin{tikzpicture} 
+			\tkzTabInit[lgt=2,espcl=1] 
+				{$x$         /1, 
+				$x^3$   /1, 
+				$\left(2x-5\right)^2$  /1,
+				$x+1$       /1}% 
+				{  , $-1$ , $0$ ,$\dfrac{5}{2}$,  }% 
+			\tkzTabLine{ , - , d , - , t , + , t , + ,}
+			\tkzTabLine{ , + , d , + , t , + , t , - ,}
+			\tkzTabLine{ , - , d , + , t , + , t , +, }
+		\end{tikzpicture} 
+		
+		For $x < -1$, we find $x^3 < 0$, $(2x-5)^2 > 0$, and $x+1 < 0$.  Together, that means the left-hand side of our inequality has the form 
+		$\displaystyle \dfrac{ \textrm{negative} \cdot \textrm{positive}}{\textrm{negative}}$.  It is, therefore, positive in that region, and makes up
+		part of our solution.  We cannot include the endpoint $x=-1$ in the solution, as the fraction is undefined there.
+		
+		In the same way, we see that in the interval $\left( 0, \frac{5}{2} \right)$, the left-hand side of the inequality is also positive.  
+		
+		The solution is $\left( -\infty, -1 \right) \cup \left[ 0, \frac{5}{2} \right]$.
 	\end{explanation}
-	
-	%%%% \todo{finish this example and draw in the sign chart.  Then come up with a question.}
 \end{example}
+
+	%%%% \todo{Then come up with a question.}
 
 
 
