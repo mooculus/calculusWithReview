@@ -75,7 +75,49 @@ The process requires us to move all the nonzero terms of the inequality to one s
 	\end{explanation}
 \end{example}
 
-	%%%% \todo{Then come up with a question.}
+If the inequality is not given in factored form, we have some work to do before we start.
+\begin{example}
+	Solve the inequality $\displaystyle x^2 + 5x \leq -10 -\dfrac{16}{x-2}$.
+	\begin{explanation}
+		We'll begin by moving everything to one side, then combining them all together into a single fraction.
+		\begin{align*}
+			x^2 + 5x &\leq -10 -\dfrac{16}{x-2}\\
+			x^2 + 5x +10 +\dfrac{16}{x-2} &\leq 0\\
+			\left(x^2+5x+10\right) \cdot \left(\dfrac{x-2}{x-2}\right) +\dfrac{16}{x-2} &\leq 0\\
+			\dfrac{x^3+3x^2-20}{x-2} + \dfrac{16}{x-2} &\leq 0\\
+			\dfrac{x^3+3x^2-4}{x-2} &\leq 0\\
+			\dfrac{(x-1)(x+2)^2}{x-2} &\leq 0
+		\end{align*}
+		Now that the inequality is in a better form for us to work with, we'll build a sign chart like we did in the last example.
+
+		\begin{tikzpicture} 
+			\tkzTabInit[lgt=2,espcl=1] 
+				{$x$         /1, 
+				$x-1$   /1, 
+				$\left(x+2\right)^2$  /1,
+				$x-2$       /1}% 
+				{  , $-2$ , $1$ ,$2$,  }% 
+			\tkzTabLine{ , - , t , - , t , + , d , + ,}
+			\tkzTabLine{ , + , t , + , t , + , d , + ,}
+			\tkzTabLine{ , - , t , - , t , - , d , +, }
+		\end{tikzpicture} 
+
+		We see from the chart that $\displaystyle \dfrac{(x-1)(x+2)^2}{x-2}$ will be negative in $(1,2)$.  At $x=-2$ and $x=1$ it is zero.
+		The solution is then: $\left\{ -2\right\} \cup [ 1, 2 )$.
+	\end{explanation}
+\end{example}
+
+
+\begin{question}
+	Find the solution of the inequality: $\displaystyle x + \dfrac{9}{x-1} > 5$.
+	\begin{multipleChoice}
+		\choice{$(-1, \infty)$}
+		\choice{$[-1,\infty)$}
+		\choice[correct]{$(-1,2)\cup (2,\infty)$}
+		\choice{$\{-1\} \cup [2,\infty)$}
+		\choice{none of the above}
+	\end{multipleChoice}
+\end{question}
 
 
 
