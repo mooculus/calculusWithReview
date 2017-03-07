@@ -42,7 +42,7 @@ by a negative quantity and expressing our answers in interval notation.
 Nonlinear inequalities are more complicated.  To solve them, we will use a tool called a \emph{sign chart}.
 The process requires us to move all the nonzero terms of the inequality to one side, and factor.
 \begin{example}
-	Solve the inequality $\displaystyle \dfrac{x^3 \left(2x-5\right)^2}{x+1} \geq 0.$.
+	Solve the inequality \[ \dfrac{x^3 \left(2x-5\right)^2}{x+1} \geq 0.\]
 
 	\begin{explanation}
 		Since the right-hand side is zero, we are really asking where the left-hand side will be positive.  The only way
@@ -75,51 +75,40 @@ The process requires us to move all the nonzero terms of the inequality to one s
 	\end{explanation}
 \end{example}
 
-If the inequality is not given in factored form, we have some work to do before we start.
-\begin{example}
-	Solve the inequality $\displaystyle x^2 + 5x \leq -10 -\dfrac{16}{x-2}$.
-	\begin{explanation}
-		We'll begin by moving everything to one side, then combining them all together into a single fraction.
-		\begin{align*}
-			x^2 + 5x &\leq -10 -\dfrac{16}{x-2}\\
-			x^2 + 5x +10 +\dfrac{16}{x-2} &\leq 0\\
-			\left(x^2+5x+10\right) \cdot \left(\dfrac{x-2}{x-2}\right) +\dfrac{16}{x-2} &\leq 0\\
-			\dfrac{x^3+3x^2-20}{x-2} + \dfrac{16}{x-2} &\leq 0\\
-			\dfrac{x^3+3x^2-4}{x-2} &\leq 0\\
-			\dfrac{(x-1)(x+2)^2}{x-2} &\leq 0
-		\end{align*}
-		Now that the inequality is in a better form for us to work with, we'll build a sign chart like we did in the last example.
 
+\begin{example}
+	Solve the inequality \[ \dfrac{2x}{x-1} \leq \dfrac{5-x}{x-1}. \] 
+
+	\begin{explanation}
+		Let's start by moving all the terms to one side of the inequality.
+		\begin{align*}
+			\dfrac{2x}{x-1} &\leq \dfrac{5-x}{x-1}\\
+			\dfrac{2x}{x-1} - \dfrac{5-x}{x-1} &\leq 0\\
+			\dfrac{3x - 5}{x-1} &\leq 0
+		\end{align*}
 		\begin{tikzpicture} 
 			\tkzTabInit[lgt=2,espcl=1] 
 				{$x$         /1, 
-				$x-1$   /1, 
-				$\left(x+2\right)^2$  /1,
-				$x-2$       /1}% 
-				{  , $-2$ , $1$ ,$2$,  }% 
-			\tkzTabLine{ , - , t , - , t , + , d , + ,}
-			\tkzTabLine{ , + , t , + , t , + , d , + ,}
-			\tkzTabLine{ , - , t , - , t , - , d , +, }
+				$3x-5$   /1, 
+				$x-1$       /1}% 
+				{  , $1$ , $\dfrac{5}{3}$,  }% 
+			\tkzTabLine{ , - , d , - , t , + ,}
+			\tkzTabLine{ , - , d , + , t , + ,}
 		\end{tikzpicture} 
-
-		We see from the chart that $\displaystyle \dfrac{(x-1)(x+2)^2}{x-2}$ will be negative in $(1,2)$.  At $x=-2$ and $x=1$ it is zero.
-		The solution is then: $\left\{ -2\right\} \cup [ 1, 2 )$.
+		The solution is $\displaystyle \left( 1, \dfrac{5}{3} \right]$.
 	\end{explanation}
 \end{example}
 
-
 \begin{problem}
-	Find the solution of the inequality: $\displaystyle x + \dfrac{9}{x-1} > 5$.
+	Find the solution of the inequality \[ \dfrac{x}{x-4} \geq \dfrac{2x-1}{x-4}. \]
 	\begin{multipleChoice}
-		\choice{$(-1, \infty)$}
-		\choice{$[-1,\infty)$}
-		\choice[correct]{$(-1,2)\cup (2,\infty)$}
-		\choice{$\{-1\} \cup [2,\infty)$}
-		\choice{none of the above}
+		\choice[correct]{$\left[1, 4\right)$}
+		\choice{$\left(-\infty, 1\right] \bigcup \left(4, \infty\right)$}
+		\choice{$\left(1, 4\right)$}
+		\choice{$\left(-\infty, 1\right) \bigcup \left(4, \infty\right)$}
+		\choice{None of the above}
 	\end{multipleChoice}
 \end{problem}
-
-
 
 
 

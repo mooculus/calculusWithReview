@@ -4,7 +4,7 @@
 
 \outcome{Know the graphs and properties of ``famous'' functions.}
 
-\title[Dig-In:]{Polynomial functions}
+\title[Dig-In:]{Working with polynomials}
 
 
 \begin{document}
@@ -91,8 +91,7 @@ Multiplying polynomials is based on the familiar property of arithmetic, \dfn{di
 The result is that we have multiplied every term of the first polynomial by every term of the second, then added the results together.  In the case of two
 \dfn{binomials} (polynomials with only two terms), this is frequently referred to as \dfn{FOIL}.
 
-There are several product formulas that arise repeatedly when multiplying binomials.  You will likely have seen most of these before.
-
+There are several product formulas that arise repeatedly when working with binomials.  You will likely have seen most of these before.
 \noindent\fbox{
 	\parbox{0.4\textwidth}{
 		\begin{align*}
@@ -106,7 +105,6 @@ There are several product formulas that arise repeatedly when multiplying binomi
 		\end{align*}
 	}
 }
-
 \begin{example}
 	If $f$ is the polynomial function given by $f(x) = x^3-2x^2 +5$, find $f(x+1)$.  Find $f(2+h)$.
 	\begin{explanation}
@@ -153,7 +151,8 @@ For \dfn{trinomials} (polynomials with three terms) of the form $ax^2 + bx + c$,
 \begin{example}
 	Factor $x^2+2x-24$.
 	\begin{explanation}
-		Since the leading coefficient is $1$, we want to factor $x^2+2x-24$ as $(x+r)(x+s)$.  That means, we are looking for two numbers that add to $2$,
+		Since the leading coefficient is $1$, we want to factor $x^2+2x-24$ as $(x+r)(x+s)$.  If we multiply out $(x+r)(x+s)$ we get
+		$x^2 + (r+s)x + rs$.  We need to find two numbers that add to $2$,
 		and multiply to $-24$.  Look at the different ways of multiplying two numbers to get $-24$:  $-1 \cdot 24$, $-2 \cdot 12$, $-3 \cdot 8$, $-4 \cdot 6$...
 		That last one, $-4$ and $6$ are two numbers that add to $2$ and multiply to give $-24$.
 		
@@ -165,10 +164,11 @@ The process is slightly more complicated when $a \neq 1$.
 \begin{example}
 	Factor $6x^2 + 11 x + 3$.
 	\begin{explanation}
-		In this case, we are looking for numbers that multiply to $6$ for our coefficients, and that multiply to $3$ for the constants in each
-		factor.
-		That is, we're looking at things like $(6x+1)(x+3)$, $(6x+3)(x+1)$, $(2x+3)(3x+1)$, $(2x+1)(3x+3)$.   Actually, that's about it, as $6$ can only
+		In this case, want to find $(px+r)(qx+s) = pq x^2 + (ps+qr) x+ rs$.  Ignore that middle term for now, and just focus on the leading term and the constant term.
+		We need to find numbers that multiply to $6$ for our coefficients, and that multiply to $3$ for the constants in each factor.
+		That means we're looking at things like $(6x+1)(x+3)$, $(6x+3)(x+1)$, $(2x+3)(3x+1)$, $(2x+1)(3x+3)$.   Actually, that's it, as $6$ can only
 		factor as $1 \cdot 6$ or $2 \cdot 3$, and $3$ only factors as $1 \cdot 3$.
+		
 		All of these possibilities will give the right $x^2$ term and the right constant term.  The only difference is the $x$-term they give.  Do any of them
 		give an $x$-coefficient of $11$?  Yes!
 		
@@ -198,9 +198,72 @@ If $x=c$ is a root of a polynomial, then $x-c$ is a factor of that polynomial.
 
 
 \section{Equations}
+A \emph{quadratic equation in $x$} is an equation which is equivalent to one with the form
+	$ax^2 + bx + c = 0$, where $a$, $b$, and $c$ are constants, with $a \neq 0$.
 
+There are three major techniques you are probably familiar with for solving quadratic equations:
+\begin{itemize}
+	\item Factoring.
+	\item Completing the Square.
+	\item Quadratic Formula.
+\end{itemize}
+
+Each of these methods are important.  Factoring is vital, because it is a valid approach to solve nearly any type of equation.  Completing
+the Square is a technique that becomes useful when we need to rewrite certain types of expressions.  The Quadratic Formula will always
+work, but has some limitations.
+
+\begin{example}
+	Solve the quadratic equation
+	\[ 2x^2 +5x = 27 x - 60. \]
+	\begin{explanation}
+		We'll start by writing this in it's standard form: $2x^2 - 22x + 60 = 0$.  Notice how there is a common factor of 2? Let's divide by 2.
+		
+		$x^2 - 11x + 30 = 0$.  Any of the above methods will work here, so let's try factoring.  What numbers add to $-11$ and multiply to $30$?
+		$-5$ and $-6$ do. That gives us:
+		\begin{align*}
+			x^2 - 11x + 30 &= 0\\
+			(x-5)(x-6) &= 0
+		\end{align*}
+		Either $x-5 = 0$ (giving us $x=5$) or $x-6 = 0$ (giving us $x=6$).  The two solutions are $x = 5, 6$.
+	\end{explanation}
+\end{example}	
+
+\begin{example}
+	Solve the quadratic equation
+	\[  x^2 = 6x -4.\]
+	\begin{explanation}
+		Again, we'll write it in standard form: $x^2 - 6x + 4 = 0$.  The quadratic $x^2 -6x+4$ does not factor, so we'll complete the square instead.
+		
+		Start by moving the constant term to the other side
+		\[ x^2 - 6x = -4. \]
+		This has $b = -6$.  That means $\displaystyle \dfrac{b}{2} = -3$ and $\displaystyle \left( \dfrac{b}{2}\right)^2 = 9$.  Add $9$ to both sides.
+		\[ x^2 - 6x + 9 = -4 + 9 = 5. \]
+		The left-hand side is now a perfect square, $\left(x-3\right)^2 = x^2 - 6x + 9$.  We can then solve using square roots.
+		\begin{align*}
+			x^2 - 6x + 9 &=  5\\
+			\left( x-3 \right)^2 &= 5\\
+			x-3 = \pm \sqrt{5} \\
+			x = 3 \pm \sqrt{5}.
+		\end{align*}
+	\end{explanation}
+\end{example}
+If you had used the quadratic formula, $\displaystyle x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$, instead of factoring or completing the square above, you would have found the same solutions.
+
+\begin{problem}
+	Solve the quadratic equation $\displaystyle x^2 + 4 = 4\left(x+2\right)$.
+	\begin{multipleChoice}
+		\choice{$x = \pm 2$}
+		\choice[correct]{$x=2\pm 2\sqrt{2}$}
+		\choice{$x = -2, -4$}
+		\choice{none of the above}
+  \end{multipleChoice}
+\end{problem}
+
+
+
+
+Building on these methods, we'll consider more general types of equations.
 A polynomial equation is an equation which is equivalent to one of the form $a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0$. 
-Quadratic-type equations can be handled by completing the square or the quadratic formula.
 \begin{example}
 	Solve the equation $x^4 = 6x^2 - 4$.
 	\begin{explanation}
@@ -216,6 +279,18 @@ Quadratic-type equations can be handled by completing the square or the quadrati
 		Either $x^2 = 3 + \sqrt{13}$, or $x^2 = 3 - \sqrt{13}$.  Since $3 - \sqrt{13}$ is negative, only $x^2 = 3 + \sqrt{13}$ is possible.
 		
 		The only real solutions are $x = \pm \sqrt{3 + \sqrt{13}}$.
+	\end{explanation}
+\end{example}
+
+Factoring is a process that helps us solve more than just quadratic equations, as long as we first get one side of the equation equal to zero.
+\begin{example}
+	Solve the equation
+	\[ 2x^2 \left( x-4 \right) \left( 2x-5\right)^3 = 0. \]
+	\begin{explanation}
+		The only way for a product of real numbers to be zero, is for one of the factors to have been zero.
+		Here, that means either $2x^2 = 0$, or $x-4 = 0$ or $(2x-5)^3 = 0$.
+		This gives us three equations, each substantially less complicated than the original one, to solve.  By solving them, we find
+		$x = 0, 4, \frac{5}{2}$.
 	\end{explanation}
 \end{example}
 
@@ -312,7 +387,7 @@ Quadratic functions, written as $f(x) = ax^2 + bx + c$ with $a \ne 0$, have para
 
 
 \begin{problem}
-	Use the graph of $f(x) = 2x^2 - 4x + 3$ to estimate $\lim_{x\to 2} f(x)$.
+	Use the graph of $f(x) = 2x^2 - 4x + 3$ to estimate the value of $\lim_{x\to 2} f(x)$.
 	\[ \begin{prompt} 
 		\lim_{x\to 2} f(x) = \answer{3} 
 	\end{prompt}\]
@@ -320,14 +395,10 @@ Quadratic functions, written as $f(x) = ax^2 + bx + c$ with $a \ne 0$, have para
 
 
 
+
 The upshot of the Fundamental Theorem of Algebra (in terms of graphing) is that when we plot a
 polynomial of degree $n$, its graph will cross the $x$-axis at most
 $n$ times.  Each crossing corresponds to a root of that polynomial.
-
-
-
-
-
 
 \begin{example}
   Here we see the the graphs of four polynomial functions.
