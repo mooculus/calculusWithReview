@@ -132,14 +132,42 @@ We can generalize the example above to get the following theorems.
 \end{question}
 
 
+
+
+
+There are several other continuous functions.  Some that you are familiar with are mentioned in the following statement.
+We will study these functions in more depth later.
+
+\begin{theorem}[Continuity of Other Functions]
+	The trigonometric functions $\sin x$ and $\cos x$ and exponential functions $a^x$
+	are continuous everywhere.  The other trigonometric functions are continuous in
+	their domain.
+\end{theorem}
+
+\begin{example}
+	Compute the limit:
+	\[ \lim_{x\to \pi/4} \sin x \cos x. \]
+	
+	\begin{explanation}
+		By the limit laws, \[ \lim_{x \to \pi/4} \sin x \cos x = \left(\lim_{x\to \pi/4} \sin x \right) \left( \lim_{x\to \pi/4} \cos x \right).\]
+		$\displaystyle \lim_{x\to \pi/4} \sin x = \sin \frac{\pi}{4} = \answer[given]{\frac{1}{\sqrt{2}} }$.
+		$\displaystyle \lim_{x\to \pi/4} \cos x = \cos \frac{\pi}{4} = \answer[given]{\frac{1}{\sqrt{2}} }$.
+		
+		Putting these together, $\displaystyle \lim_{x\to \pi/4} \sin x \cos x = \answer[given]{\frac{1}{2}}$.
+	\end{explanation}
+\end{example}
+
+
+
+
 Now, we give basic rules for how limits interact with composition
 of functions.
 
 \begin{theorem}[Composition Limit Law]\index{composition limit law}
-  If $f(x)$ is continuous at $x = \lim_{x\to a} g(x)$, then
-  \[
-  \lim_{x\to a} f(g(x)) = f(\lim_{x\to a} g(x)).
-  \]
+	If $f(x)$ is continuous at $x = \lim_{x\to a} g(x)$, then
+	\[
+		\lim_{x\to a} f(g(x)) = f(\lim_{x\to a} g(x)).
+	\]
 \end{theorem}
 
 Because the limit of a continuous function is the same as the function
@@ -299,7 +327,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0}\sec^2(e^x-1)
+  \lim_{x\to 0}\sec^2(5^x-1)
   \]
   \begin{multipleChoice}
     \choice[correct]{yes}
@@ -308,25 +336,25 @@ Let's try this out.
   \begin{question}
     Compute:
     \[
-    \lim_{x\to 0}\sec^2(e^x-1)\begin{prompt} =\answer{1}\end{prompt}
+    \lim_{x\to 0}\sec^2(5^x-1)\begin{prompt} =\answer{1}\end{prompt}
     \]
     \begin{feedback}
       Notice that
       \[
-      \lim_{x\to 0} \sec^2(e^x-1) = \lim_{x\to 0} \frac{1}{\cos^2(e^x-1)}.
+      \lim_{x\to 0} \sec^2(5^x-1) = \lim_{x\to 0} \frac{1}{\cos^2(5^x-1)}.
       \]
       If we are trying to use Limit Laws to compute this limit, we
       would now have to use the Quotient Law to say that
       \[
-      \lim_{x\to 0} \frac{1}{\cos^2(e^x-1)} = \frac{ \lim_{x\to 0}1}{
-        \lim_{x\to 0}\cos^2(e^x-1)}.
+      \lim_{x\to 0} \frac{1}{\cos^2(5^x-1)} = \frac{ \lim_{x\to 0}1}{
+        \lim_{x\to 0}\cos^2(5^x-1)}.
       \]
       We are only allowed to use this law if both limits exist and the
       denominator is not $0$.  Let's check the denominator and numerator
       separately. First we'll compute the limit of the denominator:
       \begin{align*}
-        \lim_{x\to 0}\cos^2(e^x-1) &= \cos^2(\lim_{x\to 0}(e^x-1))\\
-        &=\cos^2(\lim_{x\to 0}(e^x)-\lim_{x\to 0}(1))\\
+        \lim_{x\to 0}\cos^2(5^x-1)  &= \cos^2(\lim_{x\to 0}(5^x-1))\\
+        &=\cos^2(\lim_{x\to 0}(5^x)-\lim_{x\to 0}(1))\\
         &=\cos^2(1-1)\\
         &= \cos^2(0)\\
         &=1
@@ -338,7 +366,7 @@ Let's try this out.
       \]
       Hence
       \[
-      \frac{ \lim_{x\to 0}1}{ \lim_{x\to 0}\cos^2(e^x-1)} =
+      \frac{ \lim_{x\to 0}1}{ \lim_{x\to 0}\cos^2(5^x-1)} =
       \frac{1}{1}=1
       \]
     \end{feedback}
@@ -349,7 +377,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 1}{(x-1)\cdot \csc(\ln(x))}
+  \lim_{x\to 1}{(x-1)\cdot \csc(\sqrt{x^2-1})}
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -358,7 +386,7 @@ Let's try this out.
   \begin{feedback}
     If we are trying to use limit laws to compute this limit, we would have to use the Product Law to say that
     \[
-    \lim_{x\to 1}{(x-1)\cdot \csc(\ln(x))}= \lim_{x\to 1}{(x-1)\cdot \lim_{x\to 1}\csc(\ln(x))}.
+    \lim_{x\to 1}{(x-1)\cdot \csc(\sqrt{x^2-1})}= \lim_{x\to 1}{(x-1)\cdot \lim_{x\to 1}\csc(\sqrt{x^2-1})}.
     \]
     We are only allowed to use this law if both limits exist.  Let's
     check each limit separately.
@@ -370,21 +398,20 @@ Let's try this out.
    So this limit exists. Now we check the other factor.
    Notice that
    \[
-   \lim_{x\to 1}\csc(\ln(x)) = \frac{1}{\sin(\ln(x))}.
+   \lim_{x\to 1}\csc(\sqrt{x^2-1}) = \frac{1}{\sin(\sqrt{x^2-1})}.
    \]
    If we are trying to use limit laws to compute this limit, we would now have to use the Quotient Law to say that
    \[
-   \frac{1}{\sin(\ln(x))} = \frac{\lim_{x\to 1}1}{\lim_{x\to
-       1}\sin(\ln(x))}.
+   \frac{1}{\sin(\sqrt{x^2-1})} = \frac{\lim_{x\to 1}1}{\lim_{x\to1}\sin(\sqrt{x^2-1})}.
    \]
    We are only allowed to use this law if both limits exist and the
    denominator does not equal $0$.  The limit in the numerator definitely
    exists, so let's check the limit in the denominator.
    \begin{align*}
-   \lim_{x\to 1}\sin(\ln(x)) &= \sin(\lim_{x\to 1}\ln(x))\\
-   &=\sin(\ln(1))\\
-   &= \sin(0)\\
-   &= 0
+   	\lim_{x\to 1}\sin(\sqrt{x^2-1}) &= \sin(\lim_{x\to 1}\sqrt{x^2-1})\\
+   		&=\sin(\sqrt{1^2 -1})\\
+   		&= \sin(0)\\
+   		&= 0
   \end{align*}
   Since the denominator is $0$, we cannot apply the Quotient Law.
   \end{feedback}
@@ -393,7 +420,7 @@ Let's try this out.
 \begin{question}
   Can this limit be directly computed by limit laws?
   \[
-  \lim_{x\to 0} x\ln x
+  \lim_{x\to 0} x\cot^2 x
   \]
   \begin{multipleChoice}
     \choice{yes}
@@ -403,12 +430,12 @@ Let's try this out.
   If we are trying to use limit laws to compute this limit, we would
   have to use the Product Law to say that
   \[
-  \lim_{x\to 0} x\ln x =\lim_{x\to 0} x \cdot \lim_{x\to 0}\ln x.
+  \lim_{x\to 0} x\cot^2 x =\lim_{x\to 0} x \cdot \lim_{x\to 0}\cot^2 x.
   \]
   We are only allowed to use this law if both limits exist.  We know
-  $\lim_{x\to 0} x = 0$, but what about $\lim_{x\to 0}\ln x$?  We do
-  not know how to find $\lim_{x\to 0}\ln x$ using limit laws because $0$
-  is not in the domain of $\ln x$.
+  $\lim_{x\to 0} x = 0$, but what about $\lim_{x\to 0}\cot^2 x$?  We do
+  not know how to find $\lim_{x\to 0}\cot^2 x$ using limit laws because $0$
+  is not in the domain of $\cot^2 x$.
   \end{feedback}
 \end{question}
 
