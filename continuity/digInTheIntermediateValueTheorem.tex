@@ -182,30 +182,31 @@ The Intermediate Value Theorem can be use to show that curves cross:
 \begin{example} 
   Explain why the functions
   \begin{align*}
-    f(x) &= x^2\ln(x)\\
-    g(x) &= 2x\cos(\ln(x))
+    f(x) &= x^2\sqrt[3]{x}\\
+    g(x) &= 2(x+1)\cos(\sqrt[3]{x})
   \end{align*}
-  intersect on the interval $[1,e]$.
+  intersect on the interval $\left[0,\left( \frac{\pi}{2}\right)^3 \right]$.
 
   To start, note that both $f$ and $g$ are continuous functions, and
   hence $h = f-g$ is also a continuous function. Now
   \begin{align*}
-    h(1) &= f(1) - g(1) \\
-    &= (\answer[given]{1})^2\cdot \ln(\answer[given]{1}) - 2\cdot\answer[given]{1}\cdot \cos(\ln(\answer[given]{1}))\\
+    h(0) &= f(0) - g(0) \\
+    &= (\answer[given]{0})^2\cdot \sqrt{(\answer[given]{0})} - 2\cdot(\answer[given]{0}+1) \cdot \cos\left(\sqrt[3]{(\answer[given]{0})} \right)\\
     &= \answer[given]{-2}.
   \end{align*}
   and in a similar fashion
    \begin{align*}
-    h(e) &= f(e) - g(e) \\
-    &= e^2\cdot \answer[given]{1} - 2\cdot e\cos(\answer[given]{1})
+    h\left(\left( \frac{\pi}{2}\right)^3\right) &= f\left(\left( \frac{\pi}{2}\right)^3\right) - g\left(\left( \frac{\pi}{2}\right)^3\right) \\
+         &= \left( \left( \frac{\pi}{2}\right)^3\right)^2\cdot \sqrt{\left( \frac{\pi}{2}\right)^3} \\ 
+         & -  2\cdot\left( \left( \frac{\pi}{2}\right)^3+1\right) \cdot \cos\left(\sqrt[3]{\left( \frac{\pi}{2}\right)^3} \right)\\
    \end{align*}
-   Since $e>2$ and $0 < \cos(1)<1$ we see that the expression above is
+   Since $\cos\left( \frac{\pi}{2}\right)=0$ we see that the expression above is
    positive. Hence by the Intermediate Value Theorem, $f$ and $g$
-   intersect on the interval $[1,e]$.
+   intersect on the interval $\left[0,\left( \frac{\pi}{2}\right)^3 \right]$.
    \begin{onlineOnly}
    We can see this point of intersection by looking at the graphs of $y=f(x)$ and $y=g(x)$ on the given interval. 
    \[
-   \graph[xmin=1,xmax=e,ymin=-10,ymax=10]{x^2lnx, 2x\cos(\ln(x))}
+   \graph[xmin=1,xmax=e,ymin=-10,ymax=10]{x^2 *x^(1/3), 2(x+1)\cos(x^(1/3))}
    \]
    \end{onlineOnly}
 \end{example}

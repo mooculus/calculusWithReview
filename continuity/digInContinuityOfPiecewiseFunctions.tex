@@ -24,7 +24,7 @@ Consider the following piecewise defined function
 f(x) = 
 \begin{cases}
   \frac{x}{x-1} &\text{if $x<0$ and $x\ne 1$,}\\
-  e^{-x} + c &\text{if $x\ge 0$}.
+  \frac{x+1}{x^2+1} + c &\text{if $x\ge 0$}.
 \end{cases}
 \]
 Find $c$ so that $f$ is continuous at $x=0$.
@@ -42,8 +42,8 @@ Find $c$ so that $f$ is continuous at $x=0$.
   \end{align*}
   On there other hand
   \begin{align*}
-    \lim_{x\to 0^+} f(x) &= \lim_{x\to 0^+}\left(\answer[given]{e^{-x}+c}\right)\\
-    &= \answer[given]{e^0 + c}\\
+    \lim_{x\to 0^+} f(x) &= \lim_{x\to 0^+}\left(\answer[given]{\frac{x+1}{x^2+1} + c}\right)\\
+    &= \answer[given]{\frac{0+1}{0^2+1} + c}\\
     &= \answer[given]{1+ c}
   \end{align*}
   Hence for our function to be continuous, we need

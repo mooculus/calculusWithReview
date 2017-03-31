@@ -205,12 +205,13 @@ We conclude with an infinite limit at infinity.
 \begin{example}
 Compute
 \[
-\lim_{x\to \infty} \ln(x)
+%\lim_{x\to \infty} \ln(x)
+\lim_{x\to\infty}\sqrt{x}.
 \]
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
-            domain=0:20,
+            domain=0:10,
             ymax=4,
             ymin=-1,
             samples=100,
@@ -218,23 +219,22 @@ Compute
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west}
           ]
-	  \addplot [very thick, penColor, smooth] {ln(x)};
+	  \addplot [very thick, penColor, smooth] {x^(1/2)};
         \end{axis}
 \end{tikzpicture}
 %% \caption{A plot of $f(x)=\ln(x)$.}
 %% \label{plot:lnx}
 \end{image}
 \begin{explanation}
-The function $\ln(x)$ grows very slowly, and seems like it may have a
+The function $\sqrt{x}$ grows slowly, and seems like it may have a
 horizontal asymptote, see the graph above. However, if we consider the
-definition of the natural log as the inverse of the exponential
-function
+square root as the inverse of the function $f(x) = x^2 , \quad x \geq 0$.
 \begin{quote}%%BADBAD I would like word choice for "positive"
-  $\ln(x) = y$ means that $e^y =x$ and that $x$ is positive.
+  $\sqrt{x} = y$ means that $y^2 = x$ and that $y \geq 0$.
 \end{quote}
-We see that we may raise $e$ to higher and higher values to obtain
-larger numbers.  This means that $\ln(x)$ is unbounded, and hence
-$\lim_{x\to\infty}\ln(x)=\infty$.
+We see that we may square higher and higher values to obtain
+larger outputs.  This means that $\sqrt{x}$ is unbounded, and hence
+$\lim_{x\to\infty}\sqrt{x}=\infty$.
 \end{explanation}
 \end{example}
 
