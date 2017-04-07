@@ -24,30 +24,34 @@ story):
 \begin{dialogue}
 \item[Devyn] Riley! Something is bothering me. 
 \item[Riley] What is it?
-\item[Devyn] I have broken calculus. 
-\item[Riley] ..
-\item[Devyn] ..
-\item[Devyn]..
+\item[Devyn]  It's about rates of change.
+\item[Riley] That's just a derivative.  What's the issue?
+\item[Devyn]  It might take a bit of setup.  Suppose my car has a 10 gallon tank.  The distance $D$ I can drive, without filling up, is $D(m)=10m$ miles, where $m$ is my car's fuel
+			efficiency, in miles per gallon.
+\item[Riley]  Sure.  So if you're getting $35$ miles per gallon, that is $D(35) = 350$ miles, so you can drive 350 miles before running out of gas.
+\item[Devyn] Right!  Now, the fuel efficiency depends on how fast I'm driving.  If I'm driving 55 miles per hour, I can get 40 miles per gallon, but if I'm driving 70 miles per hour the interstate,
+			I only get 30 miles per gallon.
+\item[Riley]  Oh!  So your distance function $D$ depends on $m$, but $m$ depends on your velocity $v$.  That means $D$ is really a function of $v$.
+\item[Devyn]  Exactly!  Finding the derivative $\frac{dD}{dm}$ is easy, but how do I find $\frac{dD}{dv}$?
+\item[Riley]  If only we could find the derivative of a composite function...
 \end{dialogue}
 
-This problem that Riley and Devyn are having is somewhat subtle. 
+
 
 \begin{question}
-  What mistake is being made?
-
-\begin{multipleChoice}
-\choice{Riley did not plot $\sin(\theta)$.}
-\choice{Riley did not take the derivative correctly.}
-\choice[correct]{Riley was working in degrees, not radians.}
-\choice{$\cos(0)\ne 1$}
-\choice{Riley computed the slope incorrectly.}
-\end{multipleChoice}
-\begin{feedback}
-  In calculus, we work with radians. Working in degrees will produce
-  erroneous answers.
-\end{feedback}
+	What is $\frac{dD}{dm}$?
+	\[ \frac{dD}{dm} = \answer{10}. \]
 \end{question}
 
+\begin{question}
+	Suppose that the fuel efficiency $m$ is a linear between $v = 50$ mph to $v= 70$ mph.  What is $\frac{dm}{dv}$?
+	\begin{multipleChoice}
+		\choice{$10$}
+		\choice{$-10$}
+		\choice[correct]{$-1.5$}
+		\choice{$1.5$}
+	\end{multipleChoice}
+\end{question}
 
 %\input{../leveledQuestions.tex}
 
