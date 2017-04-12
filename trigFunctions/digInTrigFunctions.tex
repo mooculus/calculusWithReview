@@ -393,9 +393,7 @@ As a reminder, we include the graphs here.
         \end{axis}
 \end{tikzpicture}
 \end{image}
-%%%%
-%%%  Finish this! 
-%%%% 
+
 
 
 \section{The power of the Pythagorean Theorem}
@@ -440,7 +438,7 @@ The Pythagorean Theorem gives several key trigonometric identities.
   \begin{explanation}
     From the unit circle we can see
     \begin{image}
-\begin{tikzpicture}
+	\begin{tikzpicture}
 	\begin{axis}[
             xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
             axis lines=center,
@@ -469,8 +467,8 @@ The Pythagorean Theorem gives several key trigonometric identities.
           \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(t)$};
           \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(t)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
-        \end{axis}
-\end{tikzpicture}
+        	\end{axis}
+	\end{tikzpicture}
     \end{image}
     via the Pythagorean Theorem that
     \[
@@ -487,9 +485,33 @@ The Pythagorean Theorem gives several key trigonometric identities.
   \end{explanation}
 \end{theorem}
 
-%%%%%
-%%   Add more trig identities to remember!  Angle addition, Double Angle, Half-Angleformulas.
-%%%%%
+There several other trigonometric identities that appear on occasion.
+\begin{theorem}[Angle Addition Formulas]\index{Angle addition formulas}
+	\begin{align*}
+		\sin(s + t) &= \sin(s)\cos(t)  + \cos(s)\sin(t) \\
+		\cos(s+t) &= \cos(s)\cos(t) - \sin(s)\sin(t)
+	\end{align*}
+\end{theorem}
+
+If we plug $s = t = \theta$ into the angle addition formulas, we find the double-angle identities.
+\begin{theorem}[Double-Angle Identities]\index{Double-angle identities}
+	\begin{align*}
+		\sin(2 \theta) &= 2\sin(\theta)\cos(\theta)\\
+		\cos(2\theta) &= \cos^2(\theta) - \sin^2(\theta)\\
+			&= 2 \cos^2(\theta)-1\\
+			&= 1 - 2 \sin^2(\theta)
+	\end{align*}
+\end{theorem}
+
+Solving the bottom two formulas for $\cos^2(\theta)$ and $\sin^2(\theta)$ gives the half-angle identities.
+\begin{theorem}[Half-Angle Identities]\index{Half-angle identities}
+	\begin{align*}
+		\sin^2(\theta) &= \frac{1-\cos(2\theta)}{2}\\
+		\cos^2(\theta) &= \frac{1+\cos(2\theta)}{2}	
+	\end{align*}
+\end{theorem}
+
+
 
 
 \section{Trigonometric equations}
@@ -497,13 +519,66 @@ Frequently we are in the situation of having to determine precisely which angles
 \begin{example}
 	Solve the equation: \[ \sin \theta = -\frac{1}{2}. \]
 	\begin{explanation}
-		We'll start by finding the reference angle.
+		We'll start by finding the reference angle, $\theta_R$, the acute angle between the terminal side of $\theta$ and the $x$-axis.  
+		The reference angle satisfies $\sin \theta_R = \frac{1}{2}$.  
+		\begin{image}[2in]
+		   \begin{tikzpicture}
+    			\coordinate (C) at (0,2);
+    			\coordinate (D) at (4,2);
+   			 \coordinate (E) at (4,4);
+   			 \tkzMarkRightAngle(C,D,E)
+    			\tkzMarkAngle(D,C,E)
+    			\draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
+   			 \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
+  			  \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
+  			  \draw[very thick] (D)--(E)--(C)--cycle;
+    			\node at (2,2-.7) {$\answer{\sqrt{3}}$};
+    			\node[] at (4+.5,3) {$1$};
+    			\node at (2-.2,3+.4) {$2$};
+    			\node at (1.2,2.3) {$\theta_R$};
+  		  \end{tikzpicture}
+		\end{image}
+		From the picture we see $\theta_R = \frac{\pi}{6}$.  In one period $[0, 2\pi]$, there are two angles that have reference angle $\frac{\pi}{6}$ and have negative
+		sine value.  One is in quadrant 3, and one in quadrant 4.  That means the solutions in the interval $[0, 2\pi]$ are $\frac{5\pi}{6}$ and $\frac{11\pi}{6}$.
+		
+		To find all solutions, we have to add all multiples of $2\pi$ to these.  The solutions are then \[ \theta = \frac{5\pi}{6} + 2\pi k , \,\, \frac{11\pi}{6}+2\pi k , \,\, k \textrm{ any integer}. \]
 	\end{explanation}
 \end{example}
 
-%%%%%%
-%% More trig equations
-%%%%%%
+\begin{problem}
+	Solve the equation: \[ \tan \theta = -\sqrt{3}. \]
+	\begin{multipleChoice}
+		\choice{$\theta = \frac{\pi}{3}+\pi k$}
+		\choice{$\theta = \frac{\pi}{6}+ \pi k$}
+		\choice[correct]{$\theta = \frac{2\pi}{3}+ \pi k$}
+		\choice{$\theta = \frac{5\pi}{6}+\pi k$}
+		\choice{None of the above}
+	\end{multipleChoice}
+\end{problem}
+
+Let's try one a bit more complicated.
+\begin{example}
+	Solve the equation: \[ \cos \theta \left( \cos \theta + 1\right) = \sin^2 \theta. \]
+	\begin{explanation}
+		We'll start by simplifying a bit.
+		\begin{align*}
+			\cos \theta \left( \cos \theta + 1\right) &= \sin^2 \theta \\
+			\cos^2 \theta + \cos \theta &= \sin^2 \theta \\
+			\cos^2 \theta - \sin^2 \theta + \cos \theta &= 0\\
+			\cos^2 \theta - \left(1-\cos^2\theta\right) + \cos \theta &= 0\\
+			2\cos^2 \theta + \cos \theta - 1 &= 0.
+		\end{align*}
+		Notice that this equation is quadratic in $\cos \theta$.  We can factor it like we try to do to solve any other quadratic equation:
+		\[ \left( \cos \theta + 1 \right) \left( 2 \cos \theta - 1\right) = 0.\]
+		On the interval $[0, 2\pi]$, $\cos \theta = -1$ has only one solution, $\theta = \answer[given]{\pi}$.  
+		For $\cos \theta = \frac{1}{2}$, we see that the reference angle $\theta_R = \answer[given]{\frac{\pi}{6}}$.  Since cosine is positive in quadrants 1 and 4,
+		we find solutions $\theta = \frac{\pi}{6}$ and $\frac{11\pi}{6}$.
+		
+		All solutions are:
+		\[ \theta = \pi + 2 \pi k, \,\, \frac{\pi}{6}+ 2 \pi k ,\,\, \frac{11\pi}{6} + 2\pi k, \,\, k \textrm{ any integer.} \]
+	\end{explanation}
+\end{example}
+
 
 
 
