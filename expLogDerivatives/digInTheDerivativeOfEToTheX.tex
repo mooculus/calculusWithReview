@@ -147,14 +147,34 @@ Compute:
 \[
 \ddx\left(8\sqrt{x} + 7e^x \right)
 \]
-\begin{explanation}
-Write with me:
-\begin{align*}
-\ddx\left(8\sqrt{x} + 7e^x \right) &= 8\ddx x^{1/2} + 7\ddx e^x\\
-&= 4x^{-1/2} + 7 \answer[given]{e^x}.
-\end{align*}
-\end{explanation}
+	\begin{explanation}
+		Write with me:
+		\begin{align*}
+			\ddx\left(8\sqrt{x} + 7e^x \right) &= 8\ddx x^{1/2} + 7\ddx e^x\\
+				&= 4x^{-1/2} + 7 \answer[given]{e^x}.
+		\end{align*}
+	\end{explanation}
 \end{example}
+
+
+
+
+\begin{example}
+	Compute: \[ \ddx e^{4x\sqrt{x+1}} \]
+	\begin{explanation}
+		We know the derivative of $e^x$, but we're being asked the derivative of $e^{4x \sqrt{x+1}}$.  The $x$ has been replaced by a function of $x$.
+		We think of $e^{4x \sqrt{x+1}}$ as a composite function with $f(x) = e^x$ and $g(x) = 4x \sqrt{x+1}$.
+		To take the derivative of a composite function, we have chain rule: $\ddx f(g(x)) = f'( g(x) ) g'(x)$.  
+		
+		We know $f'(x) = \ddx e^x = e^x$ and $g'(x) = \ddx \left( 4x \sqrt{x+1} \right)$ which we calculate by product rule as
+		$4 \sqrt{x+1} + 4x \dfrac{1}{2 \sqrt{x+1}} \cdot 1$ (where we used chain rule AGAIN inside the square root).
+		Our answer is then:
+		\[ e^{4x \sqrt{x+1}}\left( 4\sqrt{x+1} + \dfrac{2x}{\sqrt{x+1}}\right).\]
+	\end{explanation}	
+\end{example}
+
+
+
 
 
 \end{document}
