@@ -4,7 +4,7 @@
 
 \outcome{}
 
-\title[Break-Ground:]{ Exponential function BreakGround}
+\title[Break-Ground:]{An interesting situation}
 
 \begin{document}
 \begin{abstract}
@@ -12,22 +12,45 @@
 \end{abstract}
 \maketitle
 
-Check out this dialogue between two calculus students (based on a true
-story):
+Check out this dialogue between two calculus students (based on a true story):
 
 \begin{dialogue}
-\item[Devyn] Riley, I've been thinking about ...
-\item[Riley] What is ...
-\item[Devyn] 
-\item[Riley] 
-\item[Devyn] 
+\item[Devyn] Riley, I've been thinking about the interest on my bank account.
+\item[Riley] So, like the compound interest formula, \[ A = P\left( 1 + \frac{r}{n} \right)^{nt}? \]
+\item[Devyn] Yes!  To make it easier to work with, suppose I deposit just \$1, so $P=1$.
+\item[Riley]  A \$1 bank account balance?  I can imagine that!
+\item[Devyn] If the interest is compounded monthly, $n=12$, and if the deposit is at $3\%$ interest, then $r = 0.03$.
+\item[Riley] Since $\dfrac{0.03}{12} = .0025$, that brings you to \[ A = \left( 1.0025 \right)^{12t}. \]
+\item[Devyn] My question is: How long does it take the account to double in value?  How long until the account balance is \$2?
+\item[Riley] Can't we just setup \[ \left(1.0025\right)^{12t} = 2 ?\]
+\item[Devyn] Of course, but how to solve that for $t$?  The variable is up in an exponent.
 \item[Riley] Hmmmm. I'm not sure\dots
 \end{dialogue}
 
 
+\begin{question}
+	What kind of operation will allow us to solve for $t$?
+	\begin{multipleChoice}
+		\choice{Take the square root of both sides.}
+		\choice{Take the cosecent of both sides.}
+		\choice{Raise both sides to the $1.0025$-th power.}
+		\choice[correct]{Take a logarithm of both sides.}
+	\end{multipleChoice}
+\end{question}
 
 
-\input{../leveledQuestions.tex}
+\begin{question}
+	Take the compound interest formula above $\displaystyle A = P\left( 1 + \frac{r}{n}\right)^{nt}$ with $P = 1$, $r = 1$, and $t = 1$:
+	\[ A = \left( 1 + \frac{1}{n} \right)^{n}. \]
+	Plug in larger and larger values of $n$ and see what happens to the values of $A$.
+	\begin{multipleChoice}
+		\choice{$\dfrac{1}{n}$ tends to $0$, so $\displaystyle \lim_{n \to \infty} \left(1 + \frac{1}{n} \right)^n = 1$.}
+		\choice{The exponent is getting bigger and bigger, so $\displaystyle \lim_{n \to \infty} \left(1 + \frac{1}{n} \right)^n = \infty$.}
+		\choice{$\displaystyle \lim_{n\to \infty} \left( 1 + \frac{1}{n} \right)^n = 3$.}
+		\choice[correct]{$\displaystyle \lim_{n\to \infty} \left( 1 + \frac{1}{n} \right)^n = 2.71828\ldots$.}
+	\end{multipleChoice}
+\end{question}
+%\input{../leveledQuestions.tex}
 
 
 \end{document}

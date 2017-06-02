@@ -4,7 +4,7 @@
 
 \outcome{Know the derivatives of exponential and logarithmic functions.}
 
-\title[Break-Ground:]{Exponential and logarithmic derivative BreakGround}
+\title[Break-Ground:]{Interesting changes}
 
 \begin{document}
 \begin{abstract}
@@ -16,56 +16,43 @@ Check out this dialogue between two calculus students (based on a true
 story):
 
 \begin{dialogue}
-\item[Devyn] Riley, do you remember when we first starting graphing
-  functions? Like with a ``T-chart?''
-\item[Riley] I remember everything.
-\item[Devyn] ...
-\item[Riley] ...
+\item[Devyn] Riley, remember when I asked you about compound interest?
+\item[Riley] Yes I do!  You were dealing with a formula like \[ A = P\left( 1 + \dfrac{r}{n} \right)^{nt}.\]
+\item[Devyn] I was.  With monthly compoundings and 3\% interest with a principal of \$1, we this to just
+			\[ A = (1.0025)^{12t}.\]
+\item[Riley] I remember that. What about it?
+\item[Devyn] As time passes, the account is worth more and more.
+\item[Riley] Makes sense.  You are gaining interest each month.
+\item[Devyn] But how much?  How fast is it growing?
+\item[Riley] You are thinking about rates of change!  
+\item[Devyn] Right!  How do we find the derivative $\dd[A]t$?
+\item[Riley] It isn't a polynomial, so we can't use Power Rule.  What can we do?
+
 \end{dialogue}
 
 \begin{problem}
-  When $x$ is a large number (furthest from zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
+  What is the average rate of change of \[A = (1.0025)^{12t}\] over the first 2 years (so from $t=0$ to $t=2$)?  (ROUND TO 2 DECIMAL PLACES)
   \begin{multipleChoice}
-    \choice{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice[correct]{$5x^6$}
+    \choice[correct]{$0.03$.}
+    \choice{$0.06$.}
+    \choice{$1.06$.}
+    \choice{$1$.}
   \end{multipleChoice}
 \end{problem}
 
 \begin{problem}
-  When $x$ is a small number (near zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
-  \begin{multipleChoice}
-    \choice[correct]{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice{$5x^6$}
+  What are the units of that average rate of change?
+    \begin{multipleChoice}
+    \choice{dollars}
+    \choice{years}
+    \choice[correct]{dollars/year}
+    \choice{years/dollar}
+    \choice{It does not have a unit}
   \end{multipleChoice}
 \end{problem}
 
 
-\begin{problem}
-  Very roughly speaking, what does the graph of
-  $y=5x^6-5x^5-5x^4+5x^3+x^2 -1$ look like?
-  \begin{multipleChoice}
-    \choice{The graph starts in the lower left and ends in the upper
-      right of the plane.}
-    \choice{The graph starts in the lower right and ends in the upper
-      left of the plane.}
-    \choice[correct]{The graph looks something like the letter ``U.''}
-    \choice{The graph looks something like an upside down letter ``U.''}
-  \end{multipleChoice}
-\end{problem}
-
-
-
-\input{../leveledQuestions.tex}
+%\input{../leveledQuestions.tex}
 
 
 \end{document}
