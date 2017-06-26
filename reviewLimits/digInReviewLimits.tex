@@ -95,6 +95,7 @@ Calculate $\displaystyle \lim_{x\to \pi} \left(3x^2 - 4x \cos(x)\right)$.
 	\end{explanation}
 \end{example}
 
+
 From the Limit Laws, we saw that polynomial functions had a very important property for us.  They were `continuous'.
 \begin{definition}
   A function $f$ is \dfn{continuous at a point} $a$ if
@@ -116,6 +117,14 @@ limits!
 	\end{explanation}
 \end{example}
 
+Try one on your own.
+\begin{problem}
+	Evaluate the limit.
+	\[ \lim_{x \to 3} \left( 4(x-2)^2 - 3e^{2x-6}+ \tan\left( \frac{x^2-8}{4} \pi \right) \right) \begin{prompt}= \answer{2}.\end{prompt} \]
+\end{problem}
+
+
+
 What if we get a function that isn't continuous?  
 \begin{example}
 	Evaluate: $\displaystyle \lim_{x\to 2} \dfrac{x^2-4}{x^2+x-6}$.
@@ -128,11 +137,17 @@ What if we get a function that isn't continuous?
 				&= \dfrac{(x+2)\cancel{(x-2)}}{(x+3)\cancel{(x-2)}}\\
 				&= \dfrac{x+2}{x+3}
 		\end{align*}
-		\[ \lim_{x\to 2} \dfrac{x-4}{x^2+x-6} = \answer{\frac{4}{5}}. \]	
+		\[ \lim_{x\to 2} \dfrac{x-4}{x^2+x-6} \begin{prompt}= \answer{\frac{4}{5}} .\end{prompt}  \]	
 	\end{explanation}
 \end{example}
 
+In this example, we were able to use our algebra skills to replace the function with a discontinuity at $x=2$ with a function that is continuous there.  Try one on your own.
+\begin{problem}
+	Evaluate the limit.
+	\[ \lim_{x\to -1} \frac{x^2+5x+4}{2x^2+5x+3} \begin{prompt}= \answer{2}. \end{prompt} \]
+\end{problem}
 
+Algebra doesn't always help, though.  The function in the next example is not continuous at $x=3$, but we cannot replace it by a function that is continuous there.
 \begin{example}
 	Evaluate: $\displaystyle \lim_{x\to 3} \dfrac{2^x \ln(x-1)}{(x-3)^3\cos(x)}$.
 	\begin{explanation}
@@ -153,9 +168,81 @@ What if we get a function that isn't continuous?
 		Putting these together we see that $\displaystyle \lim_{x\to 3}\dfrac{ 2^x \ln(x-1)}{(x-3)^3 \cos(x)}$ does not exist.
 	\end{explanation}
 \end{example}
-	
+For \zeroOverZero forms, algebra will usually help us evaluate the limit we are interested in.  For \numOverZero forms, like in this previous example, we're expecting one-sided limits
+of $\pm \infty$.  We use the signs of the individual factors to see whether each one-sided limit is either $+\infty$ or $-\infty$, then compare them to determine if we can say anything 
+about the limit itself.
 
-***** CONT of PW FUNCTIONS ****
-**** SQUEEZE THM *****
-***** INT VALUE THM****
+\begin{problem}
+	Evaluate the limit.
+	\[ \lim_{x \to 1^-} \frac{(3+x)^2 \sin(x)}{x(1-x)^5 e^x } \begin{prompt} = \answer{+\infty} .\end{prompt} \]
+\end{problem}	
+
+In all of the limits we've been talking about so far, the input variable is tending to a specific value.  If instead we allow it to grow (in either direction) without bound, we are talking about
+`Limits at Infinity' rather than just `Limits'.  These limits at infinity are the tools we used to detect horizontal asymptotes.
+\begin{example}
+	Evaluate: $\displaystyle \lim_{x\to \infty} \frac{4x^3-6x+2}{5x^3+7x^2-3x+1}$.
+	\begin{explanation}
+		The numerator and denominator each tend to $\infty$ as $x$ tends to $\infty$, so this limit has form \inftyOverInfty, another indeterminate form.  We need to do some simplification to evaluate it.  
+		The function is rational, so remember our trick.  Start by finding the largest degree term in the denominator.  Here that's an $x^3$-term.  Divide the numerator and denominator
+		by $x^3$.
+		\begin{align*}
+			\lim_{x\to\infty} \frac{4x^3-6x+2}{5x^3+7x^2-3x+1} &= \lim_{x\to\infty} \frac{4x^3-6x+2}{5x^3+7x^2-3x+1} \cdot \frac{1/x^3}{1/x^3}\\
+				&= \lim_{x\to\infty} \frac{\frac{4x^3}{x^3}-\frac{6x}{x^3}+\frac{2}{x^3}}{\frac{5x^3}{x^3}+\frac{7x^2}{x^3}-\frac{3x}{x^3}+\frac{1}{x^3}}\\
+				&= \lim_{x\to\infty} \frac{4-\frac{6}{x^2}+\frac{2}{x^3}}{5+\frac{7}{x}-\frac{3}{x^2}+\frac{1}{x^3}}\\
+				&= \lim_{x\to\infty}\frac{4}{5}\\
+				&= \answer{\frac{4}{5}}.
+		\end{align*}
+	\end{explanation}
+\end{example}
+
+With a little work, this trick also helps with functions that are not rational.
+\begin{example}
+	Evaluate: $\displaystyle \lim_{x\to -\infty} \frac{3x+1}{\sqrt{x^2+9}}$.
+	\begin{explanation}
+		In the square root, there is a polynomial $x^2+9$.  Since $x$ is tending toward $-\infty$, we can rewrite the radical in the denominator.  
+		\begin{align*}
+			\sqrt{x^2+9} &= \sqrt{x^2\left(1 + \frac{9}{x^2} \right)}\\
+				&= \sqrt{x^2} \sqrt{1+\frac{9}{x^2}}\\
+				&= |x| \sqrt{1+\frac{9}{x^2}}\\
+				&= -x \sqrt{1+\frac{9}{x^2} }.
+		\end{align*}
+		(Why $-x$ instead of $x$?  When would we have gotten $x$ instead?)
+
+		If the denominator were really $-x$, then we would divide the numerator and denominator by $x$.  Let's see what happens if we do that anyway.
+		\begin{align*}
+			\lim_{x\to -\infty} \frac{3x+1}{\sqrt{x^2+9}} &= \lim_{x\to -\infty} \frac{3x+1}{\sqrt{x^2+9}} \cdot \frac{1/x}{1/x}\\
+				&= \lim_{x\to -\infty} \frac{3+\frac{1}{x}}{\frac{1}{x} \cdot \sqrt{x^2+9}} \\
+				&= \lim_{x\to -\infty} \frac{3+\frac{1}{x}}{\frac{1}{x} \cdot -x \sqrt{1 + \frac{9}{x^2}}} \\
+				&= \lim_{x\to -\infty} \frac{3+\frac{1}{x}}{ - \sqrt{1 + \frac{9}{x^2}}} \\
+				&= \lim_{x\to -\infty} \frac{3}{-\sqrt{1}}\\
+				&= \answer{-3}.
+		\end{align*}
+	\end{explanation}
+\end{example}
+
+Let's try one that looks a bit different.
+\begin{example}
+	Evaluate: $\displaystyle \lim_{x\to\infty} \left(x - \sqrt{x^2+1} \right)$.
+	\begin{explanation}
+		It is clear that $\lim_{x\to\infty}x = \infty$ and $\lim_{x\to\infty} \sqrt{x^2+1} = \infty$.  That means this limit has form $\inftyMinusInfty$, which is indeterminate.  To evaluate,
+		we'll need to rewrite it a bit.  We'll start by multiplying and dividing by the conjugate.
+		\begin{align*}
+			\lim_{x\to\infty}\left(x - \sqrt{x^2+1}\right) &= \lim_{x\to\infty}\left(x - \sqrt{x^2+1}\right) \cdot \frac{x + \sqrt{x^2+1}}{x+\sqrt{x^2+1}}\\
+				&= \lim_{x\to\infty} \frac{\left(x-\sqrt{x^2+1}\right)\left(x+\sqrt{x^2+1}\right)}{x+\sqrt{x^2+1}}\\
+				&= \lim_{x\to\infty}\frac{x^2 - \left(x^2+1\right)}{x+\sqrt{x^2+1}}\\
+				&= \lim_{x\to\infty}\frac{-1}{x + \sqrt{x^2+1}}.
+		\end{align*}
+		The numerator is a constant $-1$ and the denominator tends to $\infty$.  That means
+		\[ \lim_{x\to\infty} \left( x - \sqrt{x^2+1} \right) = \answer{0}. \]
+	\end{explanation}	
+\end{example}
+
+Try one on your own.
+\begin{problem}
+	Evaluate the limit.
+	\[  \lim_{x\to -\infty} \frac{4x^3+x}{5x^3+2\sqrt{x^6 + 1}} \begin{prompt}= \answer{\frac{4}{3}} .\end{prompt}\]
+\end{problem}
+
+
+
 \end{document}
