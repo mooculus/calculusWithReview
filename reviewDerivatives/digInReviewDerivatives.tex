@@ -9,41 +9,181 @@
 
 \begin{document}
 \begin{abstract}
-  Definition of the derivative and differentiation rules
+  Review differentiation.
 \end{abstract}
 \maketitle
 
 
 \section{What are derivatives?}
+After working with limits, our main tool last semester was the derivative.  We started with a function $f$ and a number $a$ in the
+interior of its domain.  The derivative of $f$ at $a$ ( denoted as either $f'(a)$ or $\eval{ \ddx f(x)}_{x=a}$ ) can be interpreted
+in a couple different ways.  It represents the \emph{instantaneous rate of change of $f$ at $a$}.  Graphically it represents
+the \emph{slope of the line tangent to the graph of $y=f(x)$ at the point $(a, f(a) )$}. 
 
+When we first came up with the idea, we didn't know how to calculate $f'(a)$ explicitly, so we approximated instead.  We
+approximated the \emph{instantaneous rate of change at $a$} by the \emph{average rate of change on $[a, a+h]$}.  Graphically
+we approximated the \emph{slope of the tangent line at $(a,f(a))$} by the \emph{slope of the secant line through $(a, f(a))$ and $(a+h, f(a+h))$}.
+The exact value arose when we took the limit as $h$ tended to $0$.
+
+The definition of the derivative is then:
 \begin{definition}
-  A \dfn{rational function} in the variable $x$ is a function the form
+  The \dfn{derivative} of $f$ is 
   \[
-  f(x) = \frac{p(x)}{q(x)}
+  \ddx f(x) = \lim_{h\to 0} \frac{f(x+h) - f(x)}{h}.
   \]
-  where $p$ and $q$ are polynomial functions. The domain of a rational
-  function is all real numbers except for where the denominator is
-  equal to zero.
 \end{definition}
 
+Let's go through an example of using this definition.
+\begin{example}
+	Find an equation of the line tangent to the graph of  $f(x) = x^2 - 3x + 1$ at the point $(2, -1)$.
+	\begin{explanation}
+		To find an equation for a line we need a point on the line and the slope of the line.  Since we know the point
+		$(2, -1)$ is on the line, our equation should look like:
+		\[ y + 1 = m_{tan} (x-2) \]
+		where $m_{tan}$ is the slope.  
+		
+		We know the slope at $(2, -1)$ means we need to find $f'\left( \answer[given]{2} \right)$.
+		\begin{align*}
+			f'(2) &= \lim_{h \to 0} \frac{ f(2+h) - f(2) }{h}\\
+				&= \lim_{h \to 0} \frac{\left((2+h)^2 - 3(2+h) + 1\right) - \left(  -1 \right)}{h}\\
+				&= \lim_{h \to 0} \frac{\left( (4 + 4h + h^2)-(6+3h) + 1\right) +1}{h}\\
+				&= \lim_{h \to 0} \frac{h^2+h}{h}\\
+				&= \lim_{h \to 0} \frac{h(h+1)}{h}\\
+				&= \lim_{h \to 0} \frac{\cancel{h}(h+1)}{\cancel{h}}\\
+				&= \lim_{h \to 0} (h+1)\\
+				&= \answer{1}
+		\end{align*}
+
+		An equation for the line is: \[ y + 1 = 1 (x-2). \]
+	\end{explanation}
+\end{example}
+
+\section{Shortcut formulas}
+We soon turned to finding `shortcut formulas' for finding derivatives more easily.   The most important of these are in the table below.
+\begin{xbox}{Power Rule}
+\[ \ddx\left( x^n \right) = n x^{n-1} \]
+\end{xbox}
+
+\begin{xbox}{Combining Formulas}
+	\begin{align*}
+		\ddx \left( f(x) + g(x) \right) 	&= f'(x) + g'(x)\\
+		\ddx \left( f(x) g(x) \right) 		&= f'(x) g(x) + f(x) g'(x)\\
+		\ddx\left( \dfrac{f(x)}{g(x)} \right) &= \dfrac{f'(x)g(x) - f(x) g'(x)}{(g(x))^2}\\
+		\ddx \left( f\left(g(x) \right) \right) &= f'\left( g(x) \right) g'(x)
+	\end{align*}
+\end{xbox}
+
+\begin{xbox}{Exponentials and Logarithms}
+	\begin{align*}
+		\ddx \left( e^x \right) 		&= e^x\\
+		\ddx \left( \ln x \right) 		&= \dfrac{1}{x}\\
+		\\
+		\ddx \left( b^x \right) 		&= b^x \ln b\\
+		\ddx \left( \log_b x\right) 	&= \dfrac{1}{x \ln b}
+	\end{align*}
+\end{xbox}
+
+\begin{xbox}{Trigonometric Functions}
+	\begin{align*}
+		\ddx\left( \sin x\right) 		&= \cos x\\
+		\ddx \left( \cos x \right) 	&= - \sin x\\
+		\ddx\left( \tan x \right) 	&= \sec^2 x\\
+		\ddx \left( \sec x \right) 	&=  \sec x \tan x\\
+		\ddx \left( \csc x \right) 	&= - \csc x \cot x\\
+		\ddx \left( \cot x \right) 	&= - \csc^2 x
+	\end{align*}
+\end{xbox}
+
+\begin{example}
+	If an object has displacement function given by $s(t) = 2t^2 - 4t + e^t$, find the velocity at time $t = 2$.
+	\begin{explanation}
+		Since velocity is the rate of change of displacement, this is asking us to find $s'(2)$.  We'll find
+		$v(t) = s'(t)$ by differentiating term-by-term.
+		\begin{align*}
+			v(t) 	&= \ddt\left(2t^2-4t+e^t \right)\\
+				&= \ddt\left(2t^2\right) - \ddt\left(4t\right) + \ddt \left( e^t \right)\\
+				&= \answer{4t} - \answer{4} + \answer{e^t}
+		\end{align*}
+		This gives a formula for $v(t)$, but we are being asked for the velocity at a specific time.  We still need to
+		plug in $t = 2$.
+		\[ v(2) = 8 - 4 + e^2 = 4+ e^2. \]
+	\end{explanation}
+\end{example}
+
+\begin{example}
+	Find $\ddx \left( 2x \tan \left(\log_5 (x+2)\right) \right)$.
+	\begin{explanation}
+		At its outer-most level, this is a multiplication problem.  The $2x$ is being multiplied by a tangent function.  That means we'll start with
+		the Product Rule.
+		\begin{align*} 
+		\ddx \left( 2x \tan\left( \log_5 (x+2) \right) \right) &= \ddx(2x) \tan\left( \log_5 (x+2) \right) \\
+			&+ (2x) \ddx\left( \tan\left( \log_5 (x+2)\right) \right).
+		\end{align*}
+		The first term on we can handle, since $\displaystyle \ddx(2x) = \answer{2}$.  The term on the right asks us to differentiate a tangent function, but the stuff
+		on the inside isn't just the variable itself.  That means it is a Chain Rule problem.
+			\[ \ddx \left( \tan \left( \log_5 (x+2) \right) \right) = \sec^2\left( \log_5 (x+2) \right) \cdot \ddx \left( \log_5 (x+2) \right). \]
+		We have to take the derivative of a logarithm, but $x$ is not alone on the inside.  There is ANOTHER Chain Rule.
+			\[ \ddx \left( \log_5 (x+2) \right) = \dfrac{1}{(x+2) \ln( \answer[given]{5} )} \cdot \ddx(x+2) = \dfrac{1}{(x+2) \ln 5}. \]
+
+		Putting this all together, our derivative is:
+		\[ 2 \tan \left( \log_5 (x+2) \right) + \dfrac{2x \sec^2 \left( \log_5 (x+2) \right)}{(x+2) \ln 5}. \]
+	\end{explanation}
+\end{example}
+
+
+\begin{example}
+	Suppose $f$ is a function whose values are given in the following table.
+	\begin{center}
+		\begin{tabular}{c c c}
+			\hline \hline
+			x & f(x) & f'(x) \\ 
+			\hline
+			0 & 1 & -1 \\
+			1 & -1 & 3\\
+			2 & 6 & -7\\
+			\hline
+		\end{tabular}		
+	\end{center}
+	
+	Find $\displaystyle \eval{ \ddx\left( \cos\left( (x+\pi) f( x ) \right) \right)}_{x=0}$.
+	\begin{explanation}
+		Notice that, at its outer-most level, this function is just the cosine of something.  That means this is a Chain Rule problem.  Let's start with that.
+		\[\ddx\left( \cos\left( (x+\pi) f( x ) \right) \right) = -\sin\left( (x+\pi) f( x ) \right) \cdot \ddx\left( (x+\pi) f( x ) \right). \]
+		
+		The stuff that was on the inside of the cosine is a product of $(x + \pi)$ with $f(x)$, so next is Product Rule.
+		\begin{align*} 
+			\ddx \left( x + \pi\right) f(x) &= \ddx\left(x+ \pi\right) f(x) + (x + \pi) \ddx \left( f(x) \right)\\
+				&= \left(\answer[given]{1}\right) f(x) + (x+\pi) f'(x).
+		\end{align*}
+		Altogether we have:
+		\[\ddx\left( \cos\left( (x+\pi) f( x ) \right) \right) = -\sin\left( (x+\pi) f( x ) \right) \cdot \left(f(x) + (x+\pi) f'(x) \right). \]
+		
+		Plugging in $x=0$ gives:
+		\begin{align*}
+			\eval{\ddx\left( \cos\left( (x+\pi) f( x ) \right) \right)}_{x=0} &= -\sin\left( \pi f( 0 ) \right) \cdot \left(f(0) + \pi f'(0) \right) \\
+				&= -\sin\left( \pi \right) \cdot \left( 1 - \pi \right)\\
+				&= \answer{0}.
+		\end{align*}
+	\end{explanation}
+\end{example}
+
+
+\section{Applications}
+We finished last semester with a few applications that showed some of the things the derivative was good for.  (There are MANY others!)
+
+Recall that a \emph{critical point} of a function $f$ is a number $c$  with either $f'(c)=0$ or $f'(c)$ does not exist.
 \begin{question}
-  Which of the following are rational functions?
-  \begin{selectAll}
-    \choice[correct]{$f(x) = 0$}
-    \choice[correct]{$f(x) = \frac{3x+1}{x^2-4x+5}$}
-    \choice{$f(x)=e^x$}
-    \choice{$f(x)=\frac{\sin(x)}{\cos(x)}$}
-    \choice[correct]{$f(x) = -4x^{-3}+5x^{-1}+7-18x^2$}
-    \choice{$f(x) = x^{1/2}-x +8$}
-    \choice{$f(x)=\frac{\sqrt{x}}{x^3-x}$}
-  \end{selectAll}
-  \begin{feedback}
-    All polynomials can be thought of as rational functions.
-  \end{feedback}
+	Find the critical points of the function $\displaystyle f(x) = x e^x$.
+	
+	\begin{prompt} \[x = \answer{-1}\]\end{prompt}
 \end{question}
 
-
-%% \section{Connections to polynomials}
-%% $\frac{x^2-3x+2}{x-2} \ne x-1$
+Critical points played a large role for us in graphing functions and in optimization problems. Try the following optimization problem.
+\begin{question}
+	Among all rectangles with perimeter $30$, find the maximum area possible.
+	
+	
+	\begin{prompt} \[ \textrm{The maximum area is } \answer{\frac{225}{4}}. \] \end{prompt}
+\end{question}
 
 \end{document}

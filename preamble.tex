@@ -22,6 +22,19 @@
 
 
 
+\usepackage[many]{tcolorbox}  %% for titled boxes
+\newtcolorbox{xbox}[1]{%
+    tikznode boxed title,
+    enhanced,
+    arc=0mm,
+    interior style={white},
+    attach boxed title to top center= {yshift=-\tcboxedtitleheight/2},
+    fonttitle=\bfseries,
+    colbacktitle=white,coltitle=black,
+    boxed title style={size=normal,colframe=white,boxrule=0pt},
+    title={#1}}
+
+
 \usepackage{array}
 \setlength{\extrarowheight}{+.1cm}   
 \newdimen\digitwidth
@@ -45,6 +58,7 @@
 \newcommand{\pp}[2][]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\l}{\ell}
 \newcommand{\ddx}{\frac{d}{\d x}}
+\newcommand{\ddt}{\frac{d}{\d t}}
 
 \newcommand{\zeroOverZero}{\ensuremath{\boldsymbol{\tfrac{0}{0}}}}
 \newcommand{\inftyOverInfty}{\ensuremath{\boldsymbol{\tfrac{\infty}{\infty}}}}
