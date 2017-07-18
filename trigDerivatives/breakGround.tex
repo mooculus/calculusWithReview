@@ -4,11 +4,11 @@
 
 \outcome{}
 
-\title[Break-Ground:]{Trig Derivative BreakGround}
+\title[Break-Ground:]{How fast was the pen going?}
 
 \begin{document}
 \begin{abstract}
-  Two young mathematicians think about the plots of functions.
+  Two young mathematicians think about the rate of change of periodic motion.
 \end{abstract}
 \maketitle
 
@@ -16,58 +16,85 @@ Check out this dialogue between two calculus students (based on a true
 story):
 
 \begin{dialogue}
-\item[Devyn] Riley, do you remember when we first starting graphing
-  functions? Like with a ``T-chart?''
-\item[Riley] I remember everything.
-\item[Devyn] ...
-\item[Riley] ...
-\item[Devyn] ...
-\item[Riley] Hmmmm. I'm not sure\dots
+\item[Devyn] Riley, do you remember your pen bouncing on a spring?
+\item[Riley] Sure!  I still have the graph of it's height that we made.  It looked like this:
+\begin{image}
+      \begin{tikzpicture}
+        		\begin{axis}[
+            		xmin=0,xmax=13.5,ymin=-1.5,ymax=1.5,
+            		axis lines=center,
+            		ticks=none,
+            		width=6in,
+            		height=3in,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          		]        
+          			\addplot [very thick, penColor, samples=100,smooth, domain=(0:13.5)] {-cos(deg(x))};
+        		\end{axis}
+ 	 \end{tikzpicture}
+  \end{image}
+
+\item[Devyn] Did you notice that at the top, the graph looks like it has horizontal tangent lines?
+\item[Riley] And at the bottoms, too!
+\item[Devyn] Right!  That means the pen was at rest at those instants.  What about at other points, though?
+\item[Riley] The steepest slopes look like they happen when the graph crossed the $t$-axis.  That means the pen was
+moving fastest at those times.
+\item[Devyn] How fast was it going though?  And what about at other times?
+\item[Riley] Hmmmm. I'm not sure yet\dots
 \end{dialogue}
 
+Let's put some labels on the graph so we can talk about it.
+\begin{image}
+      \begin{tikzpicture}
+        		\begin{axis}[
+            		xmin=-1,xmax=13.5,ymin=-1.5,ymax=1.5,
+            		axis lines=center,
+            		ticks=none,
+            		width=6in,
+            		height=3in,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          		]        
+          			\addplot [very thick, penColor, samples=100,smooth, domain=(0:13.5)] {-cos(deg(x))};
+  				\draw (0,-1) node {\textbullet};
+				\draw ( 1.57, 0 ) node {\textbullet};
+				\draw (3.14, 1 ) node {\textbullet};
+				\draw (4.71, 0 ) node {\textbullet};
+		        		\draw (-0.5,-1) node {A};
+				\draw ( 1.4, 0.3 ) node {B};
+				\draw (3.14, 1.2 ) node {C};
+				\draw (4.8, 0.3 ) node {D};
+		\end{axis}
+ 	 \end{tikzpicture}
+  \end{image}
+  
 \begin{problem}
-  When $x$ is a large number (furthest from zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
-  \begin{multipleChoice}
-    \choice{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice[correct]{$5x^6$}
-  \end{multipleChoice}
+  At which of these points does the pen have the highest velocity?
+  \begin{selectAll}
+    \choice{$A$}
+    \choice[correct]{$B$}
+    \choice{$C$}
+    \choice{$D$}
+    \choice{None of these.}
+  \end{selectAll}
 \end{problem}
 
 \begin{problem}
-  When $x$ is a small number (near zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
-  \begin{multipleChoice}
-    \choice[correct]{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice{$5x^6$}
-  \end{multipleChoice}
+  At which of these points does the pen have the lowest speed? 
+  \begin{selectAll}
+    \choice[correct]{$A$}
+    \choice{$B$}
+    \choice[correct]{$C$}
+    \choice{$D$}
+    \choice{None of these.}
+  \end{selectAll}
 \end{problem}
 
 
 \begin{problem}
-  Very roughly speaking, what does the graph of
-  $y=5x^6-5x^5-5x^4+5x^3+x^2 -1$ look like?
-  \begin{multipleChoice}
-    \choice{The graph starts in the lower left and ends in the upper
-      right of the plane.}
-    \choice{The graph starts in the lower right and ends in the upper
-      left of the plane.}
-    \choice[correct]{The graph looks something like the letter ``U.''}
-    \choice{The graph looks something like an upside down letter ``U.''}
-  \end{multipleChoice}
+	Use slopes of tangent lines to plot the graph of the derivative.  Does it look familiar?
 \end{problem}
-
-
-
-\input{../leveledQuestions.tex}
+%\input{../leveledQuestions.tex}
 
 
 \end{document}
