@@ -7,4 +7,3 @@ Table
 Sum
 Infinite Sum
 
-This section needs to be written.
