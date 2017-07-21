@@ -1,62 +1,33 @@
-.DS*
-._.DS*
-._*
-
-.smbdelete*
-
-## Core latex/pdflatex auxiliary files:
+*~
 *.aux
-*.lof
+*.pdf
 *.log
-*.lot
-*.fls
 *.out
 *.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
+*.synctex.gz
 *.jax
 *.oc
-
-## Intermediate documents:
 *.dvi
-*-converted-to.*
-
-
-## Build tool auxiliary files:
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
-*.pdfsync
-
-
-# makeidx
 *.idx
 *.ilg
 *.ind
-*.ist
-
-
-
-
-
-# todonotes
-*.tdo
-
-# xypic precompiled matrices
-*.xyc
-
-
-## Editors:
-# WinEdt
-*.bak
-*.sav
-
-# auto folder when using emacs and auctex
-/auto/*
-
-# expex forward references with \gathertags
-*-tags.tex
+*.4ct
+*.4tc
+*.auxlock
+*.html
+*.idv
+*.tmp
+*.xref
+*.lg
+*.svg
+*.png
+*.md5
+*.dpth
+*.ps
+*.jpg
+.DS_Store
+*.ids
+*.table
+*.dat
+*.script
+*.dep
