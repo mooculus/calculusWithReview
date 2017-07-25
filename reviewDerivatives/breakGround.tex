@@ -16,45 +16,40 @@ Check out this dialogue between two calculus students (based on a true
 story):
 
 \begin{dialogue}
-\item[Devyn] Riley, do you remember when we first starting graphing
-  functions? Like with a ``T-chart?''
-\item[Riley] I remember everything.
-\item[Devyn] ...
-\item[Riley] ...
-\item[Devyn] ...
-\item[Riley] ...
-\item[Devyn] ...
-\item[Riley] ...
+\item[Devyn] Riley, I've got a weird limit I'm trying to evaluate.
+\item[Riley] What is it?
+\item[Devyn] I'm trying to find \[ \lim_{x \to 0} \frac{(e^x + \sin x) - 1}{x}.\]
+\item[Riley] Have you tried just plugging in $0$?
+\item[Devyn] Yes, but it looks like a \zeroOverZero form.  Usually I would just do some algebra to simplify the limit and it would work out,
+		but there doesn't seem to be any algebra to do.
+\item[Riley] Hmmm... I want to try something.  What if we take that $e^x + \sin x$ group and call it $f(x)$.  Then this limit is
+		\[ \lim_{x \to 0} \frac{f(x) - 1}{x}.\]
+\item[Devyn] Oh!  With that choice of $f$, we know $f(0) = 1$, so I can rewrite that limit as
+		\[ \lim_{x \to 0} \frac{f(x) - f(0)}{x-0}.\]
+\item[Riley] That looks familiar!
 \end{dialogue}
 
 \begin{problem}
- Question
+ In trying to evaluate Devyn's limit, Riley and Devyn managed to rewrite it into a form they had worked with before.  Why does this limit look familiar?
   \begin{multipleChoice}
-  	  \choice{$-1$}
-  	  \choice{$x^2$}
-  	  \choice{$5x^3$}
-  	  \choice{$-5x^4$}
-  	  \choice{$-5x^5$}
-  	  \choice[correct]{$5x^6$}
+  	  \choice{It is a \zeroOverZero-form.}
+  	  \choice[correct]{It is the definition of the derivative.}
+  	  \choice{It is how you solve optimization problems.}
+  	  \choice{It becomes a Squeeze Theorem problem.}
+  	  \choice{None of the above.}
   \end{multipleChoice}
 \end{problem}
 
 \begin{problem}
-  When $x$ is a small number (near zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
-  \begin{multipleChoice}
-    \choice[correct]{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice{$5x^6$}
-  \end{multipleChoice}
+Use what you found out about that form to find the value of the Devyn's limit?
+	\begin{prompt}
+		$\displaystyle \lim_{x \to 0} \frac{(e^x + \sin x) - 1}{x} = \answer{2}$.
+	\end{prompt}
 \end{problem}
 
 
 
-\input{../leveledQuestions.tex}
+%\input{../leveledQuestions.tex}
 
 
 \end{document}

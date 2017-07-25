@@ -4,7 +4,7 @@
 
 \outcome{Review limits.}
 
-\title[Break-Ground:]{Review Limits BreakGround Here}
+\title[Break-Ground:]{Guess the Value}
 
 \begin{document}
 \begin{abstract}
@@ -16,59 +16,54 @@ Check out this dialogue between two calculus students (based on a true
 story):
 
 \begin{dialogue}
-\item[Devyn] Riley, do you remember when we first starting graphing
-  functions? Like with a ``T-chart?''
-\item[Riley] I remember everything.
-\item[Devyn] ...
-\item[Riley] ...
-\item[Devyn] ...
-\item[Riley] ...
-\item[Devyn] ...
-\item[Riley] ...
+	\item[Devyn] Riley, I want to play a game!
+	\item[Riley]  Ok.  What's the game?
+	\item[Devyn] I'm thinking of a function.  You are trying to figure out the output value of my function when the input is $4$.
+	\item[Riley] So if I call your function $f$, I win if I can guess $f(4)$, right?  What information do I have to work with?
+	\item[Devyn] Right!  You can ask for the output values for three different input values that are not $4$.  Any other input is ok.
+	\item[Riley] I'm in!  What's $f(3)$?
+	\item[Devyn] When the input is $3$, the output is $6.5$, so $f(3) = 6.5$.  That's one value down, two more.  What do you want to know next?
+	\item[Riley] What's $f(3.9)$?
+	\item[Devyn] I think I see your strategy.  $f(3.9) = 6.895$.
+	\item[Riley] With my last value, I'll ask for $f(3.999)$.
+	\item[Devyn] $f(3.999) = 6.9999972$.  Was that enough information for you to guess $f(4)$?
 \end{dialogue}
 
 \begin{problem}
-Question
+What is $f(4)$?
   \begin{multipleChoice}
-    \choice{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice[correct]{$5x^6$}
+    \choice{$6.99999999999943$}
+    \choice{$7.00000123$}
+    \choice{$7$}
+    \choice[correct]{Not enough information to tell.}
   \end{multipleChoice}
 \end{problem}
 
 \begin{problem}
-  When $x$ is a small number (near zero), which term of
-  $5x^6-5x^5-5x^4+5x^3+x^2 -1$ is largest (furthest from zero)?
+  Which of the following best describes Riley's strategy to find the value?
   \begin{multipleChoice}
-    \choice[correct]{$-1$}
-    \choice{$x^2$}
-    \choice{$5x^3$}
-    \choice{$-5x^4$}
-    \choice{$-5x^5$}
-    \choice{$5x^6$}
+    \choice{Differentiation.}
+    \choice{Chain Rule.}
+    \choice[correct]{Limit.}
+    \choice{Optimization.}
+    \choice{None of these.}
   \end{multipleChoice}
 \end{problem}
 
 
 \begin{problem}
-  Very roughly speaking, what does the graph of
-  $y=5x^6-5x^5-5x^4+5x^3+x^2 -1$ look like?
-  \begin{multipleChoice}
-    \choice{The graph starts in the lower left and ends in the upper
-      right of the plane.}
-    \choice{The graph starts in the lower right and ends in the upper
-      left of the plane.}
-    \choice[correct]{The graph looks something like the letter ``U.''}
-    \choice{The graph looks something like an upside down letter ``U.''}
-  \end{multipleChoice}
+  Which of the following properties would have given Riley a better chance at guessing the value?
+  \begin{selectAll}
+    \choice[correct]{Differentiability.}
+    \choice[correct]{Continuity.}
+    \choice{The function has an absolute maximum value.}
+    \choice{None of these.}
+  \end{selectAll}
 \end{problem}
 
 
 
-\input{../leveledQuestions.tex}
+%\input{../leveledQuestions.tex}
 
 
 \end{document}
