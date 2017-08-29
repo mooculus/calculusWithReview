@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\begin{document}
+
+
+	The graph of the polynomial function $p(x) = -x^3 + 4x$ is given in the figure below.
+	
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-3, xmax=3, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-3,...,3}, ytick={-2,...,2},
+            			%xticklabels={-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+          			\addplot[color=penColor,very thick,smooth,domain=-3:3] {-1*x*(x^2-4)};
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+\begin{exercise}
+	What is the domain of the function?
+	\[ \left( \answer{-\infty}\, , \, \answer{\infty}\right) \]
+\end{exercise}
+
+\begin{exercise}
+	What is the range of the function?
+	\[ \left( \answer{-\infty}\, , \, \answer{\infty}\right) \]	
+\end{exercise}
+
+\begin{exercise}
+	Use the graph to evaluate the following limit.
+	\[ \lim_{x\to -2} p(x) = \answer{0} \]	
+\end{exercise}
+
+
+\end{document}
