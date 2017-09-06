@@ -1,0 +1,56 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+A rational function has graph given below.
+\begin{exercise}
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-7, xmax=7, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-7,...,7}, ytick={-5,...,5},
+            			%xticklabels={-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+				\addplot[dashed, thick, color=purple] coordinates{(-7,0) (7,0)};
+				\addplot[dashed, thick, color=red] coordinates{(-2,-6) (-2,6)};
+				\addplot[dashed, thick, color=red] coordinates{(2,-6) (2,6)};
+          			\addplot[color=penColor,very thick,smooth,domain=-7:-2.1] {-2*x/(x^2-4)};
+			         \addplot[color=penColor,very thick,smooth,domain=-1.9:1.9] {-2*x/(x^2-4)};
+				 \addplot[color=penColor,very thick,smooth,domain=2.1:7] {-2*x/(x^2-4)}; 
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+
+	Which of the following functions could this be the graph of?
+	\begin{multipleChoice}
+		\choice[correct]{$\dfrac{-2x}{(x+2)(x-2)}$}
+		\choice{$\dfrac{2x}{(x+2)(x-2)}$}
+		\choice{$\dfrac{-2(x^2-4)}{x}$}
+		\choice{$\dfrac{2(x^2-4)}{x}$}
+		\choice{$\dfrac{2x}{(x+2)^2(x-2)}$}
+		\choice{$\dfrac{2x}{(x+2)(x-2)^2}$}		
+	\end{multipleChoice}
+	
+	
+	\begin{exercise}
+		What is the horizontal asymptote of the function?
+		\[ y = \answer{0} \]
+		
+		\begin{exercise}
+			Where does this function cross it's horizontal asymptote? (If there are no crossings, type DNE)\\[2em]
+			\begin{center} At the point $\left( \, \answer{0} \, , \, \answer{0} \, \right)$. \end{center}
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+
+
+\end{document}

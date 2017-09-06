@@ -1,0 +1,124 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\begin{document}
+
+\begin{exercise}
+	Examine the four graphs below.
+
+	\begin{enumerate}
+		\item[(A)]	
+	
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-5, xmax=5, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-5,...,5}, ytick={-5,...,5},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+				\addplot[color=penColor,very thick,smooth,domain=-5:-0.1] {1/x};
+				\addplot[color=penColor,very thick,smooth,domain=0.1:5] {1/x};
+				\addplot[dashed,color=red, thick] coordinates{(0,-5) (0,5)};
+				\addplot[dashed,color=gray, thick] coordinates{(-5,0) (5,0)};
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+
+	\item[(B)]	
+	
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-5, xmax=5, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-5,...,5}, ytick={-5,...,5},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+				\addplot[color=penColor,very thick,smooth,domain=-5:-0.1] {-1/x};
+				\addplot[color=penColor,very thick,smooth,domain=0.1:5] {-1/x};
+				\addplot[dashed,color=red, thick] coordinates{(0,-5) (0,5)};
+				\addplot[dashed,color=gray, thick] coordinates{(-5,0) (5,0)};
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+
+	\item[(C)]	
+	
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-5, xmax=5, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-5,...,5}, ytick={-5,...,5},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+				\addplot[color=penColor,very thick,smooth,domain=-5:-0.1] {-1/x};
+				\addplot[color=penColor,very thick,smooth,domain=0.1:5] {1/x};
+				\addplot[dashed,color=red, thick] coordinates{(0,-5) (0,5)};
+				\addplot[dashed,color=gray, thick] coordinates{(-5,0) (5,0)};
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+
+	\item[(D)]	
+	
+	\begin{image}
+  		\begin{tikzpicture}
+  			\begin{axis}[
+            			xmin=-5, xmax=5, ymin=-5,ymax=5,    
+            			unit vector ratio*=1 1 1,
+            			axis lines =middle, xlabel=$x$, ylabel=$y$,
+            			every axis y label/.style={at=(current axis.above origin),anchor=south},
+            			every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            			xtick={-5,...,5}, ytick={-5,...,5},
+            			grid=major,width=4in,
+            			grid style={dashed, gridColor},
+          		]
+				\addplot[color=penColor,very thick,smooth,domain=-5:-0.1] {1/x};
+				\addplot[color=penColor,very thick,smooth,domain=0.1:5] {-1/x};
+				\addplot[dashed,color=red, thick] coordinates{(0,-5) (0,5)};
+				\addplot[dashed,color=gray, thick] coordinates{(-5,0) (5,0)};
+        			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+\end{enumerate}
+
+
+Which of these graphs have a vertical asymptote at $x=0$, a horizontal asymptote at $y=0$, and no zeroes?
+\begin{selectAll}
+	\choice[correct]{Graph (A)}
+	\choice[correct]{Graph (B)}
+	\choice[correct]{Graph (C)}
+	\choice[correct]{Graph (D)}
+\end{selectAll}	
+
+	\begin{exercise}
+		What other information would you need to be given to distinguish one graph from among these choices?
+		\begin{multipleChoice}
+			\choice{The $y$-intercepts.}
+			\choice{The $x$-intercepts.}
+			\choice{Where the graph crosses the horizontal asymptotes.}
+			\choice[correct]{A sign-chart of the function.}
+		\end{multipleChoice}
+	\end{exercise}
+
+\end{exercise}
+
+
+
+\end{document}
