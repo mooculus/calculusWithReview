@@ -34,9 +34,9 @@ Let's cut to the chase:
   \begin{selectAll}
     \choice[correct]{$\lim_{x\to -1} \frac{1}{(x+1)^2}$}
     \choice{$\lim_{x\to 2}\frac{x^2-3x+2}{x-2}$}
-    \choice{$\lim_{x\to 0}\frac{\sin(x)}{x}$}
+%    \choice{$\lim_{x\to 0}\frac{\sin(x)}{x}$}
     \choice[correct]{$\lim_{x\to 2}\frac{x^2-3x-2}{x-2}$}
-    \choice[correct]{$\lim_{x\to 1}\frac{e^x}{\ln(x)}$}
+    \choice[correct]{$\lim_{x\to 1}\frac{x}{\sqrt{x}-1}$}
   \end{selectAll}
 \end{question}
 
@@ -95,7 +95,7 @@ goes to $a$.
 If $|f(x)|$ grows arbitrarily large as $x$ approaches $a$ and $f(x)$ is
 negative, we write
 \[
-\lim_{x\to a} f(x) = -\infty
+	\lim_{x\to a} f(x) = -\infty
 \]
 and say that the limit of $f(x)$ \textbf{approaches negative infinity}
 as $x$ goes to $a$.
@@ -106,21 +106,21 @@ Let's consider a few more examples.
 \begin{example}
   Compute:
   \[
-  \lim_{x\to -2} \frac{e^x}{(x+2)^4}
+	  \lim_{x\to -2} \frac{5-x}{(x+2)^4}
   \]
   \begin{explanation}
     First let's look at the form of this limit, we do this by taking the limits of both the numerator and denominator:
     \[
-    \lim_{x\to -2} e^x = \answer[given]{\frac{1}{e^2}}\qquad\text{and}\lim_{x\to-2}\left((x+2)^4\right) = 0
+    \lim_{x\to -2} 5-x = \answer[given]{7}\qquad\text{and}\lim_{x\to-2}\left((x+2)^4\right) = 0
     \]
     so this limit is of the form \numOverZero.  As $x$ approaches $-2$:
     \begin{itemize}
-    \item The numerator is a \wordChoice{\choice[correct]{positive}\choice{negative}} number. 
-    \item The denominator is \wordChoice{\choice[correct]{positive}\choice{negative}} and is approaching zero.
+	    \item The numerator is a \wordChoice{\choice[correct]{positive}\choice{negative}} number. 
+	    \item The denominator is \wordChoice{\choice[correct]{positive}\choice{negative}} and is approaching zero.
     \end{itemize}
     This means that
     \[
-    \lim_{x\to -2} \frac{e^x}{(x+2)^4} = \infty.
+	    \lim_{x\to -2} \frac{5-x}{(x+2)^4} = \infty.
     \]
   \end{explanation}
 \end{example}
