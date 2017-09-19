@@ -191,11 +191,11 @@ asymptote, and in the example this occurs an infinite number of times!
 \begin{example}
 Give a horizontal asymptote of
 \[
-f(x) = \frac{\sin(7x)+4x}{x}.
+	f(x) = \frac{\sin(7x)+4x}{x}.
 \]
 \begin{explanation}
 Again from previous work, we see that $\lim_{x\to \infty} f(x) =
-\answer[given]{4}$. Hence $y=\answer[given]{4}$ is a horizontal asymptote of $f(x)$.
+\answer{4}$. Hence $y=\answer{4}$ is a horizontal asymptote of $f(x)$.
 \end{explanation}
 \end{example}
 
@@ -204,10 +204,7 @@ We conclude with an infinite limit at infinity.
 
 \begin{example}
 Compute
-\[
-
-\lim_{x\to\infty}\sqrt{x}.
-\]
+\[ \lim_{x\to\infty}\sqrt{x}. \]
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
@@ -223,16 +220,19 @@ Compute
         \end{axis}
 \end{tikzpicture}
 \end{image}
+
 \begin{explanation}
 The function $\sqrt{x}$ grows slowly, and seems like it may have a
 horizontal asymptote, see the graph above. However, if we consider the
 square root as the inverse of the function $f(x) = x^2 , \quad x \geq 0$.
+
 \begin{quote}%%BADBAD I would like word choice for "positive"
   $\sqrt{x} = y$ means that $y^2 = x$ and that $y \geq 0$.
 \end{quote}
+
 We see that we may square higher and higher values to obtain
 larger outputs.  This means that $\sqrt{x}$ is unbounded, and hence
-$\lim_{x\to\infty}\sqrt{x}=\infty$.
+$\displaystyle \lim_{x\to\infty}\sqrt{x}=\infty$.
 \end{explanation}
 \end{example}
 
