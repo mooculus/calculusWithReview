@@ -1,0 +1,61 @@
+\documentclass{ximera}
+\input{../../preamble.tex}
+\outcome{Calculate the limit as $x$ approaches $\pm \infty$ of common functions algebraically.}
+\outcome{Compute limits at infinity of famous functions.}
+\outcome{Compute slant asymptotes.}
+\tag{limit}
+\author{Bobby Ramsey}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+
+\begin{exercise}
+	Let \[ g(x) = \frac{3x^4+x^3+2x+5}{x^3+2}. \]
+	
+	Compute
+
+	\begin{enumerate}
+		\item $\lim_{x\to \infty} g(x) \begin{prompt} = \answer{\infty}\end{prompt}$
+		\item $\lim_{x\to -\infty}g(x) \begin{prompt} = \answer{-\infty}\end{prompt}$
+	\end{enumerate}
+
+	\begin{hint}
+		Multiply by \[\frac{\frac{1}{x^3}}{\frac{1}{x^3}}\]
+	\end{hint}
+
+	\begin{exercise}
+		Does the function $g$ have any horizontal asymptotes?
+		\begin{multipleChoice}
+			\choice{No.}
+			\choice[correct]{Yes.}
+			\choice{We cannot tell with what we are given.}
+		\end{multipleChoice}
+		
+		\begin{exercise}
+			What is the quotient and remainder if $3x^4+x^3+2x+5$ is divided by $x^3+2$?
+			\begin{align*}
+				\text{ Quotient } &= \answer{3x+1}\\
+				\text{ Remainder } &= \answer{-4x+3}	
+			\end{align*}
+			\begin{exercise}
+				Write $g(x)$ as a proper fraction:
+				\[ g(x) = \left( \answer{3x+1} \right) + \frac{\answer{-4x+3}}{x^3+2} \]
+				\begin{exercise}
+					What is the end behavior of the fraction $\dfrac{-4x+3}{x^3+2}$?
+					\begin{align*}
+						\lim_{x\to \infty} \frac{-4x+3}{x^3+2} &= \answer{0} \\
+						\lim_{x\to -\infty} \frac{-4x+3}{x^3+2} &= \answer{0} \\
+					\end{align*}
+					\begin{exercise}
+						The function $g$ did not have any horizontal asymptotes.  That means it did not approach any horizontal lines as $x$ went off toward either $\pm \infty$.
+						There is another line that $g$ approached, though.  This is the \wordChoice{\choice[correct]{slant asymptote}\choice{tangent line}\choice{secant line}}.
+						\begin{exercise}	
+							The equation of the slant asymptote is:
+							\[ y = \answer{-4x+3} \]
+						\end{exercise}
+					\end{exercise}
+				\end{exercise}
+			\end{exercise}
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+\end{document}
