@@ -1,0 +1,30 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+\begin{exercise}
+
+	If an investment is made with a principal of \$200, invested at 24\% interest, compounded monthly, the value is
+	given by the compound interest formula:
+	\[ A(t) = 200(1.02)^{12 t} \]
+	with $t$ in years after the investment.
+	
+	After how many years has the investment doubled? (Round to 1 decimal place)
+	\[ t = \answer{2.9} years \]
+	\begin{exercise}
+		Find the derivative, $\ddt{A(t)}$.
+		
+		\[ \ddt{A(t)} = \answer{ 2400(1.02)^{12t} } \]
+		
+		\begin{exercise}
+			How fast is the balance growing (in dollars/year) after 3 years? (Round to 1 decimal place)
+		
+			\[ \eval{\ddt{A(t)}}_{t=3} =  \answer{ 96.9 } \text{ dollars/ year }\]
+		\end{exercise}
+	\end{exercise}
+	
+\end{exercise}
+\end{document}
