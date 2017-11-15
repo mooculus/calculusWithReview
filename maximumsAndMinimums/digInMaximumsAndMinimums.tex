@@ -9,7 +9,7 @@
 \outcome{Define a critical point.}
 \outcome{Find critical points.}
 \outcome{Define absolute maximum and absolute minimum.}
-\outcome{Find the absolute max or min of a continuous function on a closed interval.}
+%\outcome{Find the absolute max or min of a continuous function on a closed interval.}
 \outcome{Define local maximum and local minimum.}
 \outcome{Compare and contrast local and absolute maxima and minima.}
 \outcome{Identify situations in which an absolute maximum or minimum is guaranteed.}
@@ -36,22 +36,36 @@ often useful to know what the graph of the function looks like. We can
 obtain a good picture of the graph using certain crucial information
 provided by derivatives of the function.
 
+
 \section{Extrema}
+We'll start with some definitions.
+\begin{definition}\hfil\index{maximum/minimum!absolute}
+\begin{enumerate}
+\item A function $f$ has an \dfn{global maximum} at $x=a$, if $f(a)\ge
+  f(x)$ for every $x$ in the domain of the function.
+\item A function $f$ has an \dfn{global minimum} at $x=a$, if $f(a)\le
+  f(x)$ for every $x$ in the domain of the function.
+\end{enumerate} 
+A \dfn{global extremum}\index{extremum!global} is either a
+global maximum or a global minimum.
+\end{definition}
 
 Local \textit{extrema} on a function are points on the graph where the
 $y$-coordinate is larger (or smaller) than all other $y$-coordinates
 on the graph at points ``close to'' $(x,y)$. 
 
 \begin{definition}\hfil\index{maximum/minimum!local}
-\begin{enumerate}
-\item A function $f$ has a \dfn{local maximum} at $x=a$, if $f(a)\ge
-  f(x)$ for every $x$ near $a$.
-\item A function $f$ has a \dfn{local minimum} at $x=a$, if $f(a)\le
-  f(x)$ for every $x$ near $a$.
-\end{enumerate}
-A \dfn{local extremum}\index{extremum!local} is either a local
-maximum or a local minimum.
+	\begin{enumerate}
+		\item A function $f$ has a \dfn{local maximum} at an interior point in its domain $x=a$, if $f(a)\ge
+		  f(x)$ for every $x$ near $a$.
+		\item A function $f$ has a \dfn{local minimum} at an interior point in its domain $x=a$, if $f(a)\le
+		  f(x)$ for every $x$ near $a$.
+	\end{enumerate}
+	A \dfn{local extremum}\index{extremum!local} is either a local
+	maximum or a local minimum.
 \end{definition}
+In this definition, the phrase "on an interior point of its domain" means that
+endpoints are never local extrema.
 
 %% \begin{question} BADBAD I want this question
 %%   True or false: ``All absolute extrema are also local extrema.''
@@ -155,23 +169,26 @@ or the derivative is undefined, as in the plot of $f(x) = x^{2/3}$ and $f'(x) = 
 This brings us to our next definition.
 
 \begin{definition}\index{critical point}
-  A function has a \dfn{critical point} at $x=a$ if 
+  Suppose $x=a$ is an interior point in the domain of a function $f$.  Then $f$ has a \dfn{critical point} 
+  at $x=a$ if 
   \[
   f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
   \]
 \end{definition}
+Again, the phrase `an interior point in the domain' used here means that the endpoints of the domain are never
+critical points.
 
 \begin{warning} 
-When looking for local maximum and minimum points, you are likely to
-make two sorts of mistakes: 
-\begin{itemize}
-\item You may forget that a maximum or minimum can occur where the
-  derivative does not exist, and so forget to check whether the
-  derivative exists everywhere. 
-\item You might assume that any place that the derivative is zero is a
-  local maximum or minimum point, but this is not true, consider the
-  plots of $f(x) = x^3$ and $f'(x) = 3x^2$.
-\begin{image}
+	When looking for local maximum and minimum points, you are likely to
+	make two sorts of mistakes: 
+	\begin{itemize}
+		\item You may forget that a maximum or minimum can occur where the
+		  derivative does not exist, and so forget to check whether the
+		  derivative exists everywhere. 
+		\item You might assume that any place that the derivative is zero is a
+		  local maximum or minimum point, but this is not true, consider the
+		  plots of $f(x) = x^3$ and $f'(x) = 3x^2$.
+			\begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-3:3,
@@ -186,13 +203,13 @@ make two sorts of mistakes:
           \node at (axis cs:1,.9) [anchor=west] {\color{penColor}$f$};  
           \node at (axis cs:-.5,1) [anchor=west] {\color{penColor2}$f'$};
         \end{axis}
-\end{tikzpicture}
-%% \caption{A plot of $f(x) = x^3$ and $f'(x) = 3x^2$. While $f'(0)=0$,
-%%   there is neither a maximum nor minimum at $(0,f(0))$.}
-%% \label{figure:x^3}
-\end{image}
-While $f'(0)=0$, there is neither a maximum nor minimum at $(0,f(0))$.
-\end{itemize}
+		\end{tikzpicture}
+		%% \caption{A plot of $f(x) = x^3$ and $f'(x) = 3x^2$. While $f'(0)=0$,
+		%%   there is neither a maximum nor minimum at $(0,f(0))$.}
+		%% \label{figure:x^3}
+		\end{image}
+		While $f'(0)=0$, there is neither a maximum nor minimum at $(0,f(0))$.
+	\end{itemize}
 \end{warning}
 
 
@@ -337,7 +354,7 @@ when $f'(x)$ is increasing and decreasing:
   f'(-1)&=\answer[given]{2},\\
   f'(2)&=\answer[given]{8}.
 \end{align*}
-From this we can make a sign table:
+From this we can make a sign-chart:
 
 \begin{image}
 \begin{tikzpicture}
@@ -440,8 +457,7 @@ studying how $f'$ changes. This leads us to our next section.
 
 If we are trying to understand the shape of the graph of a function,
 knowing where it is concave up and concave down helps us to get a more
-accurate picture. It is worth summarizing what we have seen already in
-to a single theorem.
+accurate picture. It is worth recalling what we already know.
 
 \begin{theorem}[Test for Concavity]\index{concavity test}
 Suppose that $f''(x)$ exists on an interval.
