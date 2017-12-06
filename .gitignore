@@ -31,3 +31,11 @@
 *.dat
 *.script
 *.dep
+*.sagetex.sage
+*.json
+*.sagetex.sage.py
+*.sagetex.sout
+*.sagetex.scmd
+#*
+*.sage
+appliedOptimization/exercises/exerciseList.tex
