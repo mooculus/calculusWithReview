@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\outcome{Define linear approximation as an application of the tangent to a curve.}
+\outcome{Find the linear approximation to a function at a point and use it to approximate the function value.}
+\outcome{Compute differentials.}
+%\outcome{Contrast the notation and meaning of \d{y} versus \Delta y.}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+\begin{exercise}
+
+	Consider the function $f(x) = \tan(x)$.
+
+	The linear approximation of $f$ at $a=\frac{\pi}{4}$ is 
+	\[ L(x) = \answer{2(x-\frac{\pi}{4})+1}. \]
+
+	\begin{exercise}
+		The formula for the differential $df$ is given by:
+		\[ df = \answer{sec^2(x)} dx \]					
+		
+		\begin{exercise}
+			If $x$ changes to $44^\circ$, (from the value of $a$ specified above) use differentials to estimate the change in $f$.
+			\[ df = \answer{\frac{-\pi}{90}} \]
+			
+			\begin{exercise}
+				Use this to estimate \[\tan\left( 44^\circ \right) \approx \answer{1-\frac{\pi}{90}} \]
+				
+				\begin{exercise}
+					This estimate is:
+					\begin{multipleChoice}
+						\choice{an overestimate.}
+						\choice[correct]{an underestimate.}
+						\choice{the exact value of $\tan\left( 44^\circ \right)$.}
+						\choice{impossible to determine.}
+					\end{multipleChoice}
+				\end{exercise}
+			\end{exercise}
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+\end{document}
