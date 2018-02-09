@@ -16,6 +16,42 @@
 \end{abstract}
 \maketitle
 
+An important application of derivatives is in determining when a function is increasing or decreasing.
+\begin{definition}\index{increasing}\index{decreasing}
+	A function is \emph{increasing} on an interval $I$ if, for all $a$ and $b$ in the interval with $a<b$, then $f(a) < f(b)$.
+	A function is \emph{decreasing} on an interval $I$ if, for all $a$ and $b$ in the interval with $a<b$, then $f(a) > f(b)$.
+\end{definition}
+\begin{example}
+The following is the graph of $y=f(x)$.  On what intervals is $f$ increasing?  On what intervals is $f$ decreasing?
+  \begin{image}
+  \begin{tikzpicture}
+	\begin{axis}[
+            xmin=-2.1,xmax=3.1,ymin=-3,ymax=4,
+            axis lines=center,
+            width=6in,
+            height=3in,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [very thick,penColor,smooth, domain=(-2:3)] {(x^4)/4-(x^3)/3-x^2)};
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+  \begin{explanation}
+  	As we move along the graph from left to right, we see that the $y$-values are getting smaller until we get to $x=-1$.  Between $x=-1$ and $x=0$ the
+	$y$-values are getting larger, then between $x=0$ and $x=2$ they get smaller again.  Finally, after $x=2$ they start growing.
+	
+	$f$ is increasing on: $(-1,\answer{0})$ and $(\answer{2},\infty)$.  $f$ is decreasing on $(-\infty, \answer{-1})$ and $(\answer{0}, \answer{2})$.
+  \end{explanation}	
+\end{example}
+
+Let's look at each of the intervals from the last example separately.
+On $(-\infty,-1)$, look at the slopes of the tangent lines.  Is there anything that all of those slopes have in common?
+They are all NEGATIVE!  Look in the interval $(0,2)$.  The slopes are all negative in that interval as well.
+What about in the interval $(1,0)$?  Those slopes are all POSITIVE.  Same for the interval $(2,\infty)$.
+Notice that the positive slopes occurred when the function was increasing and the negative slopes occurred
+when the function was decreasing?  That was no accident.
+
 Since the derivative gives us a formula for the slope of a tangent
 line to a curve, we can gain information about a function purely from
 the sign of the derivative.  In particular, we have the following theorem
