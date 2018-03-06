@@ -1,0 +1,106 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+%\outcome{Define area.}
+
+
+\author{Bobby Ramsey}
+
+\begin{document}
+\begin{exercise}
+
+Consider the function
+\[
+f(x) = 8-x^3
+\]
+on the interval $[0,2]$.  We will approximate the area of the region bounded by the graph of $f$ and the $x$-axis, by using $5$ rectangles and a Left Riemann Sum.  See the figure below.
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-0.3,xmax=3.3,ymin=-0.3,ymax=9.3,
+        clip=true,
+        unit vector ratio*=6 1 1,
+        axis lines=center,
+        grid = major,
+        ytick={0,2,...,9},
+        xtick={0,1,...,3},
+        xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+      ]      
+     %\pgfplotsinvokeforeach{0,0.5,...,1.5}{\draw[very thick,penColor2,fill,fill opacity=0.3] (axis cs:{#1},8-#1^3) rectangle (axis cs:{#1+0.5},{0});}
+      
+      \addplot[very thick,penColor,domain=0:3] plot{8-x^3};
+      
+      \node at (axis cs:2,6) {$y=f(x)$};
+      \end{axis}`
+  \end{tikzpicture}
+\end{image}
+
+What are the values of the following:
+\begin{align*}
+	n &= \answer{5} \\ \\
+	\Delta x &= \answer{0.4}
+\end{align*}
+	\begin{hint}
+		$n$ represents the number of rectangles.
+	\end{hint}
+	\begin{hint}
+		$\Delta x = \frac{b-a}{n} = \answer{0.4}$
+	\end{hint}
+
+	\begin{exercise}
+		There are $\answer{6}$ gridpoints.		
+
+		\begin{exercise}
+			They are:
+			\begin{align*}
+				x_0^* &= \answer{0} \\ \\
+				x_1^* &= \answer{0.4} \\ \\
+				x_2^* &= \answer{0.8} \\ \\
+				x_3^* &= \answer{1.2} \\ \\
+				x_4^* &= \answer{1.6} \\ \\
+				x_5^* &= \answer{2}
+			\end{align*}
+			\begin{hint}
+				What is the left-most gridpoint?  (It's also $a$)
+				
+				How far is it from one gridpoint to the next?  (It's $\Delta x$)
+			\end{hint}
+			\begin{exercise}
+				The sample points are:
+				\begin{align*}
+					x_1 &= \answer{0} \\ \\
+					x_2 &= \answer{0.4} \\ \\
+					x_3 &= \answer{0.8} \\ \\
+					x_4 &= \answer{1.2} \\ \\
+					x_5 &= \answer{1.6}
+				\end{align*}
+				\begin{hint}
+					Which type of Riemann Sum are we calculating?
+				\end{hint}
+
+				\begin{exercise}
+					Find the area of each rectangle.
+					\begin{align*}
+					f(x_1)\Delta x &= \answer{(0.4)*(8-0)} \\ \\
+					f(x_2)\Delta x &= \answer{(0.4)*(8-0.4^3)} \\ \\
+					f(x_3)\Delta x &= \answer{(0.4)*(8-0.8^3)} \\ \\
+					f(x_4)\Delta x &= \answer{(0.4)*(8-1.2^3)} \\ \\
+					f(x_5)\Delta x &= \answer{(0.4)*(8-1.6^3)}
+				\end{align*}
+				
+				\begin{exercise}
+					The Left Riemann Sum (our area approximation) has value:
+					$\answer{13.44}$.
+				\end{exercise}
+					
+				\end{exercise}
+			\end{exercise}			
+		\end{exercise}
+	\end{exercise}
+
+\end{exercise}
+\end{document}
