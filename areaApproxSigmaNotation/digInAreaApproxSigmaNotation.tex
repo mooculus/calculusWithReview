@@ -1,0 +1,82 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Write a Riemann sum in sigma notation.}
+\outcome{Use sigma notation to calculate area approximations.}
+
+\title[Dig-In:]{Area approximations with sigma notation}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+Remember the Riemann sum, written as:
+\[ f(x_1^*) \Delta x + f(x_2^*) \Delta x + \ldots + f(x_n^*) \Delta x\]
+
+The only change from one term to the next, is the subscript of the sample point.
+That subscript runs from $1$ to $n$.  That means we can write this Riemann sum
+in sigma notation as:
+\[ \sum_{k=1}^n f(x_k^*) \Delta x \]
+
+We found formulas for the sample points in certain cases.
+
+The left Riemann sum is
+\[ \sum_{k=1}^n f(a + (k-1)\Delta x) \Delta x \]
+
+The right Riemann sum is
+\[ \sum_{k=1}^n f(a + k \Delta x) \Delta x \]
+
+The midpoint Riemann sum is
+\[ \sum_{k=1}^n f\left(a + \left(k-\frac{1}{2}\right)\Delta x\right) \Delta x \]
+  
+  
+\begin{example}
+	Approximate the area under the graph of $f(x) = x^2+1$ on the interval $[2,4]$ using $100$ rectangles and right-hand endpoints.
+	\begin{explanation}
+		Let's start by finding $\Delta x$.  
+		
+		$\Delta x = \frac{b-a}{n} = \frac{1}{50}$.
+
+
+		For right-hand endpoints, $x_k^* = a + k \Delta x$.  
+		That is, $x_k^* = \answer{2} + k \answer{1/50}$.
+		
+		The Riemann sum is:
+		\begin{align*}
+			\sum_{k=1}^{100} f\left( x_k^* \right) \Delta x
+				&=\sum_{k=1}^{100} f\left( 2 + \frac{k}{50} \right) \frac{1}{50}\\
+				&=\sum_{k=1}^{100}\left( \left( 2 + \frac{k}{50} \right)^2+1 \right)\frac{1}{50}\\
+				&= \sum_{k=1}^{100} \left( \frac{k^2}{50^2} + \frac{2}{25}k+5\right) \frac{1}{50}\\
+				&= \frac{1}{50}\sum_{k=1}^{100} \left( \frac{k^2}{50^2} + \frac{2}{25}k+5\right)\\
+				&= \frac{1}{50}\left(\frac{1}{50^2}\sum_{k=1}^{100} k^2 + \frac{2}{25}\sum_{k=1}^{100}k+ \sum_{k=1}^{100}5\right)
+		\end{align*}
+
+		We have formulas for calculating the individual sums here!
+		
+		\begin{align*} 
+			\sum_{k=1}^{100} k^2 &= \frac{(100)(100+1)(2\cdot100+1)}{6} \\ \\
+				&= \answer{338350}\\
+			\sum_{k=1}^{100} k &= \frac{(100)(100+1)}{2} \\ \\
+				&= \answer{5050}\\
+			\sum_{k=1}^{100} 5 &= 5 \cdot 100 \\
+				&= \answer{500}
+		\end{align*}
+		
+		Then
+		\begin{align*}
+			\sum_{k=1}^{100} f\left( x_k^* \right) \Delta x
+				&=\frac{1}{50}\left(\frac{1}{50^2}\sum_{k=1}^{100} k^2 + \frac{2}{25}\sum_{k=1}^{100}k+ \sum_{k=1}^{100}5\right) \\
+				&= \frac{1}{50}\left(\frac{1}{50^2}\answer{338350} + \frac{2}{25}\answer{5050}+ \answer{500}\right) \\
+				&= \answer{62/3}
+		\end{align*}
+	\end{explanation}
+\end{example}
+ 
+The process used in this example is the same for almost all of these approximations.  Plug $\Delta x$ and $x_k^*$ into the Riemann sum formula and simplify,
+then use our summation formulas.
+  
+ 
+ 
+\end{document}
