@@ -31,7 +31,7 @@ are called the \emph{upper and lower limits} of the summation.  In this case, th
 every integer value of $k$ between $1$ and $5$ (so $1$, $2$, $3$, $4$, and $5$) and plug them each into the summand formula (here that formula is $3k$).
 Then those are all added together.
 \[ \sum_{k=1}^{5} 3k= 3\cdot 1 + 3\cdot 2 + 3\cdot 3 + 3\cdot 4 + 3\cdot 5 = 45 \]
-\hop
+
 
 
 \begin{example}
@@ -44,7 +44,7 @@ Then those are all added together.
 \end{example}
 
 
-\hop
+ 
 
 \begin{example}
 	Write out what is meant by the following:
@@ -58,14 +58,14 @@ Then those are all added together.
 		\end{align*}	
 	\end{explanation}
 \end{example}
-\hop
+ 
 
 Try one on your own.
 \begin{question}
 	Write out what is meant by the following (no need to simplify):
 	\[ \sum_{n=-1}^{4} \sqrt{n+1} =\answer{\sqrt{0}+\sqrt{1}+\sqrt{2}+\sqrt{3}+\sqrt{4}+\sqrt{5}}\]
 \end{question}
-\hop
+ 
 
 Let's try going the other way around.
 \begin{example}
@@ -82,7 +82,7 @@ Let's try going the other way around.
 		\[ \sum_{k=1}^{12} 2m \]
 	\end{explanation}
 \end{example}
-\hop
+ 
 
 \begin{example}
 	Write the following sum in sigma notation.
@@ -103,7 +103,7 @@ Let's try going the other way around.
 		\[ \sum_{k=0}^{7} (-1)^k \left(\frac{1}{2}\right)^{k} = \sum_{k=0}^7 \left( \answer{\frac{-1}{2}} \right)^k \]
 	\end{explanation}
 \end{example}
- \hop
+  
  
 Try one on your own.
 \begin{example}
@@ -112,7 +112,7 @@ Try one on your own.
 	\[ \sum_{k=2}^{53} \left(  \answer{-\frac{k-1}{\sqrt{k}} } \right) \]
 
 \end{example}
-\hop \hop
+   
 
  
  \section{Calculating with sigma notation}
@@ -124,18 +124,12 @@ Try one on your own.
  The other basic sums that we need are much more complicated to derive.  Rather than explaining where they come from, we'll just give you
  a list of the final formulas, that you can use.
  
- \begin{form}
- $\displaystyle \sum_{k=1}^n C = nC$.
- \end{form}
-\begin{form}
- $\displaystyle \sum_{k=1}^n k = \frac{n(n+1)}{2}$.
-\end{form}
-\begin{form}
- $\displaystyle \sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$.
-\end{form}
-\begin{form}
- $\displaystyle \sum_{k=1}^n k^3 = \left(\frac{n(n+1)}{2}\right)^2$.
-\end{form} 
+ \begin{align*}
+	\sum_{k=1}^n C &= nC \\ \\
+	\sum_{k=1}^n k &= \frac{n(n+1)}{2} \\ \\
+	\sum_{k=1}^n k^2 &= \frac{n(n+1)(2n+1)}{6} \\ \\
+	\sum_{k=1}^n k^3 &= \left(\frac{n(n+1)}{2}\right)^2
+\end{align*} 
 
 
 Now that we have this list, let's use them to compute.
@@ -146,7 +140,7 @@ Now that we have this list, let's use them to compute.
 	\end{explanation}
 \end{example}
 
-\hop
+ 
 
 \begin{example}
 	Find the value of the sum $\displaystyle \sum_{k=1}^{100} k$.
@@ -155,15 +149,12 @@ Now that we have this list, let's use them to compute.
 	\end{explanation}
 \end{example}
 
-\hop
+ 
 
  Because sigma notation is just a new way of writing addition, the usual properties of addition still apply, but a couple of the important ones look a little different.
- \begin{prop}[Commutativity]
- 	$\displaystyle \sum_{k=1}^{n} (a_k + b_k) = \sum_{k=1}^n a_k + \sum_{k=1}^n b_k$.
- \end{prop}
- \begin{prop}[Distribution]
- 	$\displaystyle \sum_{k=1}^{n} c \cdot a_k = c \sum_{k=1}^n a_k$.
- \end{prop}
+\[ \text{Commutativity:} \quad \sum_{k=1}^{n} (a_k + b_k) = \sum_{k=1}^n a_k + \sum_{k=1}^n b_k \]
+\[ \text{Distribution:}  \quad \sum_{k=1}^{n} c \cdot a_k = c \sum_{k=1}^n a_k \]
+
 
 \begin{example}
 	Find the value of the sum $\displaystyle \sum_{k=1}^{10} \left(2k^2+5\right)$.
@@ -180,7 +171,7 @@ Now that we have this list, let's use them to compute.
 		 Putting all that together, $\displaystyle \sum_{k=1}^{10}\left(2k^2+5\right) = 2 \cdot 385 + 50 = \answer{820}$.
 	\end{explanation}
 \end{example}
-\hop
+ 
 
 \begin{example}
 	Find the value of the sum $\displaystyle \sum_{k=1}^{200} \left(2k^3-6k^2+3\right)$.
@@ -200,7 +191,7 @@ Now that we have this list, let's use them to compute.
 	\end{explanation}
 \end{example}
 
-\hop
+ 
 
 Try one on your own.
 \begin{problem}
