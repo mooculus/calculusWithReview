@@ -1,0 +1,58 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\outcome{Understand the relationship between area under a curve and sums of rectangles.}
+\outcome{Approximate area under a curve.}
+\outcome{Compute Riemann sums with sigma notation.}
+
+\author{Nela Lakos \and Kyle Parsons \and Bobby Ramsey}
+
+\begin{document}
+
+
+Consider the function
+\[
+f(x) = 25 - x^2
+\]
+on the interval $[0,5]$.  We will approximate the area of the region bounded by the graph of $f$ and the $x$-axis, using
+right endpoints and $n=100$ rectangles.
+
+\begin{exercise}
+	Find $\Delta x$.
+	\[ \Delta x = \answer{1/20} \]
+	\begin{hint}
+		$\Delta x = \frac{b-a}{n}$
+	\end{hint}
+	\begin{exercise}
+		The sample-points $x_k^*$, for $k = 1, 2, \ldots, n$, are given by:
+		\[ x_k^* = \answer{k/20} \]
+		\begin{hint}
+			Right-hand endpoints have the form $x_k^* = a + k \Delta x$.
+		\end{hint}	
+		\begin{exercise}
+			What is $f( x_k^* )$?
+			\[ f\left( \frac{k}{20} \right) = \answer{25-\frac{k^2}{400}} \]
+			\begin{hint}
+				You have already found that $x_k^* = \frac{k}{20}$.  What do you get if you plug that into $f$?
+			\end{hint}
+			\begin{exercise}
+				The Riemann sum to approximate area is given by
+				\[ \sum_{k=1}^{n} f(x_k^*) \Delta x = \sum_{k=1}^{100} \left( \left( 25 - \frac{k^2}{400}\right) \frac{1}{20} \right)\]
+				Evaluate this sum. (Exact value)
+				\[ \sum_{k=1}^{n} f(x_k^*) \Delta x = \answer{13233/160} \]
+				\begin{hint}
+					Remember the formulas:
+					\begin{align*}
+						\sum_{k=1}^{n}  C &= nC\\ \\
+						\sum_{k=1}^{n}  k &= \frac{n(n+1)}{2}\\ \\
+						\sum_{k=1}^{n}  k^2 &= \frac{n(n+1)(2n+1)}{6}\\ \\
+						\sum_{k=1}^{n}  k^3 &= \left( \frac{n(n+1)}{2}\right)^2
+					\end{align*}
+				\end{hint}
+			\end{exercise}			
+		\end{exercise}
+	\end{exercise}
+
+\end{exercise}
+\end{document}

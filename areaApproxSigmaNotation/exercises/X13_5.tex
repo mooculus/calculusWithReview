@@ -1,0 +1,51 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\outcome{Approximate area under a curve.}
+\outcome{Compute Riemann sums with sigma notation.}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+
+
+Consider the function
+\[
+f(x) = 3x^2
+\]
+on the interval $[0,1]$.  We will approximate the area of the region bounded by the graph of $f$ and the $x$-axis, using
+left endpoints and $n=50$ rectangles.
+
+\begin{exercise}
+	Find $\Delta x$.
+	\[ \Delta x = \answer{1/50} \]
+	\begin{hint}
+		$\Delta x = \frac{b-a}{n}$
+	\end{hint}
+	\begin{exercise}
+		The sample-points $x_k^*$, for $k = 1, 2, \ldots, n$, are given by:
+		\[ x_k^* = \answer{(k-1)/50} \]
+		\begin{hint}
+			Left-hand endpoints have the form $x_k^* = a + (k-1) \Delta x$.
+		\end{hint}	
+		\begin{exercise}
+			What is $f( x_k^* )$?
+			\[ f\left( \frac{k-1}{50} \right) = \answer{(3/2500)(k^2-2k+1)} \]
+			\begin{hint}
+				You have already found that $x_k^* = \frac{k-1}{50}$.  What do you get if you plug that into $f$?
+			\end{hint}
+			\begin{exercise}
+				The Riemann sum to approximate area is given by
+				\[ \sum_{k=1}^{n} f(x_k^*) \Delta x = \sum_{k=1}^{50} \left( \frac{3k^2-6k+3}{2500}\right) \frac{1}{50} \right)\]				
+				Evaluate this sum. (Exact value)
+				\[ \sum_{k=1}^{n} f(x_k^*) \Delta x = \answer{4851/5000} \]
+				\begin{hint}
+					This will be easier if you factor the $2500(50)$ from the denominator in front of the sum.
+				\end{hint}
+			\end{exercise}
+		\end{exercise}
+	\end{exercise}
+
+\end{exercise}
+\end{document}

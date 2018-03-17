@@ -1,0 +1,48 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\outcome{Approximate area under a curve.}
+\outcome{Compute Riemann sums with sigma notation.}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+
+
+Consider the function
+\[
+f(x) = x-x^2
+\]
+on the interval $[0,1]$.  Approximate the area of the region bounded by the graph of $f$ and the $x$-axis, using
+right endpoints and $n=30$ rectangles.  (Give the exact value of the Riemann sum.)
+
+
+\begin{exercise}
+\[ \text{Right Riemann Sum }\, = \answer{899/5400} \]
+
+\begin{hint}
+	\begin{exercise}
+	Find $\Delta x$.
+	\[ \Delta x = \answer{1/30} \]
+
+	\begin{exercise}
+		The sample-points $x_k^*$, for $k = 1, 2, \ldots, n$, are given by:
+		\[ x_k^* = \answer{k/30} \]
+
+		\begin{exercise}
+			What is $f( x_k^* )$?
+			\[ f\left( \frac{k}{30} \right) = \answer{\frac{k}{30}-\frac{k^2}{900}} \]
+
+			\begin{exercise}
+				The Riemann sum to approximate area is given by
+				\[ \sum_{k=1}^{n} f(x_k^*) \Delta x = \sum_{k=1}^{30} \left( \left( \frac{k}{30} - \frac{k^2}{900}\right) \frac{1}{30} \right)\]
+				Evaluate this sum. (Exact value)
+
+			\end{exercise}
+		\end{exercise}
+	\end{exercise}
+	\end{exercise}
+\end{hint}
+\end{exercise}
+\end{document}
