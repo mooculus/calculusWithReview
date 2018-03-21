@@ -1,0 +1,22 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+
+
+\begin{exercise}
+	Rewrite the following integrals as limits, using right-hand endpoints.
+
+	\begin{align*}
+		\int_1^4 \cos(x) \d x &= \lim_{n\to\infty} \sum_{k=1}^{n} \answer{\cos( 1+ \frac{3k}{n} ) \frac{3}{n}} \\ \\ \\
+		\int_0^5 e^{x^2} \d x &= \lim_{n\to\infty} \sum_{k=1}^{n} \answer{e^{\frac{25k^2}{n^2}} \frac{5}{n}}
+	\end{align*}
+	\begin{hint}
+		$\displaystyle \int_a^b f(x) \d x = \lim_{n\to\infty} \sum_{k=1}^n f(x_k^*) \Delta x$.
+	\end{hint}
+\end{exercise}
+
+\end{document}

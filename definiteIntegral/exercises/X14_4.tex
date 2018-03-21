@@ -1,0 +1,22 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\begin{document}
+
+
+\begin{exercise}
+	Rewrite the following limits as integrals.
+
+	\begin{align*}
+		\lim_{n\to\infty} \sum_{k=1}^{n} \frac{4}{1+\left(-1+\frac{2k}{n}\right)^2}\left(\frac{2}{n}\right) &= \int_{-1}^{1} \answer{\frac{4}{1+x^2}} \d x\\ \\ \\
+		\lim_{n\to\infty} \sum_{k=1}^{n} \left(\sqrt{\left(2+\frac{7k}{n}\right)^3+4}\right)\left(\frac{7}{n}\right) &= \int_{2}^{9} \answer{\sqrt{x^3+4}} \d x
+	\end{align*}
+	\begin{hint}
+		$\displaystyle \int_a^b f(x) \d x = \lim_{n\to\infty} \sum_{k=1}^n f(x_k^*) \Delta x$.
+	\end{hint}
+\end{exercise}
+
+\end{document}
