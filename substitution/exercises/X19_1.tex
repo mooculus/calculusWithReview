@@ -1,0 +1,48 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\outcome{Compute basic antiderivatives.}
+\outcome{Use integral notation for both antiderivatives and definite integrals.}
+\outcome{Undo the Chain Rule.}
+\outcome{Calculate indefinite integrals (antiderivatives) using basic substitution.}
+
+\begin{document}
+\begin{exercise}
+	We wish to find the indefinite integral of $\cos(4-3x)$ with respect to $x$.
+
+	What should we use for our substitution variable?
+	\[ u = \answer{4-3x} \]
+	\begin{hint}
+		Is there anything being treated like a variable?  A group being plugged into a common function?
+	\end{hint}
+	\begin{exercise}
+		With $u = 4-3x$, what is the differential?
+		\[ \d u = \answer{-3} \d x \]
+		\begin{hint}
+			Remember that the \emph{differential} of a function $y = f(x)$ is $\d y = f'(x) \d x$.
+		\end{hint}
+		\begin{exercise}
+			Rewrite $\int \cos(4-3x) \d x$ in terms of your substituted variable, $u$.
+			\[ \int \cos(4-3x) \d x = \int \answer{-\frac{1}{3}\cos(u) } \d u \]
+			\begin{hint}
+				Don't forget to also sub in for $\d x$ in terms of $\d u$!
+			\end{hint}
+			\begin{exercise}
+				Evaluate the indefinite integral, in terms of $u$.
+				\[ -\frac{1}{3} \int \cos(u) \d u = \answer{-\frac{1}{3}\sin(u) + C} \]
+				\begin{hint}
+					What function has derivative $\cos(u)$?  What to do with the constant factor of $-1/3$?  Don't forget the $+C$!
+				\end{hint}
+				\begin{exercise}
+					Substitute back in terms of $x$.
+					\[ \int \cos(4-3x) \d x = \answer{-\frac{1}{3}\sin(4-3x) + C} \]
+				\end{exercise}
+			\end{exercise}
+	
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+\end{document}

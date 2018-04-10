@@ -1,0 +1,32 @@
+\documentclass{ximera}
+\input{../../preamble.tex}
+\author{Bobby Ramsey}
+
+
+\begin{document}
+\begin{exercise}
+
+We wish to evaluate the indefinite integral $\displaystyle \int \sin^5(x) \cos(x) \d x$ by making 
+a substitution.  What should you pick for your substitution variable?
+	\[ w = \answer{\sin(x)} \]
+	\begin{exercise}
+		When you make the substitution $w = \sin(x)$, what integral do you end up with?
+		\[ \int \sin^5(x) \cos(x) \d x = \int \answer{w^5} \d w \]
+		\begin{hint}
+			What is the differential?  \[ \d w = \answer{\cos(x) } \d x\]
+			What is the $\sin^5(x)$ in terms of $w$? \[\sin^5(x) = \answer{w^5}\]
+		\end{hint}
+		\begin{exercise}
+			Evaluate the indefinite integral
+			\[ \int \sin^5(x) \cos(x) \d x = \answer{\frac{1}{6} \sin^6(x) + C} \]
+			\begin{hint}
+				What integral do you get when you substitute in terms of $w$?
+				\[ \int \answer{w^5} \d w \]
+				What is that antiderivative?
+				\[ \frac{1}{6} w^6 + C \]
+				Don't forget the $+C$.
+			\end{hint}
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+\end{document}

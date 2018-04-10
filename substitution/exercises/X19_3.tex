@@ -1,0 +1,30 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+
+\outcome{Compute basic antiderivatives.}
+\outcome{Use integral notation for both antiderivatives and definite integrals.}
+\outcome{Undo the Chain Rule.}
+\outcome{Calculate indefinite integrals (antiderivatives) using basic substitution.}
+
+\begin{document}
+\begin{exercise}
+
+Find the indefinite integral of $7x^3(3x^4-2)^8$ with respect to $x$.
+
+\[
+\int 7x^3(3x^4-2)^8 \d x=\answer{\frac{7}{108}(3x^4-2)^9+C}	
+\]
+	\begin{hint}
+		What substitution should you use here?
+		\[ w = \answer{3x^4-2} \]
+		What is the differential?
+		\[ \d w = \answer{12 x^3 } \d x \]
+		What integral do you end up with after the substitution?
+		\[ \int \answer{\frac{7}{12} w^8} \d w \]
+	\end{hint}
+
+\end{exercise}
+\end{document}
