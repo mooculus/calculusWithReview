@@ -18,10 +18,10 @@
 
 \section{The basic idea}
 
-Consider the function
-\[
-f(x) = \frac{\sin(x)}{x}.
-\]
+Consider the function graphed below.
+%\[
+%f(x) = \frac{\sin(x)}{x}.
+%\]
 While $f(x)$ is undefined at $x=0$, we can still plot $f(x)$ at other
 values near $x = 0$.
 \begin{image}
@@ -30,7 +30,7 @@ values near $x = 0$.
         xmin=-6.75,xmax=6.75,ymin=-1.5,ymax=1.5,
         axis lines=center,
         xtick={-6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28},
-        xticklabels={$-2\pi$,$-3\pi/2$,$-\pi$, $-\pi/2$, $0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},
+        xticklabels={$-2$,$-3/2$,$-1$, $-1/2$, $0$, $1/2$, $1$, $3/2$, $2$},
         ytick={-1,1},
         %ticks=none,
         width=6in,
@@ -48,7 +48,7 @@ values near $x = 0$.
 \end{image}
 
 \begin{question}
-  Use the graph of $f(x) = \frac{\sin(x)}{x}$ above to answer the
+  Use the graph of $f$ above to answer the
   following question: What is $f(0)$?
   \begin{multipleChoice}
     \choice{$0$}
@@ -77,12 +77,12 @@ limit.
 \end{definition}
 
 \begin{question}
-  Use the graph of $f(x) = \frac{\sin(x)}{x}$ above to finish the following statement: ``A good guess is that\dots''
+  Use the graph of $f}$ above to finish the following statement: ``A good guess is that\dots''
   \begin{multipleChoice}
-    \choice[correct]{$\lim_{x\to 0}\frac{\sin(x)}{x} = 1$.}
-    \choice{$\lim_{x\to 1}\frac{\sin(x)}{x} = 0$.}
-    \choice{$\lim_{x\to 1}f(x) = \frac{\sin(1)}{1}$.}
-    \choice{$\lim_{x\to 0}f(x) = \frac{\sin(0)}{0}=\infty$.}
+    \choice[correct]{$\lim_{x\to 0}f(x) = 1$.}
+    \choice{$\lim_{x\to 1}f(x) = 0$.}
+    \choice{$\lim_{x\to 1}f(x) = f(1)$.}
+    \choice{$\lim_{x\to 0}f(x) = f(0)$.}
   \end{multipleChoice}
 \end{question}
 

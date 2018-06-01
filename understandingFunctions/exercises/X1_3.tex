@@ -34,10 +34,27 @@ it can be made to be one-to-one.
 \end{tikzpicture}
 \end{image}
 
-Find a formula for $f^{-1}(x)$ when $f$ is restricted to $(-\infty, 2)$.
+Find a formula for $f^{-1}(x)$ when $f$ is restricted to $(-\infty, 2]$.
 
 
 \[ f^{-1}(x) = \answer{2-\sqrt{\frac{x-1}{3}}}\]
+\begin{hint}
+	We're starting with $y = f(x)$, so that's:
+	\[ y = \answer{3(x-2)^2+1} \]
+	
+	Swap $x$ and $y$.
+	\[ x = \answer{3(y-2)^2+1} \]
+	
+	Solving for $y$ you find two solutions.  They are:
+	\begin{align*}
+		y &= 2-\sqrt{\answer{\frac{x-1}{3}}} \\
+		y &= 2+\sqrt{\answer{\frac{x-1}{3}}}
+	\end{align*}
+	
+	The domain of $f$ was restricted to $(-\infty, 2]$, which means we want the range of $f^{-1}$ to be $(-\infty, 2]$.
+	Which of the two solutions you found give outputs which are not greater than $2$?
+\end{hint}
+
 
 \end{exercise}
 \end{document}

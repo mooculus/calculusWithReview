@@ -158,7 +158,8 @@ initially appear.
 	\end{axis}
     \end{tikzpicture}
   \end{image}
-  Is $f(x)$ invertible at $x=0.5$? 
+  Is $f(x)$ invertible at $x=1$?
+  \begin{prompt}
   \begin{multipleChoice}
     \choice[correct]{yes}
     \choice{no}
@@ -168,6 +169,7 @@ initially appear.
     f^{-1}(1) = \answer{1.5}
     \]
   \end{question}
+  \end{prompt}
 \end{question}
 
 
@@ -213,11 +215,12 @@ if we can ground this in a real-life context.
     f(f^{-1}(t)) = t,
     \]
     since we solved for $f^{-1}$ in our calculation.  On the other hand, 
-    \begin{align*}
-    f^{-1}(f(t)) &=\left(\frac{5}{9}\right)(f(t) - 32)\\
-    &= \left(\frac{5}{9}\right)(f(t) - 32)\\
-    \end{align*}
-    which you should simplify to check that $f^{-1}(f(t)) = t$.
+      \begin{align*}
+     f^{-1}(f(t))&=f^{-1} \left(\left(\frac{9}{5}\right)t+32\right) \\
+     &= \frac{5}{9}\Big( \left(\frac{9}{5}\right)t+32-32\Big)\\
+     &=t
+       \end{align*}
+which shows that $f^{-1}(f(t)) = t$.
   \end{explanation}
 \end{example}
 
@@ -232,6 +235,7 @@ situation.
 \begin{question}
   Let $f$ be a function, and imagine that the points $(2,3)$ and
   $(7,3)$ are both on its graph.  Could $f$ have an inverse function?
+  \begin{prompt}
   \begin{multipleChoice}
     \choice{yes}
     \choice[correct]{no}
@@ -243,6 +247,7 @@ situation.
     a \textbf{function} cannot send the same input to two different
     outputs, $f$ must not have an inverse function.
   \end{feedback}
+  \end{prompt}
 \end{question}
 
 
@@ -456,9 +461,9 @@ domain.
 \begin{explanation}
   In this case $f(x)$ is one-to-one. We may write
   \begin{align*}
-    f(f^{-1}(x) &= \left(f^{-1}(x)\right)^3\\
+    f(f^{-1}(x)) &= \left(f^{-1}(x)\right)^3\\
     x &= \left(f^{-1}(x)\right)^3\\
-    \sqrt[3]{x} = f^{-1}(x).
+    \sqrt[3]{x} &= f^{-1}(x).
   \end{align*}
 For your viewing pleasure we give a graph of $y=f(x)=x^3$ and
 $y=f^{-1}(x)= \sqrt[3]{x}$. Note, the graph of $f^{-1}$ is the image
