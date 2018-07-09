@@ -182,11 +182,14 @@ Now we will multiply out the numerator.  Note that we do not want to
 multiply out the denominator because we already have an $(x-1)$
 factored out of the denominator and that was the goal.
 
+\[
+\lim_{x\to 1}\frac{(x+5)-3(x+1)}{(x+1)(x+5)(x-1)}
+\]
 \begin{align*}
-\lim_{x\to 1}\frac{(x+5)-3(x+1)}{(x+1)(x+5)(x-1)} &= \lim_{x\to 1}\frac{x+5-3x-3}{(x+1)(x+5)(x-1)} \\
-&= \lim_{x\to 1}\frac{-2x+2}{(x+1)(x+5)(x-1)}\\
-&= \lim_{x\to 1}\frac{-2(x-1)}{(x+1)(x+5)(x-1)}\\
-&= \lim_{x\to 1}\frac{-2}{(x+1)(x+5)}.
+  &= \lim_{x\to 1}\frac{x+5-3x-3}{(x+1)(x+5)(x-1)} \\
+  &= \lim_{x\to 1}\frac{-2x+2}{(x+1)(x+5)(x-1)}\\
+  &= \lim_{x\to 1}\frac{-2\cancel{(x-1)}}{(x+1)(x+5)\cancel{(x-1)}}\\
+  &= \lim_{x\to 1}\frac{-2}{(x+1)(x+5)}.
 \end{align*}
   
 We now have canceled, and can apply the usual Limit Laws.  Hence
@@ -229,12 +232,14 @@ Finally, we'll look at one more example.
   a^2-b^2=(a-b)(a+b).
   \]
   In our case, we will use $a=\sqrt{x+5}$ and $b=2$.  Write
-\begin{align*}
-\lim_{x\to-1} \frac{\sqrt{x+5}-2}{x+1}&=
-\lim_{x\to-1} \frac{\left(\sqrt{x+5}-2\right)}{(x+1)} \cdot \frac{\left(\sqrt{x+5}+2\right)}{\left(\sqrt{x+5}+2\right)} \\
+  \[
+  \lim_{x\to-1} \frac{\sqrt{x+5}-2}{x+1}
+  \]
+  \begin{align*}
+    &= \lim_{x\to-1} \frac{\left(\sqrt{x+5}-2\right)}{(x+1)} \cdot \frac{\left(\sqrt{x+5}+2\right)}{\left(\sqrt{x+5}+2\right)} \\
 &=\lim_{x\to-1} \frac{\answer[given]{\left(\sqrt{x+5}\right)^2-2^2}}{(x+1)\left(\sqrt{x+5}+2\right)} \\
 &=\lim_{x\to-1} \frac{x+5-4}{(x+1)\left(\sqrt{x+5}+2\right)} \\
-&=\lim_{x\to-1} \frac{(x+1)}{(x+1)\left(\sqrt{x+5}+2\right)} \\
+&=\lim_{x\to-1} \frac{\cancel{(x+1)}}{\cancel{(x+1)}\left(\sqrt{x+5}+2\right)} \\
 &=\lim_{x\to-1} \frac{1}{\sqrt{x+5}+2}\\
 &= \frac{1}{\sqrt{-1+5}+2}\\
 &=\answer[given]{\frac{1}{4}}.
