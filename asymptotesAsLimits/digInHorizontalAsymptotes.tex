@@ -21,31 +21,73 @@ grows without bound.
 
 
 
-Consider the function:
-\[
-f(x) = \frac{6x-9}{x-1}
-\]
-\begin{image}
-\begin{tikzpicture}
-	\begin{axis}[
-            domain=1:4,
-            ymax=20,
-            ymin=-10,
-            samples=100,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west}
-          ]
-	  \addplot [very thick, penColor, smooth, domain=(0:.9)] {(6*x-9)/(x-1)};
-          \addplot [very thick, penColor, smooth, domain=(1.1:3)] {(6*x-9)/(x-1)};
-          \addplot [textColor, dashed] plot coordinates {(1,-10) (1,20)};
-        \end{axis}
-\end{tikzpicture}
-%% \caption{A plot of $f(x)=\protect\frac{6x-9}{x-1}$.}
-%% \label{plot:(6x-9)/(x-1)}
-\end{image}
-As $x$ approaches infinity, it seems like $f(x)$ approaches a specific
-value. Such a limit is called a \textit{limit at infinity}.
+Let's start with an example:
+\begin{example}
+	Consider the function:
+	\[ g(x) = \frac{1}{x} \]
+	with the table below
+	\[ \begin{array}{c|c}
+		x       & g(x)=\frac{1}{x} \\\hline
+		10      & \answer[given]{0.1} \\ 
+		100     & \answer[given]{0.01} \\
+		1000    & \answer[given]{0.001} \\
+		10000   & \answer[given]{0.0001} \\
+		100000  & \answer[given]{0.00001}\\
+		1000000 & \answer[given]{0.000001}
+	\end{array} \]
+
+	What does the table tell us about $g(x)$ as $x$ grows bigger and bigger?
+	\begin{explanation}
+		As $x$ grows bigger and bigger, it seems that $g(x)$ approaches $0$. It seems that we should write
+		\[ \lim_{x\to \infty}\frac{1}{x}=0 \]
+	\end{explanation}
+\end{example}
+
+\begin{example}
+  Now consider a different function:
+  \[
+  f(x) = \frac{6x-9}{x-1}
+  \]
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          domain=1:4,
+          ymax=20,
+          ymin=-10,
+          samples=100,
+          axis lines =middle, xlabel=$x$, ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west}
+        ]
+	\addplot [very thick, penColor, smooth, domain=(0:.9)] {(6*x-9)/(x-1)};
+        \addplot [very thick, penColor, smooth, domain=(1.1:3)] {(6*x-9)/(x-1)};
+        \addplot [textColor, dashed] plot coordinates {(1,-10) (1,20)};
+        \addplot [textColor, dashed] plot coordinates {(0,6) (3,6)};
+      \end{axis}
+    \end{tikzpicture}
+
+  \end{image}
+
+  Fill in the table below, rounding to $5$ decimal places.
+  \[
+  \begin{array}{c|c}
+    x      & f(x)=\frac{6x-9}{x-1} \\ \hline
+    10     & \answer[given]{5.66667}\\
+    100    & \answer[given]{5.96970}\\
+    1000   & \answer[given]{5.99700}\\
+    10000  & \answer[given]{5.99970}\\
+    100000 & \answer[given]{5.99997}\\
+  \end{array}
+  \]
+  What does the table tell us about $f(x)$ as $x$ grows bigger and bigger?
+  \begin{explanation}
+    As $x$ grows bigger and bigger, it seems like $f(x)$ approaches $6$.
+    It seems that we should write
+    \[
+    \lim_{x\to \infty}\frac{6x-9}{x-1}=6 
+    \]
+  \end{explanation}
+\end{example}
 
 \begin{definition}\label{def:limitAtInfty}\index{limit!at infinity}
 If $f(x)$ becomes arbitrarily close to a specific value $L$ by making
@@ -63,16 +105,21 @@ $x$ sufficiently large and negative, we write
 and we say, the \dfn{limit at negative infinity} of $f(x)$ is $L$.  
 \end{definition}
 
-\begin{example} Compute
+\begin{example}  Compute the limit.
 \[
 \lim_{x\to\infty} \frac{6x-9}{x-1}.
 \]
+We will confirm what we guessed earlier by computing the limit at infinity.\\
+ We can assume that all the Limit Laws also apply to limits at infinity.
 \begin{explanation}
 Write
 \begin{align*}
 \lim_{x\to\infty}\frac{6x-9}{x-1} &= \lim_{x\to\infty}\frac{6x-9}{x-1}\cdot \frac{1/x}{1/x}\\
 &=\lim_{x\to\infty}\frac{\frac{6x}{x} - \frac{9}{x}}{\frac{x}{x} - \frac{1}{x}}\\
-&= \lim_{x\to\infty} \frac{6}{1}\\
+&=\frac{\lim_{x\to\infty}\Bigl(6- \frac{9}{x}\Bigr)}{\lim_{x\to\infty}\Bigl(1- \frac{1}{x}\Bigr)}\\
+&=\frac{6-9\lim_{x\to\infty}  \frac{1}{x}}{1-\lim_{x\to\infty} \frac{1}{x}}\\
+&=\frac{6-9(0)}{1-0}\\
+&=  \frac{6}{1}\\
 &= 6.
 \end{align*}
 \end{explanation}
@@ -81,7 +128,7 @@ Write
 Sometimes one must be careful, consider this example.
 
 \begin{example}
-Compute
+
 \[
 \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}}
 \]
@@ -92,6 +139,12 @@ number.
 \begin{align*}
 \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} &= \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} \cdot \frac{-1/x^3}{-1/x^3}\\
 &= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{x^6/x^6+5/x^6}}\\
+&= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{1+5/x^6}}\\
+&= \frac{ \lim_{x\to -\infty}\Bigl(-1-1/x^3\Bigr)}{\lim_{x\to -\infty}\sqrt{1+5/x^6}}\\
+&= \frac{ -1-\lim_{x\to -\infty}(1/x)^3}{\sqrt{\lim_{x\to -\infty}\Bigl(1+5/x^6\Bigr)}}\\
+&= \frac{ -1-(\lim_{x\to -\infty}1/x)^3}{\sqrt{1+5(\lim_{x\to -\infty}1/x)^6}}\\
+&= \frac{ -1-(0)^3}{\sqrt{1+5(0)^6}}\\
+&= \frac{ -1-0}{\sqrt{1+0}}\\
 &= -1.
 \end{align*}
 \end{explanation}
@@ -130,8 +183,7 @@ Compute:
 	  \addplot [very thick, penColor, smooth] {(1/x) * sin(deg(7*x))+4};
         \end{axis}
 \end{tikzpicture}
-%% \caption{A plot of $f(x)=\frac{\sin(7x)}{x}+4$.}
-%% \label{plot:sin7x/x+4}
+
 \end{image}
 
 \begin{explanation}
@@ -226,7 +278,7 @@ The function $\sqrt{x}$ grows slowly, and seems like it may have a
 horizontal asymptote, see the graph above. However, if we consider the
 square root as the inverse of the function $f(x) = x^2 , \quad x \geq 0$.
 
-\begin{quote}%%BADBAD I would like word choice for "positive"
+\begin{quote}
   $\sqrt{x} = y$ means that $y^2 = x$ and that $y \geq 0$.
 \end{quote}
 
