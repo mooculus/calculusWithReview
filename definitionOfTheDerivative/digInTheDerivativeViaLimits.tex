@@ -52,13 +52,6 @@ following:
   equations that we would not be able to solve via other methods.
 \end{itemize}
 
-%% \begin{xarmaBoost}
-%% What other examples can you find where one is interested in a ``rate
-%% of change?''
-%% \begin{freeResponse}
-%% Answers will vary.
-%% \end{freeResponse}
-%% \end{xarmaBoost}
 
 
 \section{From slopes of secant lines to slopes of tangent lines}
@@ -147,11 +140,7 @@ We illustrate this informal definition with the following diagram:
           \node at (axis cs:0,6.6) [anchor=north] {$y$};
         \end{axis}
 \end{tikzpicture}
-%% \caption{Given a function $f$, if one can ``zoom in'' at $(a, f(a))$
-%% sufficiently so that the graph seems to be a straight line,
-%% then that line is the \textbf{tangent line} to $f$ at the point
-%% determined by $(a, f(a))$.}
-%% \label{figure:informal-tangent}
+
 \end{image}
 %% \todo{This image should be interactive.}
 
@@ -186,8 +175,44 @@ second point for our secant line is $(a+h, f(a+h))$.  The slope of any
 secant line that passes through the points $(a,f(a))$ and $(a+h,
 f(a+h))$ is given by
 \[
-\frac{\Delta y}{\Delta x}=\frac{f(a+h) - f(a)}{(a+h) - a} =
-\frac{f(a+h)-f(a)}{h}.
+\frac{\Delta y}{\Delta x}=\frac{f(x) - f(a)}{x - a}.
+\]
+
+\begin{example}
+	If $f(x) = 2x^2+3$, find the slope of the secant line through $(2,f(2))$
+	and $(x,f(x))$ in terms of $x$.
+	
+	\begin{explanation}
+		Start with the slope formula,
+		\[
+		\frac{\Delta y}{\Delta x} =
+                \frac{f\left(\answer[given]{x}\right)-f\left(2\right)}
+                     {\answer[given]{x} - 2}.
+		\]
+		Replace $f$ with its formula:
+		\[
+		\frac{\Delta y}{\Delta x} = \frac{\answer[given]{2x^2+3} - 11}{x-2}.
+		\]
+		Simplify the numerator:
+		\[
+		\frac{\Delta y}{\Delta x} = \frac{2x^2-8}{x-2}.
+		\]
+		Factor the numerator,
+		\[
+		\frac{\Delta y}{\Delta x} = \frac{2(x+2)\left(\answer[given]{x-2}\right)}{x-2}.
+		\]
+		Cancel $x-2$ from the numerator and denominator,
+		\[
+		\frac{\Delta y}{\Delta x} = \answer[given]{2(x+2)}.
+		\]
+	\end{explanation}
+\end{example}
+
+Suppose the difference between $x$ and $a$ is some small number $h$.  That
+is $x-a=h$ or $x=a+h$.  Substituting this in to our slope formula gives us
+an alternate characterization of the slope of a secant line.
+\[
+\frac{\Delta y}{\Delta x} = \frac{f(a+h)-f(a)}{(a+h)-a} = \frac{f(a+h)-f(a)}{h}.
 \]
 
 \begin{example}
@@ -195,7 +220,7 @@ f(a+h))$ is given by
   \begin{explanation}
     Start with the slope formula we just found,
     \[
-    \frac{\Delta y}{\Delta x} = \frac{f(\answer[given]{2+h})-f(2)}{\answer[given]{h}}.
+    \frac{\Delta y}{\Delta x} = \frac{f\left(\answer[given]{2+h}\right)-f\left(2\right)}{\answer[given]{h}}.
     \]
     Now substitute in for the function we know,
     \[
@@ -211,7 +236,7 @@ f(a+h))$ is given by
     \]
     Factor an $h$ from every term in the numerator,
     \[
-    \frac{\Delta y}{\Delta x} = \frac{h(\answer[given]{2+h})}{h}.
+    \frac{\Delta y}{\Delta x} = \frac{h\left(\answer[given]{2+h}\right)}{h}.
     \]
     Cancel $h$ from the numerator and denominator,
     \[
@@ -284,6 +309,17 @@ the slope of the tangent line.  This leads to the \textit{definition of the deri
     \end{selectAll}
 \end{question}
 
+Recalling our original characterization of the slope of the secant line
+between $a$ and $x$ which is near by to $a$.  We see that we could also
+calculate the derivative of a function by letting $x$ go to $a$.  This 
+gives us the following definition:
+
+\begin{definition}
+	The \dfn{derivative} of $f$ at $a$ is
+	\[
+	\eval{\ddx f(x)}_{x=a} = \lim_{x\to a} \frac{f(x) - f(a)}{x-a}.
+	\]
+\end{definition}
 
 \begin{definition}\index{derivative!notation}
   There are several different notations for the derivative.  The two we'll mainly be using are
@@ -295,11 +331,12 @@ the slope of the tangent line.  This leads to the \textit{definition of the deri
 
 Now we will give a number of examples.
 \begin{example}
-  If $f(x) = x^2-2x$, find the derivative of $f$ at $2$.
+  If $f(x) = x^2-2x$, find the derivative of $f$ at $2$ using the $h\to0$
+  characterization.
   \begin{explanation}
     Start with the definition of the derivative,
     \[
-    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0} \frac{f(\answer[given]{2+h})-f(2)}{h}.
+    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0} \frac{f\left(\answer[given]{2+h}\right)-f\left(2\right)}{h}.
     \] 
      Now substitute in for the function we know,
     \[
@@ -315,7 +352,7 @@ Now we will give a number of examples.
     \]
     Factor an $h$ from every term in the numerator,
     \[
-    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0}\frac{h(\answer[given]{2+h})}{h}.
+    \eval{\ddx f(x)}_{x=2} = \lim_{h\to 0}\frac{h\left(\answer[given]{2+h}\right)}{h}.
     \]
     Cancel $h$ from the numerator and denominator,
     \[
@@ -332,6 +369,38 @@ Now we will give a number of examples.
     \]
     \end{onlineOnly}
 \end{explanation}
+\end{example}
+
+\begin{example}
+	Find the derivative of $f(x) = x^2+x+1$ at $x=-1$ using the $x\to a$
+	characterization.
+	\begin{explanation}
+		Start with the definition of the derivative,
+		\[
+		f'(-1) = \lim_{x\to-1}\frac{f\left(x\right)-f\left(\answer[given]{-1}\right)}{x-(-1)}.
+		\] 
+		Replace $f$ with its formula,
+		\[
+		f'(-1) = \lim_{x\to-1}\frac{x^2+x+1 - 1}{x+1}.
+		\]
+		Simplify the top,
+		\[
+		f'(-1) = \lim_{x\to-1}\frac{x^2+x}{x+1}.
+		\]
+		Factor,
+		\[
+		f'(-1) = \lim_{x\to-1}\frac{x\left(\answer[given]{x+1}\right)}{x+1}.
+		\]
+		Cancel the $x+1$ in the numerator and denominator,
+		\[
+		f'(-1) = \lim_{x\to-1}x.
+		\]
+		The expression inside the limit is continuous everywhere, so
+		evaluate the limit by plugging in,
+		\[
+		f'(-1) = \answer[given]{-1}.
+		\]
+	\end{explanation}
 \end{example}
 
 \begin{example}
