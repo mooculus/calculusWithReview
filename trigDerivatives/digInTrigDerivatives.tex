@@ -24,29 +24,25 @@ Armed with this fact we will discover the derivatives of all of the
 standard trigonometric functions.
 
 \begin{theorem}[The derivative of cosine]\index{derivative!of cosine}
-\[
-\ddx \cos(x) = -\sin(x).
-\]
-\begin{explanation}
-Recall that
-\begin{itemize}
-\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$, and
-\item $\sin(x) = \cos\left(\frac{\pi}{2}-x\right)$.
-\end{itemize}
-Now
-\begin{align*}
-\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\
-&=-\cos\left(\frac{\pi}{2}-x\right) \\
-&= -\sin(x).
-\end{align*}
-\end{explanation}
+	\[ \ddx \cos(x) = -\sin(x).\]
+	\begin{explanation}
+	Recall that
+	\begin{itemize}
+		\item $\cos(x) = \sin\left(\frac{\pi}{2}-x\right)$, and
+		\item $\sin(x) = \cos\left(\frac{\pi}{2}-x\right)$.
+	\end{itemize}
+	Now
+	\begin{align*}
+		\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\
+			&=-\cos\left(\frac{\pi}{2}-x\right) \\
+			&= -\sin(x).
+	\end{align*}
+	\end{explanation}
 \end{theorem}
 
 \begin{example}
-Compute:
-\[
-\eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}}
-\]
+	Compute:
+	\[ \eval{\ddx \cos \left( \frac{x^3}{2} \right)}_{x=\sqrt[3]{\pi}} \]
 \begin{explanation}
 Now that we know the derivative of cosine, we may combine this with the
 chain rule, so we have that
