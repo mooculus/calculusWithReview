@@ -31,7 +31,7 @@ Let $f(x) = x^2-1$.
 			\end{tikzpicture}
 		\end{image}
 
-We are calculating the value of $\displaystyle \int_{-1}^{2} f(x) \d x$.
+	We are calculating the value of $\displaystyle \int_{-1}^{2} f(x) \d x$.
 
 
 
@@ -39,7 +39,9 @@ We are calculating the value of $\displaystyle \int_{-1}^{2} f(x) \d x$.
 	What is $\Delta x$?
 	
 	\[ \Delta x = \answer{3/n} \]
-
+	\begin{hint}
+		Remember that $\Delta x = \frac{b-a}{n}$
+	\end{hint}
 	\begin{exercise}
 		Which of the following gives our choice of sample points?
 		\begin{multipleChoice}
@@ -47,11 +49,17 @@ We are calculating the value of $\displaystyle \int_{-1}^{2} f(x) \d x$.
 			\choice{$x_k^* = -1 + \frac{3(k-1)}{n}$}
 			\choice{$x_k^* = -1 + \frac{3\left(k-\frac{1}{2}\right)}{n}$}
 		\end{multipleChoice}
-		
+		\begin{hint}
+			Are we using for our sample points?
+		\end{hint}
 		\begin{exercise}
 			Calculate $f(x_k^*) \Delta x$ in terms of $k$ and $n$.
 			
 			\[ f(x_k^*) \Delta x = \frac{\answer{27}k^2}{n^3}-\frac{\answer{18}k}{n^2} \]
+			\begin{hint}
+				You've found $x_k^*$.  Plug it into the formula for $f$ above and multiply by $\Delta x$.
+				Your answer will have $k$'s and $n$'s in it, but no $x$'s.
+			\end{hint}
 			\begin{exercise}
 				Using $f(x_k^*)\Delta x = \frac{27}{n^3}k^2 - \frac{18}{n^2}k$ (which you found above), evaluate the Riemann sum.  (It will be in terms of $n$).
 				
