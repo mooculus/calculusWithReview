@@ -187,7 +187,28 @@ If $x=c$ is a root of a polynomial, then $x-c$ is a factor of that polynomial.
 	\begin{explanation}
 		Notice that if we substitute $x=1$ into the polynomial, we get zero out.  That means $x-1$ is a factor of $3x^3-12x^2+2x+8$.
 		Polynomial long division gives:
-		\[\polylongdiv{3x^3-13x^2+2x+8}{x-1}\]
+
+		\begin{center}
+\newdimen\digitwidth
+	\settowidth\digitwidth{0}
+\def~{\hspace{\digitwidth}}
+\def\divrule#1#2{%
+	\noalign{\moveright#1\digitwidth%
+		\vbox{\hrule width#2\digitwidth}}}
+$x-1$\,\begin{tabular}[b]{@{}r@{}}
+$3x^2-10x-8$ \\ \hline
+\big)\begin{tabular}[t]{@{}l@{}}
+~$3x^3-13x^2+2x+8$ \\
+$-3x^3+3x^2$ \\ \divrule{0}{10}
+~~~~~$-10x^2+2x$ \\
+~~~~~~$10x^2-10x$ \\ \divrule{6}{10}
+~~~~~~~~~~~$-8x+8$ \\
+~~~~~~~~~~~~~$8x-8$ \\ \divrule{12}{8}
+~~~~~~~~~~~~~~~~~$0$
+\end{tabular}
+\end{tabular}
+		\end{center}
+		
 		The quotient was $3x^2-10x-8$, so $3x^3-13x^2+2x+8 = (x-1)(3x^2-10x-8)$.  It remains to factor the quotient.
 		
 		The leading coefficient $3$ factors as $1 \cdot 3$, and $8$ factors as $1 \cdot 8$ and $2 \cdot 4$.  Examining the possibilities, we find the factorization
