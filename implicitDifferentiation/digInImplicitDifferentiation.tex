@@ -14,7 +14,7 @@
 
 \begin{document}
 \begin{abstract}
-In this section we differentiate equations that contain more than one variable.
+In this section we differentiate equations that contain more than one variable on one side.
 \end{abstract}
 \maketitle
 \section{Review of the chain rule}
@@ -39,42 +39,147 @@ If $y$ is a differentiable function of $x$ and if $f$ is a differentiable functi
 \section{Implicit differentiation}
 
 The functions we've been dealing with so far have been
-\textit{explicit functions}\index{explicit function}, meaning that the
-dependent variable is written in terms of the independent
+defined \textit{explicitly}
+ in terms of the independent
 variable. For example:
 \[
 y=3x^2-2x+1,\qquad y=e^{3x}, \qquad y = \frac{x-2}{x^2-3x+2}.
 \]
-However, there is another type of function, called an \textit{implicit
-  function}. In this case, the dependent variable is not stated
-explicitly in terms of the independent variable. Some examples are:
+However, this is not always  necessary or even possible to do. Sometimes we choose to or we have to define a function  \textit{implicitly
+ }. In this case, the dependent variable is not stated
+explicitly in terms of an independent variable. Some examples are:
 \[
-x^2+y^2 = 4,\qquad x^3+y^3 = 9xy, \qquad x^4+3x^2 = x^{2/3}+y^{2/3} = 1.
+x^2+y^2 = 4,\qquad x^3+y^3 = 9xy, \qquad x^4+3x^2 = x^{2/3}+y^{2/3} + 1.
 \]
-Your inclination might be simply to solve each of these for $y$ and go
-merrily on your way. However this can be difficult and it may require
-two \textit{branches}, for example to explicitly plot $x^2+y^2 = 4$,
-one needs both $y= \sqrt{4-x^2}$ and $y=-\sqrt{4-x^2}$. Moreover, it
-may not even be possible to solve for $y$. To deal with such
-situations, we use \index{implicit differentiation}\textit{implicit
-  differentiation}. We'll start with a basic example.
+Your inclination might be simply to solve each of these equations for $y$ and go
+merrily on your way. However, this can be difficult or even impossible to do.
+%one needs both $y= \sqrt{4-x^2}$ and $y=-\sqrt{4-x^2}$. Moreover, it
+%may not even be possible to solve for $y$. 
+Since we are often faced with a problem of computing derivatives of such functions,
+we need a  method that will enable us to compute derivatives of implicitly defined functions.
+% we use \index{implicit differentiation}\textit{implicit
+  %differentiation}. 
+  
+  
+  We'll start with a basic example.
+  \begin{example}
+Consider the curve (a circle) defined by:
+\[
+x^2 + y^2 = 1
+\]
+\begin{enumerate}
 
+\item Find the slope of the line tangent to the circle at the point $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$.
+\begin{explanation}
+\begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.9,xmax=1.9,
+            ymin=-1.9,ymax=1.9,
+            domain=-1.9:1.9,
+            width=3in,
+            height=3in,
+              xtick={0}, ytick={0},
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+         ]
+	\addplot [ thick, penColor2, smooth, samples=200, domain=-1:1] {(1-x^2)^(1/2)};
+	\addplot [ thick, penColor2, smooth, samples=100, domain=-2:2] {(2^(1/2)-x};
+       	\addplot [ thick, penColor, smooth, samples=200, domain=-1:1] {-(1-x^2)^(1/2)};
+	%\addplot [ thick, penColor, smooth, samples=100, domain=-2:2] {-(2^(1/2))+x};
+	   \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,1.41/2)}; 
+ %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,-1.41/2)}; 
+%  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,0)}; 
+       % \node at (axis cs:10,15) [penColor,anchor=west] {$A$}; 
+        \node at (axis cs:1.2,1.5/2) {\tiny$\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ };        
+         % \node at (axis cs:1.2,-1.8/2) {\tiny$\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$ };  
+           \node at (axis cs:-1.2,1.5/2) {\tiny$y=\sqrt{1-x^2}$  };        
+         % \node at (axis cs:-1.2,-1.8/2) {\tiny$y=-\sqrt{1-x^2}$ };        
+      \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+The curve defined by the equation  $x^2 + y^2 = 1$ is not a graph of a function. If we solve for $y$, we obtain two solutions:
+$y=\sqrt{1-x^2}$ and $y=-\sqrt{1-x^2}$. 
+The point $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ lies on the graph of the function $f(x)=\sqrt{1-x^2}$.
+Let's compute the derivative of $f$.
+\[
+f'(x)=\frac{\answer{-2x}}{2\sqrt{1-x^2}}
+\]
+Therefore, the slope of the tangent line at the point $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ is given by
+\[
+\text{slope}=f'\left(\frac{\sqrt{2}}{2}\right)=\answer{-1}
+\]
+  \end{explanation}
+\item Find the slope of the line tangent to the circle at the point $\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$.
+
+\begin{explanation}
+\begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.9,xmax=1.9,
+            ymin=-1.9,ymax=1.9,
+            domain=-1.9:1.9,
+            width=3in,
+            height=3in,
+              xtick={0}, ytick={0},
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+         ]
+	\addplot [ thick, penColor, smooth, samples=200, domain=-1:1] {(1-x^2)^(1/2)};
+	%\addplot [ thick, penColor2, smooth, samples=100, domain=-2:2] {(2^(1/2)-x};
+       	\addplot [ thick, penColor2, smooth, samples=200, domain=-1:1] {-(1-x^2)^(1/2)};
+	\addplot [ thick, penColor2, smooth, samples=100, domain=-2:2] {-(2^(1/2))+x};
+	   %\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,1.41/2)}; 
+ \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,-1.41/2)}; 
+%  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,0)}; 
+       % \node at (axis cs:10,15) [penColor,anchor=west] {$A$}; 
+       % \node at (axis cs:1.2,1.5/2) {\tiny$\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ };        
+          \node at (axis cs:1.2,-1.8/2) {\tiny$\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$ };  
+          % \node at (axis cs:-1.2,1.5/2) {\tiny$y=\sqrt{1-x^2}$  };        
+          \node at (axis cs:-1.2,-1.8/2) {\tiny$y=-\sqrt{1-x^2}$ };        
+      \end{axis}
+    \end{tikzpicture}
+    \end{image}
+The curve defined by the equation  $x^2 + y^2 = 1$ is not a graph of a function. If we solve for $y$, we obtain two solutions:
+$y=\sqrt{1-x^2}$ and $y=-\sqrt{1-x^2}$. 
+The point $\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$ lies on the graph of the function $f(x)=-\sqrt{1-x^2}$.
+Let's compute the derivative of $f$.
+\[
+f'(x)=\frac{\answer{2x}}{2\sqrt{1-x^2}}
+\]
+Therefore, the slope of the tangent line at the point $\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$ is given by
+\[
+\text{slope}=f'\left(\frac{\sqrt{2}}{2}\right)=\answer{1}
+\]
+
+Notice that we had to differentiate twice, not to mention that we had to first solve for $y$ in terms of $x$ in order to compute these two slopes.
+\end{explanation}
+\end{enumerate}
+\end{example}
+Let's take a different approach, namely let's use implicit differentiation.
 \begin{example}
-Consider the curve defined by:
+Consider the curve (a circle) defined by:
 \[
 x^2 + y^2 = 1
 \]
 \begin{enumerate}
 \item Compute $\dd[y]{x}$.
-\item Find the slope of the tangent line at $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$.
+\item Find the slope of the line tangent to the circle at $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$.
+\item Find the slope of the line tangent to the circle at $\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$.
 \end{enumerate}
 \begin{explanation}
+
+The curve defined by the equation  $x^2 + y^2 = 1$ is not a graph of a function. If we solve for $y$, we obtain two solutions:
+$y=\sqrt{1-x^2}$ and $y=-\sqrt{1-x^2}$. Therefore, we can say that  any point $(x,y)$ on the curve lies on the graph of some function $f$.
   Starting with 
 \[
 x^2 + y^2 = 1
 \]
-we apply the differential operator $\ddx$ to both sides of the
-equation to obtain
+we differentiate both sides of the
+equation with respect to $x$ to obtain
 \[
 \ddx \left(x^2+y^2\right) = \ddx 1.
 \]
@@ -86,13 +191,13 @@ Let's examine each of these terms in turn. To start
 \[
 \ddx x^2 = \answer[given]{2x}.
 \]
-On the other hand, $\ddx y^2$ is somewhat different. Here you imagine that $y = f(x)$, and hence by the chain rule
+On the other hand, $\ddx y^2$ is somewhat different. Here we assume that $y = f(x)$ for some function $f$, defined on some open interval (this is true for all points $-1<x<1$). Hence, by the chain rule
 \begin{align*}
 \ddx y^2 &= \ddx (f(x))^2 \\ 
 &= 2\cdot f(x) \cdot f'(x) \\
 &= 2y\dd[y]{x}.
 \end{align*}
-Putting this together we are left with the equation
+Putting this together, we are left with the equation
 \[
 2x + 2y\dd[y]{x} =0
 \]
@@ -102,10 +207,48 @@ At this point, we solve for $\dd[y]{x}$. Write
 2y \dd[y]{x} &= -2x\\
 \dd[y]{x} &= \answer[given]{\frac{-x}{y}}.
 \end{align*}
+Remark: Notice that the derivative $\dd[y]{x} $ is expressed in terms of both variables $x$ and $y$. This should not come as a surprise. If you think about it, the function and  its derivative are not determined solely by the value of $x$. Recall what happens if $x=\frac{\sqrt{2}}{2}$.
 
-For the second part of the problem, we simply plug $x=\frac{\sqrt{2}}{2}$ and $y=\frac{\sqrt{2}}{2}$
-into the formula above, hence the slope of the tangent line at this point 
+
+\begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.9,xmax=1.9,
+            ymin=-1.9,ymax=1.9,
+            domain=-1.9:1.9,
+            width=3in,
+            height=3in,
+              xtick={0}, ytick={0},
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+         ]
+	\addplot [ thick, penColor2, smooth, samples=200, domain=-1:1] {(1-x^2)^(1/2)};
+	\addplot [ thick, penColor2, smooth, samples=100, domain=-2:2] {(2^(1/2)-x};
+       	\addplot [ thick, penColor, smooth, samples=200, domain=-1:1] {-(1-x^2)^(1/2)};
+	\addplot [ thick, penColor, smooth, samples=100, domain=-2:2] {-(2^(1/2))+x};
+	   \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,1.41/2)}; 
+ \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,-1.41/2)}; 
+%  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.41)/2,0)}; 
+       % \node at (axis cs:10,15) [penColor,anchor=west] {$A$}; 
+        \node at (axis cs:1.2,1.5/2) {\tiny$\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ };        
+          \node at (axis cs:1.2,-1.8/2) {\tiny$\left(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$ };        
+      \end{axis}
+    \end{tikzpicture}
+    \end{image}
+    There are two different points on the curve with  the $x-$coordinate $x=\frac{\sqrt{2}}{2}$.
+     
+    The advantage of the expression for $\dd[y]{x} $ that we obtained above is that it can be used for computation of the slope of the tangent line at each of these two points, and at any other point on the curve, where defined.
+  
+ 
+So, for the second part of the problem, we simply plug $x=\frac{\sqrt{2}}{2}$ and $y=\frac{\sqrt{2}}{2}$
+into the expression above, hence the slope of the tangent line at this point 
 is $\answer[given]{-1}$.
+For the third part of the problem, we simply plug $x=\frac{\sqrt{2}}{2}$ and $y=-\frac{\sqrt{2}}{2}$
+into the expression above, hence the slope of the tangent line at this point 
+is $\answer[given]{1}$.
+
+
 \begin{onlineOnly}
   We can confirm our results by looking at the graph of the curve and
   our tangent line:
@@ -145,7 +288,7 @@ x^3+y^3 = 9xy
 \end{image}
 \begin{enumerate}
 \item Compute $\dd[y]{x}$.
-\item Find the slope of the tangent line at $(4,2)$.
+\item Find the slope of the line  tangent to this curve at $(4,2)$.
 \end{enumerate}
 
 
@@ -155,12 +298,12 @@ Starting with
 \[
 x^3+y^3 = 9xy,
 \]
-we apply the differential operator $\ddx$ to both sides of the
-equation to obtain
+we differentiate both sides of the
+equation with respect to $x$ to obtain
 \[
 \ddx \left(x^3+y^3\right) = \ddx 9xy.
 \]
-Applying the sum rule we see
+Applying the sum rule we get that
 \[
 \ddx x^3+\ddx y^3 = \ddx 9xy.
 \]
@@ -168,16 +311,16 @@ Let's examine each of these terms in turn. To start
 \[
 \ddx x^3 = \answer[given]{3x^2}.
 \]
-On the other hand $\ddx y^3$ is somewhat different. Here you imagine that $y = f(x)$, and hence by the chain rule
+On the other hand $\ddx y^3$ is somewhat different. Here you assume that $y = f(x)$, on some interval $I$, and hence by the chain rule
 \begin{align*}
-\ddx y^3 &= \ddx (y(x))^3 \\ 
+\ddx y^3 &= \ddx (f(x))^3 \\ 
 &= 3(f(x))^2 \cdot f'(x) \\
 &= 3y^2\dd[y]{x}.
 \end{align*}
-Considering the final term $\ddx 9xy$, we again imagine that $y=f(x)$. Hence 
+Considering the final term $\ddx 9xy$, we assume that $y=f(x)$, on some interval $I$. Hence 
 \begin{align*}
-\ddx 9xy &= 9\ddx x\cdot f(x) \\
-&= 9 \left(x\cdot y'(x) + f(x)\right)\\
+\ddx 9xy &= 9\ddx \Bigl(x\cdot f(x)\Bigr) \\
+&= 9 \left(x\cdot f'(x) + f(x)\right)\\
 &= 9x \dd[y]{x} + 9y.
 \end{align*}
 Putting this all together we are left with the equation
@@ -242,7 +385,7 @@ Consider the curve defined by
 Compute $\dd[x]{y}$.
 \begin{explanation}
 First, notice that the problem asks for $\dd[x]{y}$, \textbf{not}
-$\dd[y]{x}$.  So we are considering $x$ as a function of $y$. This
+$\dd[y]{x}$. This
 means the variables have changed places!  Not to worry, everything is
 exactly the same.  We apply $\dd{y}$ to both sides of the equation to
 get
@@ -274,5 +417,4 @@ and now we see
 \]
 \end{explanation}
 \end{example}
-
 \end{document}
