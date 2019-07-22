@@ -2,11 +2,11 @@
 
 \input{../../preamble.tex}
 
-%\outcome{Consider values of a function at inputs approaching a given point.}
-%\outcome{Understand the concept of a limit.}
-%\outcome{Calculate limits from a graph (or state that the limit does not exist).}
+\outcome{Consider values of a function at inputs approaching a given point.}
+\outcome{Understand the concept of a limit.}
+\outcome{Calculate limits from a graph (or state that the limit does not exist).}
 
-\author{Nela Lakos \and Kyle Parsons \and Bobby Ramsey}
+\author{Nela Lakos \and Kyle Parsons}
 
 \begin{document}
 \begin{exercise}
@@ -46,36 +46,9 @@ The entire graph of a function $f$ is given below.
 
 The domain of $f$ is $\left[\answer{-4},\answer{7}\right]$.
 
-The range of $f$ (from bottom to top) is $\left[\answer{-4},\answer{-2}\right] \cup \left\{\answer{-1}\right\} \cup \left(\answer{0},\answer{2}\right) \cup \left(\answer{2},\answer{6}\right]$.
+The range of $f$ (from bottom to top) is:
 
-
-Find the value: \[ f(0) = \answer{-1} \]
-
-%% added - 08/25/17 - BWR
-\noindent\rule[0.5ex]{\linewidth}{.2pt}
-
-Is the function $f$ invertible?
-\begin{multipleChoice}
-	\choice[correct]{Yes.}
-	\choice{No.}
-\end{multipleChoice}
-
-
-Which of the following explains why $f$ is/isn't invertible?
-\begin{selectAll}
-
-	\choice[correct]{The function is one-to-one.}
-	\choice{The function is NOT one-to-one.}
-	\choice{The graph passes the Vertical Line Test.}
-	\choice{The graph fails the Vertical Line Test.}
-	\choice[correct]{The graph passes the Horizontal Line Test.}
-	\choice{The graph fails the Horizontal Line Test.}
-\end{selectAll}
-
-Find the value:
-\[ f^{-1}(-2) = \answer{3} \]
-\noindent\rule[0.5ex]{\linewidth}{.2pt}
-%% - to here
+ $\left[\answer{-4},\answer{-2}\right] \cup \left\{\answer{-1}\right\} \cup \left(\answer{0},\answer{2}\right) \cup \left(\answer{2},\answer{6}\right]$.
 
 Find the following limits, if they exist.  If a limit does not exist, explain why.
 
@@ -95,9 +68,10 @@ Find the following limits, if they exist.  If a limit does not exist, explain wh
 \lim_{x\to3^-}f(x) = \answer{0}
 \]
 \begin{multipleChoice}
-\choice[correct]{The one-sided limit does exist.}
-\choice{The one-sided limit does not exist because $f(3)$ does not exist.}
-\choice{The one-sided limit does not exist because $f(3)$ is not close to the values of $f$ near 3.}
+\choice[correct]{The limit does exist.}
+\choice{The limit does not exist because $f(3)$ does not exist.}
+\choice{The limit does not exist because $f(3)$ is not close to the values of $f$ near 3.}
+\choice{The limit does not exist because $\lim_{x\to3^-}f(x)\neq\lim_{x\to3^+}f(x)$.}
 \end{multipleChoice}
 
 \noindent\rule[0.5ex]{\linewidth}{.2pt}
@@ -107,8 +81,9 @@ Find the following limits, if they exist.  If a limit does not exist, explain wh
 \]
 \begin{multipleChoice}
 \choice[correct]{The limit does exist.}
-\choice{The one-sided limit does not exist because $f(3)$ does not exist.}
-\choice{The one-sided limit does not exist because $f(3)$ is not close to the values of $f$ near 3.}
+\choice{The limit does not exist because $f(3)$ does not exist.}
+\choice{The limit does not exist because $f(3)$ is not close to the values of $f$ near 3.}
+\choice{The limit does not exist because $\lim_{x\to3^-}f(x)\neq\lim_{x\to3^+}f(x)$.}
 \end{multipleChoice}
 
 \noindent\rule[0.5ex]{\linewidth}{.2pt}
@@ -123,6 +98,17 @@ Find the following limits, if they exist.  If a limit does not exist, explain wh
 \choice[correct]{The limit does not exist because $\lim_{x\to3^-}f(x)\neq\lim_{x\to3^+}f(x)$.}
 \end{multipleChoice}
 
+Find the following values.
+\begin{hint}
+
+Recall:  The statement ``$f^{-1}(-2)=a$"  is equivalent to the statement
+
+ ``$-2=f(a)$" !
+\end{hint}
+\begin{align*}
+f(0) &= \answer{-1}\\
+f^{-1}(-2) &= \answer{3}
+\end{align*}
 
 \end{exercise}
 \end{document}
