@@ -42,7 +42,7 @@ by a negative quantity and expressing our answers in interval notation.
 Nonlinear inequalities are more complicated.  To solve them, we will use a tool called a \emph{sign chart}.
 The process requires us to move all the nonzero terms of the inequality to one side, and factor.
 \begin{example}
-	Solve the inequality \[ \dfrac{x^3 \left(2x-5\right)^2}{x+1} \geq 0.\]
+	Solve the inequality \[ \dfrac{x^3 \left(2x-5\right)^2}{x+1} > 0.\]
 
 	\begin{explanation}
 		Since the right-hand side is zero, we are really asking where the left-hand side will be positive.  The only way
@@ -61,7 +61,7 @@ The process requires us to move all the nonzero terms of the inequality to one s
 				$x+1$       /1}% 
 				{  , $-1$ , $0$ ,$\dfrac{5}{2}$,  }% 
 			\tkzTabLine{ , - , d , - , t , + , t , + ,}
-			\tkzTabLine{ , + , d , + , t , + , t , - ,}
+			\tkzTabLine{ , + , d , + , t , + , t , + ,}
 			\tkzTabLine{ , - , d , + , t , + , t , +, }
 		\end{tikzpicture} 
 		
@@ -69,9 +69,10 @@ The process requires us to move all the nonzero terms of the inequality to one s
 		$\displaystyle \dfrac{ \textrm{negative} \cdot \textrm{positive}}{\textrm{negative}}$.  It is, therefore, positive in that region, and makes up
 		part of our solution.  We cannot include the endpoint $x=-1$ in the solution, as the fraction is undefined there.
 		
-		In the same way, we see that in the interval $\left( 0, \frac{5}{2} \right)$, the left-hand side of the inequality is also positive.  
+		In the same way, we see that in the intervals $\left( 0, \frac{5}{2} \right)$ and $\left( \frac{5}{2}, 0\right)$, the left-hand side of the inequality is also positive.
+		Notice that the inequality is NOT satisfied at $x=\frac{5}{2}$, where the left-hand side equals zero.  
 		
-		The solution is $\left( -\infty, -1 \right) \cup \left[ 0, \frac{5}{2} \right]$.
+		The solution is $\left( -\infty, -1 \right) \cup \left( 0, \frac{5}{2} \right) \cup \left( \frac{5}{2}, \infty \right)$.
 	\end{explanation}
 \end{example}
 
