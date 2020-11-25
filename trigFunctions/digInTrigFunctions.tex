@@ -216,7 +216,7 @@ we construct the angle with initial side along the positive $x$-axis and vertex 
           \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
           \node[textColor, rotate=40] at (axis cs:.35,.38) {terminal side};
           \node[textColor] at (axis cs:.5,-.07) {initial side};
-%          \draw (.766, .643) node[circle,fill,inner sep=1pt, label=above:$(\cos \theta, \sin \theta)$](a){};
+%          \draw (.766, .643) node[circle,fill,inner sep=1pt, label=above:$(\cos(\theta), \sin(\theta))$](a){};
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -433,7 +433,7 @@ The Pythagorean Theorem gives several key trigonometric identities.
 \begin{theorem}[Pythagorean Identities]\index{Pythagorean identities}
   The following hold:
   \[
-  \cos^2\theta+\sin^2\theta = 1 \qquad 1 + \tan^2\theta = \sec^2\theta \qquad \cot^2\theta + 1 = \csc^2\theta
+  \cos^2(\theta)+\sin^2(\theta) = 1 \qquad 1 + \tan^2(\theta) = \sec^2(\theta) \qquad \cot^2(\theta) + 1 = \csc^2(\theta)
   \]
   \begin{explanation}
     From the unit circle we can see
@@ -517,10 +517,10 @@ Solving the bottom two formulas for $\cos^2(\theta)$ and $\sin^2(\theta)$ gives 
 \section{Trigonometric equations}
 Frequently we are in the situation of having to determine precisely which angles satisfy a particular equation.  The most basic example is probably like this one.
 \begin{example}
-	Solve the equation: \[ \sin \theta = -\frac{1}{2}. \]
+	Solve the equation: \[ \sin(\theta) = -\frac{1}{2}. \]
 	\begin{explanation}
 		We'll start by finding the reference angle, $\theta_R$, the acute angle between the terminal side of $\theta$ and the $x$-axis.  
-		The reference angle satisfies $\sin \theta_R = \frac{1}{2}$.  
+		The reference angle satisfies $\sin(\theta_R) = \frac{1}{2}$.  
 		\begin{image}[2in]
 		   \begin{tikzpicture}
     			\coordinate (C) at (0,2);
@@ -546,7 +546,7 @@ Frequently we are in the situation of having to determine precisely which angles
 \end{example}
 
 \begin{problem}
-	Solve the equation: \[ \tan \theta = -\sqrt{3}. \]
+	Solve the equation: \[ \tan(\theta) = -\sqrt{3}. \]
 	\begin{multipleChoice}
 		\choice{$\theta = \frac{\pi}{3}+\pi k$}
 		\choice{$\theta = \frac{\pi}{6}+ \pi k$}
@@ -558,24 +558,24 @@ Frequently we are in the situation of having to determine precisely which angles
 
 Let's try one a bit more complicated.
 \begin{example}
-	Solve the equation: \[ \cos \theta \left( \cos \theta + 1\right) = \sin^2 \theta. \]
+	Solve the equation: \[ \cos(\theta) \left( \cos(\theta) + 1\right) = \sin^2(\theta). \]
 	\begin{explanation}
 		We'll start by simplifying a bit.
 		\begin{align*}
-			\cos \theta \left( \cos \theta + 1\right) &= \sin^2 \theta \\
-			\cos^2 \theta + \cos \theta &= \sin^2 \theta \\
-			\cos^2 \theta - \sin^2 \theta + \cos \theta &= 0\\
-			\cos^2 \theta - \left(1-\cos^2\theta\right) + \cos \theta &= 0\\
-			2\cos^2 \theta + \cos \theta - 1 &= 0.
+			\cos(\theta) \left( \cos(\theta) + 1\right) &= \sin^2(\theta) \\
+			\cos^2(\theta) + \cos(\theta) &= \sin^2(\theta) \\
+			\cos^2(\theta) - \sin^2(\theta) + \cos(\theta) &= 0\\
+			\cos^2(\theta) - \left(1-\cos^2\theta\right) + \cos(\theta) &= 0\\
+			2\cos^2(\theta) + \cos(\theta) - 1 &= 0.
 		\end{align*}
-		Notice that this equation is quadratic in $\cos \theta$.  We can factor it like we try to do to solve any other quadratic equation:
-		\[ \left( \cos \theta + 1 \right) \left( 2 \cos \theta - 1\right) = 0.\]
-		On the interval $[0, 2\pi]$, $\cos \theta = -1$ has only one solution, $\theta = \answer[given]{\pi}$.  
-		For $\cos \theta = \frac{1}{2}$, we see that the reference angle $\theta_R = \answer[given]{\frac{\pi}{6}}$.  Since cosine is positive in quadrants 1 and 4,
-		we find solutions $\theta = \frac{\pi}{6}$ and $\frac{11\pi}{6}$.
+		Notice that this equation is quadratic in $\cos(\theta)$.  We can factor it like we try to do to solve any other quadratic equation:
+		\[ \left( \cos(\theta) + 1 \right) \left( 2 \cos(\theta) - 1\right) = 0.\]
+		On the interval $[0, 2\pi]$, $\cos(\theta) = -1$ has only one solution, $\theta = \answer[given]{\pi}$.  
+		For $\cos(\theta) = \frac{1}{2}$, we see that the reference angle $\theta_R = \answer[given]{\frac{\pi}{3}}$.  Since cosine is positive in quadrants 1 and 4,
+		we find solutions $\theta = \frac{\pi}{3}$ and $\frac{5\pi}{3}$.
 		
 		All solutions are:
-		\[ \theta = \pi + 2 \pi k, \,\, \frac{\pi}{6}+ 2 \pi k ,\,\, \frac{11\pi}{6} + 2\pi k, \,\, k \textrm{ any integer.} \]
+		\[ \theta = \pi + 2 \pi k, \,\, \frac{\pi}{3}+ 2 \pi k ,\,\, \frac{5\pi}{3} + 2\pi k, \,\, k \textrm{ any integer.} \]
 	\end{explanation}
 \end{example}
 
@@ -587,26 +587,26 @@ Let's try one a bit more complicated.
 Back when we introduced continuity we mentioned that each trigonometric function is continuous on its domain.
 
 \begin{example}
-	Compute the limit: \[ \lim_{\theta \to 2\pi/3} \theta \tan \theta. \]
+	Compute the limit: \[ \lim_{\theta \to 2\pi/3} \theta \tan(\theta). \]
 	\begin{explanation}
-		The multiplicative limit law allows us to split this into \[ \left(\lim_{\theta\to 2\pi/3} \theta \right) \left(\lim_{\theta\to 2\pi/3} \tan \theta \right). \]
+		The multiplicative limit law allows us to split this into \[ \left(\lim_{\theta\to 2\pi/3} \theta \right) \left(\lim_{\theta\to 2\pi/3} \tan(\theta) \right). \]
 		The function $f(\theta) = \theta$ is continuous everywhere, so $\lim_{\theta\to 2\pi/3} \theta = \answer[given]{\frac{2\pi}{3}}$.  Since $\frac{2 \pi}{3}$ is in the domain
-		of $\tan \theta$, we have $\lim_{\theta\to 2\pi/3} \tan \theta = \tan \left( \answer[given]{\frac{2 \pi}{3}} \right) = - \sqrt{3}$.  Putting these together we find
-		\[ \lim_{\theta\to 2\pi/3} \theta \tan \theta = - \frac{2 \pi \sqrt{3}}{3}. \]
+		of $\tan(\theta)$, we have $\lim_{\theta\to 2\pi/3} \tan(\theta) = \tan \left( \answer[given]{\frac{2 \pi}{3}} \right) = - \sqrt{3}$.  Putting these together we find
+		\[ \lim_{\theta\to 2\pi/3} \theta \tan(\theta) = - \frac{2 \pi \sqrt{3}}{3}. \]
 	\end{explanation}
 \end{example}
 
 
 \begin{example}
-	Compute the limit: \[ \lim_{\theta \to \pi^-} \cot \theta. \]
+	Compute the limit: \[ \lim_{\theta \to \pi^-} \cot(\theta). \]
 	\begin{explanation}
-		Recall that $\cot \theta = \frac{\cos \theta}{\sin \theta}$, so that \[ \lim_{\theta \to \pi^-} \cot \theta = \lim_{\theta \to \pi^-} \frac{\cos \theta}{\sin \theta}.\]
-		Since sine and cosine are continuous, $\lim_{\theta \to \pi^-} \cos \theta = \cos\left( \answer[given]{\pi} \right)= \answer[given]{-1}$ and 
-		$\lim_{\theta \to \pi^-} \sin \theta = \sin\left( \answer[given]{\pi} \right)  = \answer[given]{0}$.
-		That is, $\lim_{\theta \to \pi^-} \cot \theta$ is of the form $\numOverZero$.
+		Recall that $\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}$, so that \[ \lim_{\theta \to \pi^-} \cot(\theta) = \lim_{\theta \to \pi^-} \frac{\cos(\theta)}{\sin(\theta)}.\]
+		Since sine and cosine are continuous, $\lim_{\theta \to \pi^-} \cos(\theta) = \cos\left( \answer[given]{\pi} \right)= \answer[given]{-1}$ and 
+		$\lim_{\theta \to \pi^-} \sin(\theta) = \sin\left( \answer[given]{\pi} \right)  = \answer[given]{0}$.
+		That is, $\lim_{\theta \to \pi^-} \cot(\theta)$ is of the form $\numOverZero$.
 		
-		The numerator is negative for $\theta$ near $\pi$.  From the graph of $\sin \theta$, we know that the denominator is negative and approaching $0$ as $\theta \to \pi^{-}$.
-		That means \[ \lim_{\theta \to \pi^-} \cot \theta = -\infty. \]
+		The numerator is negative for $\theta$ near $\pi$.  From the graph of $\sin(\theta)$, we know that the denominator is negative and approaching $0$ as $\theta \to \pi^{-}$.
+		That means \[ \lim_{\theta \to \pi^-} \cot(\theta) = -\infty. \]
 	\end{explanation}
 \end{example}
 
