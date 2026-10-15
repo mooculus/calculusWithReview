@@ -188,26 +188,23 @@ If $x=c$ is a root of a polynomial, then $x-c$ is a factor of that polynomial.
 		Notice that if we substitute $x=1$ into the polynomial, we get zero out.  That means $x-1$ is a factor of $3x^3-12x^2+2x+8$.
 		Polynomial long division gives:
 
-		\begin{center}
-\newdimen\digitwidth
-	\settowidth\digitwidth{0}
-\def~{\hspace{\digitwidth}}
-\def\divrule#1#2{%
-	\noalign{\moveright#1\digitwidth%
-		\vbox{\hrule width#2\digitwidth}}}
-$x-1$\,\begin{tabular}[b]{@{}r@{}}
-$3x^2-10x-8$ \\ \hline
-\big)\begin{tabular}[t]{@{}l@{}}
-~$3x^3-13x^2+2x+8$ \\
-$-3x^3+3x^2$ \\ \divrule{0}{10}
-~~~~~$-10x^2+2x$ \\
-~~~~~~$10x^2-10x$ \\ \divrule{6}{10}
-~~~~~~~~~~~$-8x+8$ \\
-~~~~~~~~~~~~~$8x-8$ \\ \divrule{12}{8}
-~~~~~~~~~~~~~~~~~$0$
-\end{tabular}
-\end{tabular}
-		\end{center}
+\[
+\begin{array}{r}
+3x^2-10x-8 \\[2pt]
+x-1\,\overline{)\quad 3x^3-13x^2+2x+8} \\[4pt]
+\underline{-(3x^3-3x^2)}
+    \phantom{{}+2x+8} \\
+-10x^2+2x
+    \phantom{-()+8} \\
+\underline{-(-10x^2+10x)}
+    \phantom{{}+8} \\
+-8x+8
+    \phantom{-()} \\
+\underline{-(-8x+8)} \\
+0
+\end{array}
+\]
+
 		
 		The quotient was $3x^2-10x-8$, so $3x^3-13x^2+2x+8 = (x-1)(3x^2-10x-8)$.  It remains to factor the quotient.
 		
